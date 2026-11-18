@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONTENT OS — Отдел контент-маркетинга и Reels под ключ</title>
+<meta name="description" content="Находим ролики, которые уже приводят заявки конкурентам, и выпускаем Reels, карусели и Stories под ключ. Москва и вся РФ. Старт за 72 часа.">
+<style>
+  :root {
+    --bg-dark: #060a14;
+    --bg-dark-card: #0f1626;
+    --bg-light: #ffffff;
+    --bg-soft: #f5f7fb;
+    --ink: #0f172a;
+    --ink-muted: #475569;
+    --ink-light: #f8fafc;
+    --ink-light-muted: #94a3b8;
+    --border-light: #e2e8f0;
+    --border-dark: rgba(255, 255, 255, 0.12);
+    --blue: #2563eb;
+    --blue-bright: #3b82f6;
+    --blue-soft: #eff6ff;
+    --cyan: #38bdf8;
+    --green: #10b981;
+    --amber: #f59e0b;
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--bg-light);
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    background: var(--bg-light);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Кнопки */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    text-align: center;
+  }
+
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-primary {
+    background: var(--blue);
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.28);
+  }
+
+  .btn-primary:hover {
+    background: #1d4ed8;
+  }
+
+  .btn-outline-light {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+
+  .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .btn-outline-dark {
+    background: #ffffff;
+    color: var(--ink);
+    border-color: #cbd5e1;
+  }
+
+  .btn-outline-dark:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+
+  /* Панель A/B/C теста сверху */
+  .ab-ribbon {
+    background: #0b1222;
+    border-bottom: 1px solid var(--border-dark);
+    color: #cbd5e1;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  .ab-ribbon-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ab-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .ab-pill {
+    background: rgba(255, 255, 255, 0.06);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s;
+  }
+
+  .ab-pill.active {
+    background: var(--blue);
+    border-color: var(--blue-bright);
+    color: #ffffff;
+  }
+
+  .ab-all-btn {
+    background: transparent;
+    color: var(--cyan);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 999px;
+    padding: 5px 11px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .ab-all-panel {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-dark);
+  }
+
+  .ab-all-panel.open {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .ab-mini-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-dark);
+    border-radius: 12px;
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  .ab-mini-card:hover {
+    border-color: var(--blue-bright);
+  }
+
+  /* Шапка */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: rgba(6, 10, 20, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-dark);
+    padding: 14px 0;
+    color: #ffffff;
+  }
+
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .brand-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background: var(--blue-bright);
+    box-shadow: 0 0 12px var(--blue-bright);
+  }
+
+  .brand-geo {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-light-muted);
+    margin-left: 4px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    color: #ffffff;
+  }
+
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .header-tg {
+    color: #93c5fd;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* Hero секция */
+  .hero-section {
+    background:
+      radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.22) 0%, transparent 45%),
+      radial-gradient(circle at 12% 85%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+      var(--bg-dark);
+    color: #ffffff;
+    padding: 58px 0 72px;
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: 44px;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37, 99, 235, 0.15);
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    color: #93c5fd;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(30px, 4.1vw, 50px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.028em;
+    margin-bottom: 18px;
+    color: #ffffff;
+  }
+
+  .hero-lead {
+    font-size: clamp(16px, 1.4vw, 19px);
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    max-width: 620px;
+  }
+
+  .hero-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .hero-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 8px 13px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+
+  .hero-chip span {
+    color: var(--green);
+    font-weight: 800;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Визуальный мокап телефона 9:16 в Hero */
+  .phone-frame {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(160deg, #131c31 0%, #090e1a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 28px;
+    padding: 14px;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55);
+  }
+
+  .phone-screen {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 9 / 14;
+    background:
+      radial-gradient(circle at 30% 25%, rgba(59, 130, 246, 0.35), transparent 55%),
+      radial-gradient(circle at 80% 75%, rgba(16, 185, 129, 0.2), transparent 50%),
+      #0c1324;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .phone-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #cbd5e1;
+  }
+
+  .live-pill {
+    background: rgba(239, 68, 68, 0.22);
+    border: 1px solid rgba(248, 113, 113, 0.45);
+    color: #fecaca;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .phone-center {
+    text-align: center;
+    padding: 10px 4px;
+  }
+
+  .play-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.92);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    cursor: pointer;
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.18);
+    transition: transform 0.15s;
+  }
+
+  .play-circle:hover {
+    transform: scale(1.06);
+  }
+
+  .reel-caption-box {
+    background: rgba(6, 10, 20, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+
+  .phone-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .phone-meta {
+    font-size: 11.5px;
+    color: #94a3b8;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Общие секции */
+  .section {
+    padding: 72px 0;
+  }
+
+  .section-soft {
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-dark {
+    background: var(--bg-dark);
+    color: #ffffff;
+  }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+
+  .section-dark .section-eyebrow {
+    color: #60a5fa;
+  }
+
+  .section h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.022em;
+    margin-bottom: 12px;
+  }
+
+  .section-lead {
+    font-size: 17px;
+    color: var(--ink-muted);
+    max-width: 720px;
+    margin-bottom: 32px;
+  }
+
+  .section-dark .section-lead {
+    color: var(--ink-light-muted);
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 0.9fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .grid-hero > *,
+  .grid-2 > *,
+  .grid-3 > *,
+  .grid-4 > *,
+  .calc-grid > * {
+    min-width: 0;
+  }
+
+  /* Карточки */
+  .card {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-pain {
+    border-top: 3px solid #ef4444;
+  }
+
+  .card-step {
+    position: relative;
+  }
+
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+
+  .card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: 14.5px;
+    color: var(--ink-muted);
+  }
+
+  .card-foot {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-light);
+    font-size: 13.5px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* Баннер-перехватчик в середине */
+  .mid-banner {
+    margin-top: 28px;
+    background: linear-gradient(120deg, #0f172a 0%, #1e3a8a 100%);
+    color: #ffffff;
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+  }
+
+  /* Мокапы примеров (Блок 05) */
+  .example-card {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-visual {
+    background: #0b1120;
+    color: #ffffff;
+    padding: 18px;
+    border-bottom: 1px solid var(--border-light);
+    min-height: 205px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .example-body {
+    padding: 20px;
+  }
+
+  .mini-reel-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .mini-reel {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  .mini-reel strong {
+    display: block;
+    color: var(--cyan);
+    font-size: 12.5px;
+    margin-bottom: 4px;
+  }
+
+  .before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .ba-box {
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .ba-before {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed rgba(255, 255, 255, 0.25);
+    color: #94a3b8;
+  }
+
+  .ba-after {
+    background: rgba(37, 99, 235, 0.2);
+    border: 1px solid rgba(96, 165, 250, 0.45);
+    color: #ffffff;
+  }
+
+  .filter-banner {
+    margin-top: 20px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #7f1d1d;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 14.5px;
+  }
+
+  /* Тарифы */
+  .start-banner {
+    background: linear-gradient(135deg, #111827 0%, #172554 100%);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    color: #ffffff;
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+
+  .price-card {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .price-card.featured {
+    border: 2px solid var(--blue);
+    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.12);
+    position: relative;
+  }
+
+  .hit-badge {
+    display: inline-block;
+    background: var(--blue);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  .price-val {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 10px 0 16px;
+    color: var(--ink);
+  }
+
+  .price-val span {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink-muted);
+  }
+
+  .check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+    font-size: 14.5px;
+    color: var(--ink-muted);
+  }
+
+  .check-list li {
+    padding-left: 22px;
+    position: relative;
+  }
+
+  .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--green);
+    font-weight: 800;
+  }
+
+  .check-list strong {
+    color: var(--ink);
+  }
+
+  /* Калькулятор */
+  .calc-wrap {
+    margin-top: 28px;
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 26px;
+  }
+
+  .calc-group {
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+
+  .calc-group-title {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+
+  .calc-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-top: 1px solid #f1f5f9;
+    font-size: 14px;
+  }
+
+  .calc-option:first-of-type {
+    border-top: none;
+  }
+
+  .calc-option label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .calc-total-box {
+    background: var(--bg-soft);
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* SEO-блог карточки */
+  .blog-card {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .blog-meta {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--blue);
+    text-transform: uppercase;
+  }
+
+  /* Форма */
+  .form-card {
+    background: #ffffff;
+    color: var(--ink);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  }
+
+  .form-field {
+    margin-bottom: 14px;
+  }
+
+  .form-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--ink);
+  }
+
+  .form-field input,
+  .form-field select {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 11px 13px;
+    font-family: inherit;
+    font-size: 16px;
+    background: #ffffff;
+    color: var(--ink);
+  }
+
+  .form-field input:focus,
+  .form-field select:focus {
+    outline: 2px solid var(--blue);
+    border-color: var(--blue);
+  }
+
+  .form-status {
+    margin-top: 12px;
+    border-radius: 10px;
+    background: #ecfdf5;
+    border: 1px solid #6ee7b7;
+    color: #065f46;
+    padding: 11px 14px;
+    font-size: 13.5px;
+    display: none;
+  }
+
+  .founder-card {
+    background: var(--bg-dark-card);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .avatar-monogram {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--blue), #1e40af);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* Липкая мобильная кнопка */
+  .sticky-mobile-cta {
+    display: none;
+  }
+
+  /* Модалка */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(6, 10, 20, 0.78);
+    backdrop-filter: blur(6px);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .modal-backdrop.open {
+    display: flex;
+  }
+
+  .modal-window {
+    width: 100%;
+    max-width: 460px;
+    max-height: 92vh;
+    overflow-y: auto;
+    background: #ffffff;
+    color: var(--ink);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  footer {
+    background: #04070f;
+    color: #94a3b8;
+    border-top: 1px solid var(--border-dark);
+    padding: 28px 0;
+    font-size: 13px;
+  }
+
+  @media (max-width: 960px) {
+    .hero-grid,
+    .grid-4,
+    .grid-3,
+    .grid-2,
+    .calc-grid,
+    .ab-all-panel.open {
+      grid-template-columns: 1fr;
+    }
+    .nav-links {
+      display: none;
+    }
+  }
+
+  @media (max-width: 720px) {
+    body {
+      padding-bottom: 68px;
+    }
+    .container {
+      padding: 0 16px;
+    }
+    .section {
+      padding: 46px 0;
+    }
+    .hero-section {
+      padding: 36px 0 48px;
+    }
+    .hero-actions .btn,
+    .mid-banner .btn {
+      width: 100%;
+    }
+    .ab-pills {
+      width: 100%;
+    }
+    .ab-pill {
+      flex: 1 1 100%;
+      text-align: left;
+    }
+    .calc-option {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    .sticky-mobile-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 95;
+      background: rgba(6, 10, 20, 0.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ПАНЕЛЬ СРАВНЕНИЯ 3 ВАРИАНТОВ ПЕРВОГО БЛОКА -->
+<div class="ab-ribbon">
+  <div class="container">
+    <div class="ab-ribbon-inner">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px; width:100%; justify-content:space-between;">
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px;">
+          <strong style="color:#ffffff;">Тест 1-го экрана (выберите вариант):</strong>
+          <div class="ab-pills">
+            <button type="button" class="ab-pill active" id="ab-btn-1" onclick="setHeroVariant(1)">1. Про конкурентов</button>
+            <button type="button" class="ab-pill" id="ab-btn-2" onclick="setHeroVariant(2)">2. Ненавидите сниматься</button>
+            <button type="button" class="ab-pill" id="ab-btn-3" onclick="setHeroVariant(3)">3. Устали от слива</button>
+          </div>
+        </div>
+        <button type="button" class="ab-all-btn" onclick="toggleAllVariants()">Сравнить все 3 сразу</button>
+      </div>
+    </div>
+
+    <div id="hero-all-variants" class="ab-all-panel">
+      <div class="ab-mini-card" onclick="setHeroVariant(1)">
+        <div style="font-size:11px; color:#60a5fa; font-weight:700; margin-bottom:4px;">ВАРИАНТ 1</div>
+        <strong style="color:#fff; font-size:13.5px; display:block; margin-bottom:4px;">Ваши конкуренты уже забирают клиентов из Reels. Заберём их обратно</strong>
+        <span style="font-size:12px;">Находим ролики с запросами цены и запускаем ваш контент под ключ.</span>
+      </div>
+      <div class="ab-mini-card" onclick="setHeroVariant(2)">
+        <div style="font-size:11px; color:#60a5fa; font-weight:700; margin-bottom:4px;">ВАРИАНТ 2</div>
+        <strong style="color:#fff; font-size:13.5px; display:block; margin-bottom:4px;">Reels, которые приносят заявки — даже если вы ненавидите сниматься</strong>
+        <span style="font-size:12px;">Архив с телефона, AI-двойник или 1 выезд в МСК. План за 72 ч.</span>
+      </div>
+      <div class="ab-mini-card" onclick="setHeroVariant(3)">
+        <div style="font-size:11px; color:#60a5fa; font-weight:700; margin-bottom:4px;">ВАРИАНТ 3</div>
+        <strong style="color:#fff; font-size:13.5px; display:block; margin-bottom:4px;">Хватит снимать в пустоту и платить за «красивые просмотры»</strong>
+        <span style="font-size:12px;">Достаём рабочие связки рынка и ведём до диалога в Директ.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ШАПКА -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <span class="brand-dot"></span>
+        <span>CONTENT OS</span>
+        <span class="brand-geo">• Москва / РФ</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#pain">Почему не продаёт</a></li>
+        <li><a href="#system">Система</a></li>
+        <li><a href="#formats">Без съёмок</a></li>
+        <li><a href="#examples">Примеры</a></li>
+        <li><a href="#pricing">Тарифы</a></li>
+        <li><a href="#blog">Статьи</a></li>
+      </ul>
+      <div class="header-cta">
+        <a href="https://t.me/frankiemoor" class="header-tg">@frankiemoor</a>
+        <button type="button" class="btn btn-primary" style="padding:9px 16px; font-size:13.5px;" onclick="openModal('Бесплатный разбор вашей ниши (0 ₽)')">Забрать разбор</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 01. ПЕРВЫЙ ЭКРАН -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div id="hero-eyebrow" class="hero-badge">Москва (выезд) и вся РФ (онлайн) • Старт за 72 часа</div>
+        <h1 id="hero-title">Ваши конкуренты уже забирают клиентов из Reels. Заберём их обратно</h1>
+        <p id="hero-lead" class="hero-lead">
+          Находим ролики в вашей нише, где покупатели прямо сейчас спрашивают цену, и запускаем ваш контент под ключ — без танцев и съёмочной каторги.
+        </p>
+
+        <div class="hero-chips">
+          <div class="hero-chip"><span>✓</span> План и 10 сценариев за 72 часа</div>
+          <div class="hero-chip"><span>✓</span> 0–3 ч вашего времени в месяц</div>
+          <div class="hero-chip"><span>✓</span> Воронка кодовых слов в Директ</div>
+        </div>
+
+        <div class="hero-actions">
+          <button type="button" class="btn btn-primary" onclick="openModal('Бесплатный 3-минутный разбор ниши (0 ₽)')">Получить видеоразбор ниши (0 ₽)</button>
+          <a href="#examples" class="btn btn-outline-light">Смотреть примеры и кейсы</a>
+        </div>
+      </div>
+
+      <!-- Визуальный макет Reels-плеера 9:16 -->
+      <div>
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-top">
+              <span>KARPOV PRODUCTION</span>
+              <span class="live-pill">Showreel 9:16</span>
+            </div>
+
+            <div class="phone-center">
+              <button type="button" class="play-circle" aria-label="Смотреть видео о системе" onclick="openVideoPreview()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+              </button>
+              <div class="reel-caption-box">
+                «Почему 90% контента в бизнесе не приносит заявок — и как это чинится за 72 часа»
+              </div>
+            </div>
+
+            <div class="phone-bottom">
+              <div class="phone-meta">
+                <span>Кейсы: STEP AUTO • XT TUNING</span>
+                <span>02:15</span>
+              </div>
+              <button type="button" class="btn btn-outline-light" style="width:100%; padding:9px 12px; font-size:12.5px;" onclick="openVideoPreview()">
+                Смотреть 2-мин обзор системы
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02. БОЛИ (БЕЗ ЦЕНЫ) -->
+<section id="pain" class="section">
+  <div class="container">
+    <span class="section-eyebrow">Почему классический SMM не работает</span>
+    <h2>Почему контент забирает время, но не приносит клиентов</h2>
+    <p class="section-lead">Покупатель выбирает не того, кто красивее станцевал под тренд, а того, кто попал в его боль и довёл до диалога.</p>
+
+    <div class="grid-4">
+      <div class="card card-pain">
+        <div>
+          <h3>1. Темы «из головы»</h3>
+          <p>Снимаете ради просмотров под музыку — в комментариях никто не спрашивает цену.</p>
+        </div>
+      </div>
+      <div class="card card-pain">
+        <div>
+          <h3>2. «Процесс в лоб»</h3>
+          <p>Сырые видео работы без хука и смысла в ленте просто пролистывают мимо.</p>
+        </div>
+      </div>
+      <div class="card card-pain">
+        <div>
+          <h3>3. Вода из нейросети</h3>
+          <p>Подрядчики лепят шаблонные тексты и путают ваши реальные цены и сроки.</p>
+        </div>
+      </div>
+      <div class="card card-pain">
+        <div>
+          <h3>4. Бросаете через 2 недели</h3>
+          <p>Сложные съёмки не вписываются в вашу работу — профиль снова пустой.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03. КАК УСТРОЕНА СИСТЕМА + ЛИД-МАГНИТ -->
+<section id="system" class="section section-soft">
+  <div class="container">
+    <span class="section-eyebrow">Под капотом Content OS</span>
+    <h2>Как мы превращаем ваши соцсети в канал заявок</h2>
+    <p class="section-lead">Всю рутину анализа, сценариев и продакшена забираем на себя — наружу вы получаете понятный выбор и готовый результат.</p>
+
+    <div class="grid-4">
+      <div class="card card-step">
+        <div>
+          <div class="step-num">01</div>
+          <h3>База правды о вас</h3>
+          <p>12 вопросов голосом + ваш архив и прайсы. Ни одной выдуманной цифры в текстах.</p>
+        </div>
+      </div>
+      <div class="card card-step">
+        <div>
+          <div class="step-num">02</div>
+          <h3>Разведка конкурентов</h3>
+          <p>Находим ролики с охватом 2–3x и живыми запросами цены в комментариях.</p>
+        </div>
+      </div>
+      <div class="card card-step">
+        <div>
+          <div class="step-num">03</div>
+          <h3>Отбор с пруфами</h3>
+          <p>Отсекаем пустой глянец («Тест вторника»). Вы выбираете темы с реальными цифрами.</p>
+        </div>
+      </div>
+      <div class="card card-step">
+        <div>
+          <div class="step-num">04</div>
+          <h3>Продакшн и воронка</h3>
+          <p>Reels, карусели, Stories, PDF-магнит, кодовые слова в Директ и автопостинг.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Захват в середине -->
+    <div class="mid-banner">
+      <div>
+        <div style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:#93c5fd; font-weight:700; margin-bottom:4px;">Полезный материал без звонков</div>
+        <div style="font-size:18px; font-weight:700;">Не готовы к разбору прямо сейчас? Заберите PDF «10 коммерческих связок Reels для высокого чека»</div>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="openModal('Скачать PDF «10 коммерческих связок Reels»')">Забрать PDF в Telegram</button>
+    </div>
+  </div>
+</section>
+
+<!-- 04. НЕТ ВРЕМЕНИ СНИМАТЬСЯ -->
+<section id="formats" class="section">
+  <div class="container">
+    <span class="section-eyebrow">Удобно при любой загрузке</span>
+    <h2>Сколько вашего времени нужно: от 0 до 3 часов в месяц</h2>
+    <p class="section-lead">Подстраиваем производство под ваш график и город — ничего не ломая в операционке.</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div>
+          <span class="section-eyebrow">0 часов съёмок в месяц</span>
+          <h3>Ваш архив + AI-двойник</h3>
+          <p>Пересобираем готовые видео из вашего телефона или 1 раз обучаем вашего AI-аватара с родным голосом.</p>
+        </div>
+        <div class="card-foot">Для тех, кто вообще не хочет стоять перед камерой каждый месяц.</div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="section-eyebrow">10 мин в неделю / Удалённо</span>
+          <h3>Микро-досъём на точке (0 ₽)</h3>
+          <p>Доснимаете 2–3 кадра по ходу работы или читаете готовый текст с телесуфлёра в телефоне.</p>
+        </div>
+        <div class="card-foot">Любой город РФ и мира. Монтаж, звук и титры полностью на нас.</div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="section-eyebrow">Под ключ в Москве</span>
+          <h3>Выездная группа</h3>
+          <p>Приезжаем в офис или на объект со светом, петличками и суфлёром — снимаем пул сразу на месяц.</p>
+        </div>
+        <div class="card-foot">Без вашей возни со светом, кадром и техникой.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05. ПРИМЕРЫ И УРОВЕНЬ -->
+<section id="examples" class="section section-soft">
+  <div class="container">
+    <span class="section-eyebrow">Примеры руками, а не на словах</span>
+    <h2>Что именно вы получаете: аналитика, «было → стало» и видео</h2>
+    <p class="section-lead">Показываем механику разбора, формат сборки контента и реальный уровень цеха продакшена.</p>
+
+    <div class="grid-3">
+      <!-- Пример 1: Рентген ниши -->
+      <div class="example-card">
+        <div class="example-visual">
+          <div style="display:flex; justify-content:space-between; font-size:11px; color:#94a3b8;">
+            <span>ФОРМАТ ОТЧЁТА КОНКУРЕНТОВ</span>
+            <span style="color:var(--green);">3 хита ниши</span>
+          </div>
+          <div class="mini-reel-row">
+            <div class="mini-reel">
+              <strong>Хит №1</strong>
+              Хук про цену<br><span style="color:#cbd5e1;">💬 47 запросов</span>
+            </div>
+            <div class="mini-reel">
+              <strong>Хит №2</strong>
+              Разбор ошибки<br><span style="color:#cbd5e1;">↗ репосты</span>
+            </div>
+            <div class="mini-reel">
+              <strong>Хит №3</strong>
+              Кейс «до/после»<br><span style="color:#cbd5e1;">💬 слово ПРАЙС</span>
+            </div>
+          </div>
+          <div style="font-size:11.5px; color:#cbd5e1; margin-top:10px; border-top:1px solid rgba(255,255,255,0.1); padding-top:8px;">
+            Фильтр «Тест вторника»: адаптировано под реальную точку.
+          </div>
+        </div>
+        <div class="example-body">
+          <h3>Рентген конкурентов</h3>
+          <p style="font-size:14px; color:var(--ink-muted); margin-top:6px;">Вы сразу видите ролики вашей ниши с живыми комментариями и понимаете, почему они сработали.</p>
+        </div>
+      </div>
+
+      <!-- Пример 2: Было -> Стало -->
+      <div class="example-card">
+        <div class="example-visual">
+          <div style="font-size:11px; color:#94a3b8;">ТРАНСФОРМАЦИЯ ИСХОДНИКА</div>
+          <div class="before-after">
+            <div class="ba-box ba-before">
+              <strong style="display:block; color:#e2e8f0; margin-bottom:4px;">БЫЛО</strong>
+              Сырое видео работы в галерее + пустой профиль без воронки
+            </div>
+            <div class="ba-box ba-after">
+              <strong style="display:block; margin-bottom:4px;">СТАЛО</strong>
+              Reels с хуком + карусель 4:5 на ваших фото + PDF лид-магнит
+            </div>
+          </div>
+          <div style="font-size:11.5px; color:#93c5fd; margin-top:10px;">
+            Ноль выдуманных картинок — только ваши реальные объекты.
+          </div>
+        </div>
+        <div class="example-body">
+          <h3>Сборка «Было → Стало»</h3>
+          <p style="font-size:14px; color:var(--ink-muted); margin-top:6px;">Превращаем обычные рабочие кадры с телефона в упакованные продающие форматы.</p>
+        </div>
+      </div>
+
+      <!-- Пример 3: Видео продакшена -->
+      <div class="example-card">
+        <div class="example-visual">
+          <div style="display:flex; justify-content:space-between; font-size:11px; color:#94a3b8;">
+            <span>ПРОДАКШЕН KARPOV PRODUCTION</span>
+            <span style="color:#60a5fa;">Live кейсы</span>
+          </div>
+          <div class="mini-reel-row">
+            <div class="mini-reel" style="text-align:center;">
+              <strong>STEP AUTO</strong>
+              Спикер + 3D<br>моушн Reels
+            </div>
+            <div class="mini-reel" style="text-align:center;">
+              <strong>XT TUNING</strong>
+              Динамичный<br>авто-контент
+            </div>
+            <div class="mini-reel" style="text-align:center;">
+              <strong>WEDDINGS</strong>
+              Кино-цвет<br>и премиум
+            </div>
+          </div>
+          <div style="font-size:11.5px; color:#cbd5e1; margin-top:10px; border-top:1px solid rgba(255,255,255,0.1); padding-top:8px;">
+            Систему ведёт действующий видеопродакшн, а не чат-бот.
+          </div>
+        </div>
+        <div class="example-body">
+          <h3>Живой уровень видео</h3>
+          <p style="font-size:14px; color:var(--ink-muted); margin-top:6px;">Звук 48 кГц, плотный ритм, понятная графика и визуальный вкус без дешёвых шаблонов.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-banner">
+      <strong>Кому мы НЕ подойдём:</strong> не берём проекты с чеком 500 ₽, инфобизнес без твёрдого продукта и тех, кто ждёт волшебную кнопку без фактов бизнеса.
+    </div>
+  </div>
+</section>
+
+<!-- 06. ЦЕНЫ, ОКУПАЕМОСТЬ И КАЛЬКУЛЯТОР -->
+<section id="pricing" class="section">
+  <div class="container">
+    <span class="section-eyebrow">Прозрачные условия</span>
+    <h2>Тарифы и безопасный старт за 72 часа</h2>
+    <p class="section-lead">При среднем чеке 100–300 тыс. ₽ тариф «Оптимальный» окупается с <strong>одной сделки</strong> — и стоит в 3 раза дешевле содержания штатного отдела.</p>
+
+    <!-- Шаг 0 -->
+    <div class="start-banner">
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <span class="hit-badge" style="background:rgba(245,158,11,0.2); border:1px solid var(--amber); color:#fcd34d; margin-bottom:10px;">Шаг 0 • Проверить глубину до контракта</span>
+          <h3 style="font-size:24px; margin-bottom:8px;">«Стратегический старт» за 72 часа</h3>
+          <p style="color:#cbd5e1; font-size:15px;">Анализ ниши и конкурентов + стратегия и воронка + план на 30 дней + <strong style="color:#fff;">10 готовых сценариев Reels</strong> с хуками.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:20px;">
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:8px;">
+            <strong style="font-size:36px; color:#fbbf24;">14 900 ₽</strong>
+            <span style="font-size:18px; color:#94a3b8; text-decoration:line-through;">19 900 ₽</span>
+          </div>
+          <p style="font-size:13.5px; color:#e2e8f0; margin-bottom:14px;"><strong>100% суммы зачитывается</strong> в 1-й месяц ведения за 7 дней (доплата в «Оптимальный» — всего 45 090 ₽). Материалы остаются у вас навсегда.</p>
+          <button type="button" class="btn btn-primary" style="width:100%;" onclick="openModal('Бронь «Стратегического старта» за 14 900 ₽')">Забрать старт за 14 900 ₽</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 тарифа -->
+    <div class="grid-3">
+      <div class="price-card">
+        <div>
+          <span class="section-eyebrow" style="color:var(--ink-muted);">Тариф 01 • Витрина</span>
+          <h3>Присутствие</h3>
+          <div class="price-val">29 990 ₽ <span>/ мес</span></div>
+          <ul class="check-list">
+            <li>Упаковка профиля + план на 30 дней</li>
+            <li><strong>6 каруселей</strong> или постов в ленту</li>
+            <li><strong>10 серий Stories</strong> (прогревы)</li>
+            <li>Автопостинг без выпуска Reels</li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-outline-dark" style="width:100%;" onclick="openModal('Тариф «Присутствие» (29 990 ₽/мес)')">Выбрать «Присутствие»</button>
+      </div>
+
+      <div class="price-card featured">
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span class="section-eyebrow" style="margin:0;">Тариф 02 • Флагман</span>
+            <span class="hit-badge">ХИТ</span>
+          </div>
+          <h3>Оптимальный</h3>
+          <div class="price-val">59 990 ₽ <span>/ мес</span></div>
+          <ul class="check-list">
+            <li><strong>Стратегия и разведка бесплатно</strong></li>
+            <li><strong>10 Reels под ключ</strong> + план 30 дней</li>
+            <li><strong>6 каруселей</strong> + <strong>12 серий Stories</strong></li>
+            <li>Автопостинг + отчёт по заявкам</li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-primary" style="width:100%;" onclick="openModal('Тариф «Оптимальный» (59 990 ₽/мес)')">Выбрать «Оптимальный»</button>
+      </div>
+
+      <div class="price-card">
+        <div>
+          <span class="section-eyebrow" style="color:#d97706;">Тариф 03 • Масштаб</span>
+          <h3>Максимальный</h3>
+          <div class="price-val">99 990 ₽ <span>/ мес</span></div>
+          <ul class="check-list">
+            <li>Стратегия + лид-магнит + воронка</li>
+            <li><strong>20 Reels под ключ</strong> + план 30 дней</li>
+            <li><strong>10 каруселей</strong> + <strong>20 серий Stories</strong></li>
+            <li><strong>Бонус: адаптация во 2-ю соцсеть</strong></li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-outline-dark" style="width:100%;" onclick="openModal('Тариф «Максимальный» (99 990 ₽/мес)')">Выбрать «Максимальный»</button>
+      </div>
+    </div>
+
+    <!-- Калькулятор -->
+    <div class="calc-wrap">
+      <h3 style="font-size:21px; margin-bottom:14px;">Калькулятор комплектации под ваш бизнес</h3>
+      <div class="calc-grid">
+        <div>
+          <div class="calc-group">
+            <div class="calc-group-title">1. Базовый формат</div>
+            <div class="calc-option"><label><input type="radio" name="tier" value="0" onchange="recalc()"> Только «Стратегический старт» (72 ч)</label><strong>14 900 ₽ разово</strong></div>
+            <div class="calc-option"><label><input type="radio" name="tier" value="29990" onchange="recalc()"> «Присутствие»</label><strong>29 990 ₽/мес</strong></div>
+            <div class="calc-option"><label><input type="radio" name="tier" value="59990" checked onchange="recalc()"> «Оптимальный» (ХИТ)</label><strong>59 990 ₽/мес</strong></div>
+            <div class="calc-option"><label><input type="radio" name="tier" value="99990" onchange="recalc()"> «Максимальный»</label><strong>99 990 ₽/мес</strong></div>
+          </div>
+
+          <div class="calc-group" style="margin-bottom:0;">
+            <div class="calc-group-title">2. Опции (AI-аватар, съёмка, сети, скидки)</div>
+            <div class="calc-option"><label><input type="checkbox" id="opt-av-remote" onchange="toggleAvatar('remote')"> AI-аватар удалённо</label><strong>+19 900 ₽ разово</strong></div>
+            <div class="calc-option"><label><input type="checkbox" id="opt-av-msk" onchange="toggleAvatar('msk')"> AI-аватар «Под ключ в Москве»</label><strong>+49 900 ₽ разово</strong></div>
+            <div class="calc-option"><label><input type="checkbox" id="opt-shoot" onchange="recalc()"> Выездная съёмка МСК (iPhone, 2–3 ч)</label><strong>+14 900 ₽ разово</strong></div>
+            <div class="calc-option"><label><input type="checkbox" id="opt-multi4" onchange="recalc()"> Мультипостинг «Все сети» (TG+VK+Shorts+Threads)</label><strong>+9 900 ₽/мес</strong></div>
+            <div class="calc-option"><label><input type="checkbox" id="opt-credit" onchange="recalc()"> Зачёт «Стратегического старта» в 1-й месяц</label><strong>−14 900 ₽</strong></div>
+            <div class="calc-option"><label><input type="checkbox" id="opt-prepay3" onchange="recalc()"> Предоплата за 3 месяца</label><strong>−10%</strong></div>
+            <div class="calc-option"><label><input type="checkbox" id="opt-b2b" onchange="recalc()"> Оплата на р/с ИП/ООО</label><strong>+10%</strong></div>
+          </div>
+        </div>
+
+        <div class="calc-total-box">
+          <div>
+            <span class="section-eyebrow">Итог расчёта</span>
+            <div style="margin-bottom:10px; font-size:14px; color:var(--ink-muted);">Ежемесячно: <strong id="calc-monthly" style="display:block; font-size:26px; color:var(--ink);">59 990 ₽/мес</strong></div>
+            <div style="margin-bottom:12px; font-size:14px; color:var(--ink-muted);">Разовые опции: <strong id="calc-onetime" style="display:block; font-size:20px; color:var(--ink);">0 ₽</strong></div>
+            <div style="border-top:1px solid #cbd5e1; padding-top:12px; font-size:14px; color:var(--ink-muted);">К оплате за 1-й месяц: <strong id="calc-first" style="display:block; font-size:32px; color:var(--blue);">59 990 ₽</strong></div>
+            <div id="calc-hint" style="font-size:12.5px; color:var(--green); font-weight:600; margin-top:8px;"></div>
+          </div>
+          <button type="button" class="btn btn-primary" style="width:100%; margin-top:16px;" onclick="openModalWithCalc()">Зафиксировать расчёт и забрать разбор</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07. FAQ + ЖУРНАЛ СТАТЕЙ -->
+<section id="blog" class="section section-soft">
+  <div class="container">
+    <span class="section-eyebrow">Частые вопросы и разборы</span>
+    <h2>Коротко о главном</h2>
+
+    <div class="grid-2" style="margin-top:20px; margin-bottom:44px;">
+      <div class="card">
+        <h3>Сработает в узкой нише или не в Москве?</h3>
+        <p>Да. Работаем по всей РФ; фильтр «Тест вторника» подбирает форматы под ваш город и реальную точку.</p>
+      </div>
+      <div class="card">
+        <h3>Если уже снято много видео на точке?</h3>
+        <p>Не выбрасываем: сразу пересобираем ваш архив под сильные хуки без лишних съёмок.</p>
+      </div>
+      <div class="card">
+        <h3>Как не запутаетесь в наших ценах и сроках?</h3>
+        <p>Перед стартом фиксируем закрытую базу правды по вашему бизнесу — ноль фантазий в текстах.</p>
+      </div>
+      <div class="card">
+        <h3>Правки, сроки и оплата по счёту?</h3>
+        <p>Сдача пулами на 1–2 недели вперёд, 2 круга правок бесплатно, счёт ИП/ООО (+10%).</p>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:12px; margin-bottom:18px;">
+      <div>
+        <span class="section-eyebrow">База знаний (SEO-блог)</span>
+        <h3 style="font-size:24px;">Полезные разборы для собственников</h3>
+      </div>
+      <span style="font-size:13.5px; color:var(--ink-muted);">Раздел для регулярных SEO-статей и лидогенерации из поиска</span>
+    </div>
+
+    <div class="grid-3">
+      <div class="blog-card">
+        <div>
+          <div class="blog-meta">Гайд • Производство и услуги</div>
+          <h3 style="font-size:17px; margin-top:6px;">Как снимать Reels для бизнеса и цеха без лица собственника</h3>
+        </div>
+        <button type="button" class="btn btn-outline-dark" style="padding:9px 14px; font-size:13px;" onclick="openModal('Запрос статьи / разбора по производству')">Скоро в журнале →</button>
+      </div>
+      <div class="blog-card">
+        <div>
+          <div class="blog-meta">Экономика • Сравнение</div>
+          <h3 style="font-size:17px; margin-top:6px;">Штатный SMM vs Content OS: реальная математика затрат</h3>
+        </div>
+        <button type="button" class="btn btn-outline-dark" style="padding:9px 14px; font-size:13px;" onclick="openModal('Запрос расчёта экономики контента')">Скоро в журнале →</button>
+      </div>
+      <div class="blog-card">
+        <div>
+          <div class="blog-meta">Воронки • Instagram</div>
+          <h3 style="font-size:17px; margin-top:6px;">Как кодовые слова в Reels переводят зрителя в заявку</h3>
+        </div>
+        <button type="button" class="btn btn-outline-dark" style="padding:9px 14px; font-size:13px;" onclick="openModal('Запрос схемы воронки кодовых слов')">Скоро в журнале →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08. ФИНАЛЬНЫЙ ЗАХВАТ -->
+<section id="lead" class="section section-dark">
+  <div class="container">
+    <span class="section-eyebrow">Первый шаг до любых оплат — 0 ₽</span>
+    <h2>Заберите бесплатный 3-минутный видеоразбор вашей ниши</h2>
+    <p class="section-lead">Получите на руки: <strong style="color:#fff;">3</strong> рабочих ролика конкурентов с заявками • <strong style="color:#fff;">2</strong> дыры вашего профиля • <strong style="color:#fff;">1</strong> готовый сценарий под ваш чек.</p>
+
+    <div class="grid-2" style="align-items:stretch;">
+      <div class="form-card">
+        <h3 style="font-size:20px; margin-bottom:16px;">Заявка на видеоразбор</h3>
+        <form onsubmit="submitMainForm(event)">
+          <div class="form-field">
+            <label for="m-niche">1. Ниша и главный продукт *</label>
+            <input id="m-niche" type="text" required placeholder="Например: производство мебели / автодетейлинг / клиника">
+          </div>
+          <div class="form-field">
+            <label for="m-link">2. Ссылка на Instagram или сайт *</label>
+            <input id="m-link" type="text" required placeholder="@профиль или ссылка">
+          </div>
+          <div class="form-field">
+            <label for="m-check">3. Средний чек и формат съёмок *</label>
+            <select id="m-check" required>
+              <option value="">Выберите вариант...</option>
+              <option>Чек от 50 000 ₽ • Готов сниматься сам</option>
+              <option>Чек от 50 000 ₽ • Нужен AI-аватар / пересборка архива</option>
+              <option>Нужен сразу «Стратегический старт» за 14 900 ₽</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="m-tg">Telegram или телефон для отправки разбора *</label>
+            <input id="m-tg" type="text" required placeholder="@username или +7 ...">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Получить видеоразбор + 1 сценарий</button>
+          <div id="m-status" class="form-status"></div>
+        </form>
+      </div>
+
+      <div class="founder-card">
+        <div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+            <div class="avatar-monogram">ДК</div>
+            <div>
+              <div style="font-size:18px; font-weight:800; color:#fff;">Дмитрий Карпов</div>
+              <div style="font-size:13.5px; color:#94a3b8;">Руководитель KARPOV PRODUCTION / CONTENT OS</div>
+            </div>
+          </div>
+          <p style="font-size:15px; color:#cbd5e1; margin-bottom:20px;">Работаем в Москве (выездные съёмки) и удалённо по всей РФ. Если удобнее сразу переслать ссылку на профиль или голосовое — пишите напрямую:</p>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <a href="https://t.me/frankiemoor" class="btn btn-primary" style="width:100%;">Написать в Telegram: @frankiemoor</a>
+            <a href="tel:+79649999443" class="btn btn-outline-light" style="width:100%;">Позвонить / WhatsApp / TG: +7 964 999-94-43</a>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border-dark); padding-top:16px; font-size:13px; color:#94a3b8;">
+          2 бесплатных круга правок • Сдача пулами на 1–2 недели • Прямая оплата или счёт ИП/ООО (+10%)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;">
+    <div><strong style="color:#fff;">CONTENT OS • KARPOV PRODUCTION</strong> — системный контент-маркетинг и видеопродакшн</div>
+    <div>Москва и вся РФ • @frankiemoor • +7 964 999-94-43</div>
+  </div>
+</footer>
+
+<!-- ЛИПКАЯ КНОПКА НА ТЕЛЕФОНЕ -->
+<div class="sticky-mobile-cta">
+  <div style="font-size:12.5px; line-height:1.2;">
+    <strong style="display:block;">Видеоразбор ниши</strong>
+    <span style="color:#94a3b8;">3 примера + 1 сценарий (0 ₽)</span>
+  </div>
+  <button type="button" class="btn btn-primary" style="padding:9px 14px; font-size:13px; white-space:nowrap;" onclick="openModal('Быстрая заявка с мобильного экрана')">Забрать</button>
+</div>
+
+<!-- 2-ШАГОВОЕ МОДАЛЬНОЕ ОКНО -->
+<div id="lead-modal" class="modal-backdrop">
+  <div class="modal-window">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+      <span class="section-eyebrow" style="margin:0;">Быстрая заявка</span>
+      <button type="button" class="btn btn-outline-dark" style="padding:5px 10px; font-size:12px;" onclick="closeModal()">✕ Закрыть</button>
+    </div>
+    <h3 id="modal-title" style="font-size:20px; margin-bottom:14px;">Заявка</h3>
+    <form onsubmit="submitModalForm(event)">
+      <div class="form-field">
+        <label>Шаг 1: Ниша и ссылка на Instagram / сайт *</label>
+        <input id="modal-niche" type="text" required placeholder="Например: автосервис в Москве, @account">
+      </div>
+      <div class="form-field">
+        <label>Шаг 2: Telegram или телефон для ответа *</label>
+        <input id="modal-contact" type="text" required placeholder="@username или +7 ...">
+      </div>
+      <div id="modal-calc-summary" style="font-size:13px; color:var(--blue); font-weight:600; margin-bottom:14px;"></div>
+      <button type="submit" class="btn btn-primary" style="width:100%;">Отправить заявку</button>
+      <div id="modal-status" class="form-status"></div>
+    </form>
+  </div>
+</div>
+
+<!-- МОДАЛКА ПРЕВЬЮ ВИДЕО -->
+<div id="video-modal" class="modal-backdrop">
+  <div class="modal-window" style="background:#0b1222; color:#fff; border:1px solid rgba(255,255,255,0.2);">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+      <span style="font-size:12px; font-weight:700; color:#60a5fa; text-transform:uppercase;">Видео-обзор системы (макет плеера)</span>
+      <button type="button" class="btn btn-outline-light" style="padding:5px 10px; font-size:12px;" onclick="closeVideoPreview()">✕ Закрыть</button>
+    </div>
+    <div style="background:#060a14; border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:24px; text-align:center; margin-bottom:14px;">
+      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Здесь в боевой версии запускается 2-минутное видео от Дмитрия Карпова + нарезка шоурила</div>
+      <p style="font-size:13px; color:#94a3b8;">Сейчас это превью-концепция, чтобы оценить расположение плеера на экране.</p>
+    </div>
+    <button type="button" class="btn btn-primary" style="width:100%;" onclick="closeVideoPreview(); openModal('Видеоразбор вашей ниши (0 ₽)');">Перейти к получению разбора</button>
+  </div>
+</div>
+
+<script>
+  const HERO_VARIANTS = {
+    1: {
+      eyebrow: 'Вариант 1 из 3 • Москва (выезд) и вся РФ (онлайн) • Старт за 72 часа',
+      title: 'Ваши конкуренты уже забирают клиентов из Reels. Заберём их обратно',
+      lead: 'Находим ролики в вашей нише, где покупатели прямо сейчас спрашивают цену, и запускаем ваш контент под ключ — без танцев и съёмочной каторги.'
+    },
+    2: {
+      eyebrow: 'Вариант 2 из 3 • Москва (выезд) и вся РФ (онлайн) • Отдел контента за 72 часа',
+      title: 'Reels, которые приносят заявки — даже если вы ненавидите сниматься',
+      lead: 'Пересоберём ваши старые видео из телефона, обучим AI-двойника или снимем всё за 1 выезд в Москве. План и 10 сценариев — уже через 72 часа.'
+    },
+    3: {
+      eyebrow: 'Вариант 3 из 3 • Москва и вся РФ • Запуск стратегии за 72 часа',
+      title: 'Хватит снимать в пустоту и платить за «красивые просмотры»',
+      lead: 'Подрядчики просили вас самих выдумывать темы, а заявок ноль? Вытаскиваем связки с доказанным спросом и ведём до диалога в Директ.'
+    }
+  };
+
+  function setHeroVariant(num) {
+    const v = HERO_VARIANTS[num];
+    if (!v) return;
+    document.getElementById('hero-eyebrow').textContent = v.eyebrow;
+    document.getElementById('hero-title').textContent = v.title;
+    document.getElementById('hero-lead').textContent = v.lead;
+    [1, 2, 3].forEach((id) => {
+      const btn = document.getElementById('ab-btn-' + id);
+      if (btn) btn.classList.toggle('active', id === num);
+    });
+  }
+
+  function toggleAllVariants() {
+    document.getElementById('hero-all-variants').classList.toggle('open');
+  }
+
+  function formatRub(n) {
+    return Math.round(n).toLocaleString('ru-RU') + ' ₽';
+  }
+
+  function toggleAvatar(type) {
+    const r = document.getElementById('opt-av-remote');
+    const m = document.getElementById('opt-av-msk');
+    if (type === 'remote' && r.checked) m.checked = false;
+    if (type === 'msk' && m.checked) r.checked = false;
+    recalc();
+  }
+
+  function getCalc() {
+    const tierEl = document.querySelector('input[name="tier"]:checked');
+    const base = tierEl ? Number(tierEl.value) : 0;
+    const av = document.getElementById('opt-av-remote').checked ? 19900 :
+               document.getElementById('opt-av-msk').checked ? 49900 : 0;
+    const shoot = document.getElementById('opt-shoot').checked ? 14900 : 0;
+    const multi4 = document.getElementById('opt-multi4').checked ? 9900 : 0;
+    const credit = document.getElementById('opt-credit').checked;
+    const prepay3 = document.getElementById('opt-prepay3').checked;
+    const b2b = document.getElementById('opt-b2b').checked;
+
+    let monthly = base > 0 ? base + multi4 : 0;
+    if (prepay3) monthly *= 0.90;
+
+    let onetime = av + shoot + (base === 0 ? 14900 : 0);
+    let first = monthly + onetime;
+    if (credit && base >= 59990) first = Math.max(0, first - 14900);
+
+    if (b2b) {
+      monthly *= 1.10;
+      onetime *= 1.10;
+      first *= 1.10;
+    }
+
+    return { base, monthly, onetime, first, credit, prepay3, b2b };
+  }
+
+  function recalc() {
+    const s = getCalc();
+    document.getElementById('calc-monthly').textContent = s.base > 0 ? formatRub(s.monthly) + '/мес' : '0 ₽ (разовый старт)';
+    document.getElementById('calc-onetime').textContent = formatRub(s.onetime);
+    document.getElementById('calc-first').textContent = formatRub(s.first);
+
+    const notes = [];
+    if (s.credit && s.base >= 59990) notes.push('Зачёт старта −14 900 ₽ применён.');
+    if (s.credit && s.base < 59990) notes.push('Зачёт 14 900 ₽ действует от тарифа «Оптимальный».');
+    if (s.prepay3) notes.push('Скидка −10% за 3 мес.');
+    if (s.b2b) notes.push('Счёт ИП/ООО +10%.');
+    document.getElementById('calc-hint').textContent = notes.join(' ');
+  }
+
+  function openModal(title, calcNote) {
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-calc-summary').textContent = calcNote || '';
+    document.getElementById('modal-status').style.display = 'none';
+    document.getElementById('lead-modal').classList.add('open');
+  }
+
+  function openModalWithCalc() {
+    const s = getCalc();
+    const tName = s.base === 0 ? 'Стратегический старт' :
+                  s.base === 29990 ? 'Присутствие' :
+                  s.base === 59990 ? 'Оптимальный' : 'Максимальный';
+    openModal('Зафиксировать расчёт тарифа', 'Выбрано: ' + tName + ' • 1-й месяц: ' + formatRub(s.first));
+  }
+
+  function closeModal() {
+    document.getElementById('lead-modal').classList.remove('open');
+  }
+
+  function openVideoPreview() {
+    document.getElementById('video-modal').classList.add('open');
+  }
+
+  function closeVideoPreview() {
+    document.getElementById('video-modal').classList.remove('open');
+  }
+
+  function submitModalForm(e) {
+    e.preventDefault();
+    const st = document.getElementById('modal-status');
+    st.style.display = 'block';
+    st.textContent = '[Демо превью]: на боевом сайте заявка сразу уходит в Telegram и Notion.';
+  }
+
+  function submitMainForm(e) {
+    e.preventDefault();
+    const st = document.getElementById('m-status');
+    st.style.display = 'block';
+    st.textContent = '[Демо превью]: на боевом сайте заявка сразу уходит в Telegram и Notion.';
+  }
+
+  recalc();
+</script>
+
+</body>
+</html>
