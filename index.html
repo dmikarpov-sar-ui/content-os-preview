@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CONTENT OS — Забираем на себя идеи, съёмки, монтаж и заявки из Reels</title>
-<meta name="description" content="Запустим Reels на поток без съёмочной рутины: идеи с пруфами конкурентов, живой и AI-продакшн, монтаж и воронка в Директ. Москва и вся РФ.">
+<title>CONTENT OS · Забираем на себя анализ рынка, съёмки, монтаж и заявки</title>
+<meta name="description" content="Изучаем конкурентов и покупателей, пишем сценарии, снимаем или делаем ролики по вашим фото и доводим зрителей до заявок. Москва и вся РФ.">
 <style>
   :root {
     --bg-dark: #060a14;
@@ -89,13 +89,13 @@
   }
 
   .btn-outline-light {
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.08);
     color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.24);
   }
 
   .btn-outline-light:hover {
-    background: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.16);
   }
 
   .btn-outline-dark {
@@ -158,7 +158,7 @@
   .nav-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 22px;
+    gap: 20px;
     list-style: none;
   }
 
@@ -186,14 +186,14 @@
     text-decoration: none;
   }
 
-  /* 01. HERO */
+  /* 01. ПЕРВЫЙ ЭКРАН */
   .hero-section {
     background:
       radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.24) 0%, transparent 45%),
       radial-gradient(circle at 12% 85%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
       var(--bg-dark);
     color: #ffffff;
-    padding: 54px 0 66px;
+    padding: 50px 0 62px;
     border-bottom: 1px solid var(--border-dark);
   }
 
@@ -218,20 +218,20 @@
   }
 
   .hero-section h1 {
-    font-size: clamp(30px, 4.1vw, 48px);
+    font-size: clamp(29px, 3.85vw, 46px);
     font-weight: 800;
-    line-height: 1.08;
+    line-height: 1.09;
     letter-spacing: -0.028em;
     margin-bottom: 16px;
     color: #ffffff;
   }
 
   .hero-lead {
-    font-size: clamp(16px, 1.4vw, 19px);
+    font-size: clamp(16px, 1.4vw, 18.5px);
     color: #cbd5e1;
-    line-height: 1.45;
+    line-height: 1.48;
     margin-bottom: 22px;
-    max-width: 590px;
+    max-width: 600px;
   }
 
   .hero-chips {
@@ -265,15 +265,15 @@
     gap: 12px;
   }
 
-  /* Телефон-плеер 9:16 в Hero */
+  /* Телефон-плеер 9:16 в первом экране */
   .phone-frame {
-    max-width: 310px;
+    max-width: 318px;
     width: 100%;
     margin: 0 auto;
     background: linear-gradient(160deg, #131c31 0%, #090e1a 100%);
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 28px;
-    padding: 13px;
+    padding: 12px;
     box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55);
   }
 
@@ -281,16 +281,39 @@
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    aspect-ratio: 9 / 14;
-    background:
-      radial-gradient(circle at 30% 25%, rgba(59, 130, 246, 0.35), transparent 55%),
-      radial-gradient(circle at 80% 75%, rgba(16, 185, 129, 0.2), transparent 50%),
-      #0c1324;
+    aspect-ratio: 9 / 15;
+    background: #0c1324;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 18px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .phone-poster-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .phone-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(6, 10, 20, 0.72) 0%,
+      rgba(6, 10, 20, 0.25) 45%,
+      rgba(6, 10, 20, 0.88) 100%
+    );
+    z-index: 1;
+  }
+
+  .phone-layer {
+    position: relative;
+    z-index: 2;
   }
 
   .phone-top {
@@ -299,17 +322,17 @@
     align-items: center;
     font-size: 11px;
     font-weight: 700;
-    color: #cbd5e1;
+    color: #e2e8f0;
   }
 
   .live-pill {
-    background: rgba(239, 68, 68, 0.22);
-    border: 1px solid rgba(248, 113, 113, 0.45);
-    color: #fecaca;
+    background: rgba(16, 185, 129, 0.24);
+    border: 1px solid rgba(52, 211, 153, 0.55);
+    color: #a7f3d0;
     padding: 3px 9px;
     border-radius: 999px;
     font-size: 10.5px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
   }
 
@@ -322,14 +345,14 @@
     height: 62px;
     border-radius: 999px;
     background: rgba(37, 99, 235, 0.94);
-    border: 2px solid rgba(255, 255, 255, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.65);
     color: #ffffff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     cursor: pointer;
-    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.24);
     transition: transform 0.15s;
   }
 
@@ -338,27 +361,20 @@
   }
 
   .reel-caption-box {
-    background: rgba(6, 10, 20, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(6, 10, 20, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 12px;
-    padding: 10px 12px;
-    font-size: 14px;
+    padding: 9px 11px;
+    font-size: 13px;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.3;
-  }
-
-  .phone-meta {
-    font-size: 11.5px;
-    color: #94a3b8;
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 8px;
   }
 
   /* Секции */
   .section {
-    padding: 64px 0;
+    padding: 62px 0;
   }
 
   .section-soft {
@@ -389,7 +405,7 @@
   .section h2 {
     font-size: clamp(24px, 3vw, 35px);
     font-weight: 800;
-    line-height: 1.14;
+    line-height: 1.15;
     letter-spacing: -0.022em;
     margin-bottom: 10px;
   }
@@ -397,8 +413,8 @@
   .section-lead {
     font-size: 16.5px;
     color: var(--ink-muted);
-    max-width: 700px;
-    margin-bottom: 28px;
+    max-width: 720px;
+    margin-bottom: 26px;
   }
 
   .section-dark .section-lead {
@@ -438,7 +454,7 @@
     min-width: 0;
   }
 
-  /* 02. Карточки болей (коротко и в лоб) */
+  /* Карточки */
   .card {
     background: #ffffff;
     border: 1px solid var(--border-light);
@@ -453,19 +469,38 @@
     border-top: 3px solid #ef4444;
   }
 
+  .card-mkt {
+    border-top: 3px solid var(--blue);
+  }
+
+  .mkt-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
   .card h3 {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.25;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
   }
 
   .card p {
     font-size: 14.5px;
     color: var(--ink-muted);
+    line-height: 1.45;
   }
 
-  /* 03. Интерактивная витрина 4 видео-кейсов вместо текстовых блоков */
+  /* Витрина видео-кейсов и материалов */
   .showcase-card {
     background: #ffffff;
     border: 1px solid var(--border-light);
@@ -484,59 +519,92 @@
 
   .video-thumb {
     position: relative;
-    aspect-ratio: 4 / 5;
-    background:
-      radial-gradient(circle at 25% 20%, rgba(59, 130, 246, 0.28), transparent 55%),
-      #0a101f;
-    padding: 16px;
+    aspect-ratio: 9 / 14;
+    background: #0a101f;
+    padding: 14px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    overflow: hidden;
+  }
+
+  .video-thumb-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.25s ease;
+  }
+
+  .showcase-card:hover .video-thumb-img {
+    transform: scale(1.03);
+  }
+
+  .video-thumb-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(6, 10, 20, 0.62) 0%,
+      rgba(6, 10, 20, 0.18) 46%,
+      rgba(6, 10, 20, 0.86) 100%
+    );
+    z-index: 1;
+  }
+
+  .video-thumb > .thumb-tag,
+  .video-thumb > .thumb-play,
+  .video-thumb > .thumb-caption {
+    position: relative;
+    z-index: 2;
   }
 
   .thumb-tag {
     align-self: flex-start;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(6, 10, 20, 0.72);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
     border-radius: 999px;
     padding: 4px 10px;
     font-size: 11px;
     font-weight: 700;
-    color: #e2e8f0;
+    color: #f8fafc;
   }
 
   .thumb-play {
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
     border-radius: 999px;
     background: rgba(37, 99, 235, 0.92);
-    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.65);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0.25);
   }
 
   .thumb-caption {
-    background: rgba(6, 10, 20, 0.78);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(6, 10, 20, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 10px;
-    padding: 9px 11px;
+    padding: 8px 10px;
     font-size: 12.5px;
     font-weight: 600;
     line-height: 1.3;
   }
 
   .showcase-body {
-    padding: 16px 18px 18px;
+    padding: 15px 17px 17px;
   }
 
   .showcase-body h3 {
-    font-size: 17px;
+    font-size: 16.5px;
     font-weight: 800;
     margin-bottom: 5px;
   }
@@ -545,6 +613,42 @@
     font-size: 13.5px;
     color: var(--ink-muted);
     line-height: 1.4;
+  }
+
+  /* Карточки маркетинга и визуала под видео */
+  .visual-thumb {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: #0f172a;
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .visual-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.25s ease;
+  }
+
+  .showcase-card:hover .visual-thumb img {
+    transform: scale(1.03);
+  }
+
+  .visual-badge {
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    background: rgba(6, 10, 20, 0.86);
+    color: #ffffff;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .mid-banner {
@@ -560,7 +664,7 @@
     gap: 16px;
   }
 
-  /* 04. Тарифы + Умный калькулятор + Старт снизу */
+  /* Тарифы и умный калькулятор */
   .price-card {
     background: #ffffff;
     border: 1px solid var(--border-light);
@@ -637,7 +741,6 @@
     color: var(--ink);
   }
 
-  /* Умный калькулятор */
   .calc-wrap {
     margin-top: 26px;
     background: #ffffff;
@@ -916,7 +1019,6 @@
     cursor: pointer;
   }
 
-  /* Стратегический старт — компактно под тарифами */
   .start-strip {
     margin-top: 22px;
     background: #0f172a;
@@ -1003,16 +1105,17 @@
     display: none;
   }
 
+  /* Модалки (заявка + медиа плеер и галерея) */
   .modal-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(6, 10, 20, 0.78);
+    background: rgba(6, 10, 20, 0.82);
     backdrop-filter: blur(6px);
     z-index: 200;
     display: none;
     align-items: center;
     justify-content: center;
-    padding: 16px;
+    padding: 14px;
   }
 
   .modal-backdrop.open {
@@ -1027,8 +1130,67 @@
     background: #ffffff;
     color: var(--ink);
     border-radius: 18px;
-    padding: 24px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    padding: 22px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  }
+
+  .modal-media-window {
+    max-width: 780px;
+    background: #0b1222;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .media-stage {
+    background: #050811;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .media-stage video {
+    max-height: 62vh;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    background: #000000;
+  }
+
+  .media-stage img {
+    max-height: 62vh;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  .media-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .media-tab-btn {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.06);
+    color: #e2e8f0;
+    padding: 7px 12px;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .media-tab-btn.active {
+    background: var(--blue);
+    border-color: var(--blue-bright);
+    color: #ffffff;
   }
 
   footer {
@@ -1113,14 +1275,15 @@
       <a href="#" class="brand">
         <span class="brand-dot"></span>
         <span>CONTENT OS</span>
-        <span class="brand-geo">• Москва / РФ</span>
+        <span class="brand-geo">• Москва и вся РФ</span>
       </a>
       <ul class="nav-links">
         <li><a href="#pain">Боли</a></li>
-        <li><a href="#cases">Видео-примеры</a></li>
+        <li><a href="#marketing">Анализ рынка</a></li>
+        <li><a href="#cases">Примеры работ</a></li>
         <li><a href="#pricing">Тарифы</a></li>
         <li><a href="#calculator">Калькулятор</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#faq">Вопросы</a></li>
       </ul>
       <div class="header-cta">
         <a href="https://t.me/frankiemoor" class="header-tg">@frankiemoor</a>
@@ -1135,49 +1298,51 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="hero-badge">Москва (выезд) и вся РФ (онлайн) • Запуск за 72 часа</div>
-        <h1>Хватит самому работать SMM-щиком. Запустим вам Reels на поток — даже без съёмок</h1>
+        <div class="hero-badge">Москва (выезд) и вся РФ (удалённо) • Запуск за 72 часа</div>
+        <h1>Хватит самому работать SMM-щиком. Сначала разберём ваш рынок, потом запустим Reels на поток</h1>
         <p class="hero-lead">
-          Идеи с пруфами конкурентов, монтаж и воронка заявок в Директ — от 0 до 3 часов вашего времени в месяц.
+          Изучаем цены конкурентов и реальные страхи покупателей. На базе этого пишем сценарии, снимаем или собираем ролики по вашим фото и доводим зрителей до заявок в личку за 0-3 часа вашего времени в месяц.
         </p>
 
         <div class="hero-chips">
-          <div class="hero-chip"><span>✓</span> Готовый план за 72 часа</div>
-          <div class="hero-chip"><span>✓</span> От 0 ч у камеры (архив / AI)</div>
-          <div class="hero-chip"><span>✓</span> Воронка кодовых слов</div>
+          <div class="hero-chip"><span>✓</span> Полный разбор рынка до съёмок</div>
+          <div class="hero-chip"><span>✓</span> От 0 ч перед камерой</div>
+          <div class="hero-chip"><span>✓</span> Поток заявок в личку</div>
         </div>
 
         <div class="hero-actions">
-          <button type="button" class="btn btn-primary" onclick="openModal('Бесплатный 3-минутный разбор ниши (0 ₽)')">Получить видеоразбор ниши (0 ₽)</button>
-          <a href="#cases" class="btn btn-outline-light">Смотреть примеры видео</a>
+          <button type="button" class="btn btn-primary" onclick="openModal('Бесплатный 3-минутный видеоразбор вашей ниши (0 ₽)')">Получить видеоразбор ниши (0 ₽)</button>
+          <a href="#cases" class="btn btn-outline-light">Смотреть живые примеры</a>
         </div>
       </div>
 
-      <!-- Слот под главный видео-шоурил 9:16 -->
-      <div data-video-slot="hero">
+      <!-- Телефон 9:16 с реальным примером ролика -->
+      <div>
         <div class="phone-frame">
           <div class="phone-screen">
-            <div class="phone-top">
+            <img class="phone-poster-img" data-media-src="media/posters/v_step_auto_motion.jpg" alt="Пример ролика STEP AUTO с графикой">
+            <div class="phone-shade"></div>
+
+            <div class="phone-layer phone-top">
               <span>KARPOV PRODUCTION</span>
-              <span class="live-pill">Showreel 9:16</span>
+              <span class="live-pill">Пример 9:16</span>
             </div>
 
-            <div class="phone-center">
-              <button type="button" class="play-circle" aria-label="Смотреть видео о системе" onclick="openVideoModal('Главный шоурил и обзор системы', 'Сюда встаёт ваш главный ролик: живой моушн-монтаж + быстрый показ, как устроена система.')">
+            <div class="phone-layer phone-center">
+              <button type="button" class="play-circle" aria-label="Смотреть видео STEP AUTO" onclick="openCasePack('motion', 0)">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
               </button>
               <div class="reel-caption-box">
-                «Как мы делаем Reels под заявки за 0–3 часа вашего времени в месяц»
+                Живой пример: монтаж с графикой, чистым звуком и удержанием зрителя
               </div>
             </div>
 
-            <div>
-              <div class="phone-meta">
-                <span>Слот под ваш шоурил</span>
-                <span>01:30</span>
-              </div>
-              <button type="button" class="btn btn-outline-light" style="width:100%; padding:9px 12px; font-size:12.5px;" onclick="openVideoModal('Главный шоурил и обзор системы', 'Сюда встаёт ваш главный ролик: живой моушн-монтаж + быстрый показ, как устроена система.')">
-                Смотреть видео-пример
+            <div class="phone-layer" style="display:flex; flex-direction:column; gap:7px;">
+              <button type="button" class="btn btn-primary" style="width:100%; padding:10px 12px; font-size:13px;" onclick="openCasePack('motion', 0)">
+                Смотреть ролик со звуком (1 мин)
+              </button>
+              <button type="button" class="btn btn-outline-light" style="width:100%; padding:9px 12px; font-size:12.5px;" onclick="openCasePack('before_after', 0)">
+                Сравнить: Было → Стало (26 сек)
               </button>
             </div>
           </div>
@@ -1187,141 +1352,232 @@
   </div>
 </section>
 
-<!-- 02. 4 КОРОТКИЕ БОЛИ (ТОЧНО ЯЗЫКОМ ПРЕДПРИНИМАТЕЛЕЙ) -->
+<!-- 02. 4 КОРОТКИЕ БОЛИ -->
 <section id="pain" class="section">
   <div class="container">
     <span class="section-eyebrow">Знакомая ситуация?</span>
-    <h2>Почему сейчас контент тормозит бизнес</h2>
+    <h2>Почему сейчас соцсети забирают время, но не приносят клиентов</h2>
 
     <div class="grid-4" style="margin-top:22px;">
       <div class="card card-pain">
         <div>
           <h3>1. Сами как SMM-щик</h3>
-          <p>Тратите вечера на придумывание тем и контроль монтажа вместо роста продаж.</p>
+          <p>Тратите вечера на придумывание тем и правки монтажёрам вместо развития бизнеса.</p>
         </div>
       </div>
       <div class="card card-pain">
         <div>
           <h3>2. Мало контента и нет идей</h3>
-          <p>Как только начинается завал по заказам — профиль замирает на недели.</p>
+          <p>Как только начинается завал по заказам, аккаунт замирает на недели.</p>
         </div>
       </div>
       <div class="card card-pain">
         <div>
-          <h3>3. Сырое видео не продаёт</h3>
-          <p>Снимаете процесс работы в лоб без хука — охваты низкие, заявок ноль.</p>
+          <h3>3. Обычные видео не продают</h3>
+          <p>Снимаете процесс работы в лоб без цепляющего начала. Охваты низкие, заявок нет.</p>
         </div>
       </div>
       <div class="card card-pain">
         <div>
           <h3>4. Подрядчики льют воду</h3>
-          <p>Присылают шаблонные тексты из нейросетей и путают ваши реальные цены.</p>
+          <p>Берут шаблонные тексты из интернета, путают ваши цены, сроки и суть продукта.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 03. ВИДЕО-ШОУРУМ: НАЖМИ И ПОСМОТРИ В ДЕЛЕ -->
-<section id="cases" class="section section-soft">
+<!-- 03. ГЛУБОКИЙ МАРКЕТИНГ ДО СЪЁМОК -->
+<section id="marketing" class="section section-soft">
   <div class="container">
-    <span class="section-eyebrow">Смотрите руками</span>
-    <h2>4 формата, которые закрывают контент без вашей рутины</h2>
-    <p class="section-lead">Нажмите на любую карточку — откроется пример ролика или разбора.</p>
+    <span class="section-eyebrow">Что под капотом перед стартом</span>
+    <h2>Почему наши ролики приводят покупателей, а не пустые просмотры</h2>
+    <p class="section-lead">До записи первого видео мы перепахиваем весь ваш рынок. Вы не тратите бюджет на съёмки наугад.</p>
 
     <div class="grid-4">
-      <!-- Слот 1: Живой моушн и спикер -->
-      <div class="showcase-card" data-video-slot="motion">
-        <div class="video-thumb" onclick="openVideoModal('Живой моушн и спикер', 'Сюда встанет ваш новый ролик с плотным моушн-дизайном и кейсы STEP AUTO / XT TUNING.')">
-          <span class="thumb-tag">Живая съёмка / Выезд</span>
-          <div class="thumb-play">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-          </div>
-          <div class="thumb-caption">Титры, графика, студийный звук 48 кГц и плотный ритм</div>
-        </div>
-        <div class="showcase-body">
-          <h3>Живой моушн-монтаж</h3>
-          <p>Снимаем за 1 выезд в МСК или монтируем ваш исходник с телефонов по суфлёру.</p>
+      <div class="card card-mkt">
+        <div>
+          <span class="mkt-num">01</span>
+          <h3>Цены и фишки конкурентов</h3>
+          <p>Разбираем 10-15 компаний в вашем городе: их прайсы, доплаты и слабые места. Видим, как выделиться и продавать дорого без скидок.</p>
         </div>
       </div>
-
-      <!-- Слот 2: AI-аватар -->
-      <div class="showcase-card" data-video-slot="avatar">
-        <div class="video-thumb" onclick="openVideoModal('Реалистичный AI-аватар', 'Сюда встанет живой пример AI-двойника с родным голосом, чтобы клиент видел качество мимики и речи.')">
-          <span class="thumb-tag">0 ч съёмок в месяц</span>
-          <div class="thumb-play">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-          </div>
-          <div class="thumb-caption">Оцифровываем ваш голос и мимику по 1 записи</div>
-        </div>
-        <div class="showcase-body">
-          <h3>Ваш AI-двойник</h3>
-          <p>Экспертные Reels выходят весь год без вашего участия у камеры за 0 ₽ доплат.</p>
+      <div class="card card-mkt">
+        <div>
+          <span class="mkt-num">02</span>
+          <h3>Реальные страхи покупателей</h3>
+          <p>Изучаем живые отзывы, форумы и вопросы клиентов в вашей теме. Берём точные слова, из-за которых люди сомневаются до покупки.</p>
         </div>
       </div>
-
-      <!-- Слот 3: Оживление фото / архива -->
-      <div class="showcase-card" data-video-slot="photo_live">
-        <div class="video-thumb" onclick="openVideoModal('Оживление фото и сырого архива', 'Сюда встанет пример «до → после»: как из фото шкафа/объекта или старых видео в телефоне собирается рекламный Reels.')">
-          <span class="thumb-tag">Без новых съёмок</span>
-          <div class="thumb-play">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-          </div>
-          <div class="thumb-caption">Фото товара или видео из цеха → Reels с историей</div>
-        </div>
-        <div class="showcase-body">
-          <h3>Из архива и фото в Reels</h3>
-          <p>Пересобираем видео из вашей галереи и оживляем фото объектов под острые хуки.</p>
+      <div class="card card-mkt">
+        <div>
+          <span class="mkt-num">03</span>
+          <h3>Темы, где люди просят цену</h3>
+          <p>Находим у других игроков в вашей нише те ролики, под которыми клиенты реально оставляют заявки, и делаем под ваш продукт.</p>
         </div>
       </div>
-
-      <!-- Слот 4: Разведка и воронка -->
-      <div class="showcase-card" data-video-slot="xray">
-        <div class="video-thumb" onclick="openVideoModal('Рентген ниши и воронка заявок', 'Сюда встанет скрин разбора конкурентов (ролики 2–3x выше медианы + запросы цены) и пример PDF лид-магнита.')">
-          <span class="thumb-tag">Темы с цифрами</span>
-          <div class="thumb-play">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-          </div>
-          <div class="thumb-caption">3 хита ниши с запросами цены + PDF по кодовому слову</div>
-        </div>
-        <div class="showcase-body">
-          <h3>Темы с пруфами и воронка</h3>
-          <p>Вы никогда не придумываете идеи: выбираете из проверенных связок рынка.</p>
+      <div class="card card-mkt">
+        <div>
+          <span class="mkt-num">04</span>
+          <h3>Понятный путь до заявки</h3>
+          <p>Собираем подарочный PDF-гайд и пошаговый план на месяц. Зритель пишет простое слово в личку, получает расчёт и идёт на созвон.</p>
         </div>
       </div>
-    </div>
-
-    <!-- Полезный перехватчик PDF -->
-    <div class="mid-banner">
-      <div>
-        <div style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:#93c5fd; font-weight:700; margin-bottom:3px;">Бесплатно без звонков</div>
-        <div style="font-size:17px; font-weight:700;">Скачайте PDF «10 связок Reels, которые приносят заявки на высокий чек»</div>
-      </div>
-      <button type="button" class="btn btn-primary" onclick="openModal('Скачать PDF «10 коммерческих связок Reels»')">Забрать PDF в Telegram</button>
     </div>
   </div>
 </section>
 
-<!-- 04. ТАРИФЫ + УМНЫЙ КАЛЬКУЛЯТОР + СТАРТ СНИЗУ -->
-<section id="pricing" class="section">
+<!-- 04. ЖИВЫЕ ПРИМЕРЫ РАБОТ (ВИДЕО + МАРКЕТИНГ И ВИЗУАЛ) -->
+<section id="cases" class="section">
+  <div class="container">
+    <span class="section-eyebrow">Реальные работы, можно нажать и посмотреть</span>
+    <h2>Примеры видео: со съёмками, без съёмок и «Было → Стало»</h2>
+    <p class="section-lead">Нажмите на любую карточку, ролик откроется прямо здесь со звуком.</p>
+
+    <div class="grid-4">
+      <!-- Видео 1: Живой спикер и графика -->
+      <div class="showcase-card" data-video-slot="motion">
+        <div class="video-thumb" onclick="openCasePack('motion', 0)">
+          <img class="video-thumb-img" data-media-src="media/posters/v_step_auto_motion.jpg" alt="Живой монтаж с графикой">
+          <div class="video-thumb-shade"></div>
+          <span class="thumb-tag">Живая съёмка • 2 примера</span>
+          <div class="thumb-play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </div>
+          <div class="thumb-caption">Титры, живые графики, звук как в студии</div>
+        </div>
+        <div class="showcase-body">
+          <h3>Спикер + графика и монтаж</h3>
+          <p>Снимаем за 1 выезд в Москве или собираем по вашим видео с телефона.</p>
+        </div>
+      </div>
+
+      <!-- Видео 2: Было -> Стало монтажа -->
+      <div class="showcase-card" data-video-slot="before_after">
+        <div class="video-thumb" onclick="openCasePack('before_after', 0)">
+          <img class="video-thumb-img" data-media-src="media/posters/v_step_auto_ba.jpg" alt="Сравнение Было и Стало">
+          <div class="video-thumb-shade"></div>
+          <span class="thumb-tag">Было → Стало</span>
+          <div class="thumb-play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </div>
+          <div class="thumb-caption">Шторка прямо в кадре: обычный монтаж против нашей упаковки</div>
+        </div>
+        <div class="showcase-body">
+          <h3>Было → Стало на одном кадре</h3>
+          <p>Наглядно видно за 26 секунд, за что клиенты досматривают до конца.</p>
+        </div>
+      </div>
+
+      <!-- Видео 3: По фото и голосовому (0 ч съёмок) -->
+      <div class="showcase-card" data-video-slot="avatar">
+        <div class="video-thumb" onclick="openCasePack('avatar', 0)">
+          <img class="video-thumb-img" data-media-src="media/posters/v_dorofey_ai.jpg" alt="Ролики по фото и голосовому без съёмок">
+          <div class="video-thumb-shade"></div>
+          <span class="thumb-tag">0 ч съёмок • 2 примера</span>
+          <div class="thumb-play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </div>
+          <div class="thumb-caption">Из фото в Telegram и голосового: мебель на заказ и ремонты</div>
+        </div>
+        <div class="showcase-body">
+          <h3>Ролик без единой съёмки</h3>
+          <p>Оживляем вас и ваши объекты по фото из телефона и родному голосу из Telegram.</p>
+        </div>
+      </div>
+
+      <!-- Видео 4: Товарные и брендовые ролики -->
+      <div class="showcase-card" data-video-slot="brand">
+        <div class="video-thumb" onclick="openCasePack('brand', 0)">
+          <img class="video-thumb-img" data-media-src="media/posters/v_chln_sizes.jpg" alt="Товарный бренд CHLN">
+          <div class="video-thumb-shade"></div>
+          <span class="thumb-tag">Магазины и бренды</span>
+          <div class="thumb-play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </div>
+          <div class="thumb-caption">Показываем товар, посадку и ценность бренда</div>
+        </div>
+        <div class="showcase-body">
+          <h3>Товарные и брендовые Reels</h3>
+          <p>Форматы для одежды, товаров и магазинов с акцентом на покупку.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Под видео: что ещё получает клиент (маркетинг, PDF, карусели) -->
+    <div style="margin-top:34px;">
+      <h3 style="font-size:21px; font-weight:800; margin-bottom:6px;">Плюс сам маркетинг и оформление ленты, которые вы получаете на руки</h3>
+      <p style="font-size:15px; color:var(--ink-muted); margin-bottom:18px;">Живые страницы готовых документов на реальном проекте. Нажмите на карточку, чтобы полистать в большом размере.</p>
+
+      <div class="grid-3">
+        <!-- Карточка маркетинга 1 -->
+        <div class="showcase-card">
+          <div class="visual-thumb" onclick="openGalleryPack('research', 0)">
+            <img data-media-src="media/cases/market_prices.jpg" alt="Таблица сравнения цен конкурентов">
+            <span class="visual-badge">2 слайда • Открыть</span>
+          </div>
+          <div class="showcase-body">
+            <h3>Срез цен конкурентов и отличия</h3>
+            <p>Живая таблица: кто сколько берёт, за что ставят скрытые доплаты и за счёт чего клиенты выберут именно вас.</p>
+          </div>
+        </div>
+
+        <!-- Карточка маркетинга 2 -->
+        <div class="showcase-card">
+          <div class="visual-thumb" onclick="openGalleryPack('funnel', 0)">
+            <img data-media-src="media/cases/lead_magnet_6.jpg" alt="Подарочный PDF-гайд и схема заявок">
+            <span class="visual-badge">Схема + PDF-гайд • Открыть</span>
+          </div>
+          <div class="showcase-body">
+            <h3>Схема заявок и PDF-подарок</h3>
+            <p>Готовый полезный файл на 6 экранов, который клиенты забирают за простое слово в личку и сразу переходят к заказу.</p>
+          </div>
+        </div>
+
+        <!-- Карточка маркетинга 3 -->
+        <div class="showcase-card">
+          <div class="visual-thumb" onclick="openGalleryPack('carousel', 0)">
+            <img data-media-src="media/cases/ref_vs_carousel.jpg" alt="Было: пример клиента. Стало: оформление под ваш бизнес">
+            <span class="visual-badge">Референс → Результат • 8 слайдов</span>
+          </div>
+          <div class="showcase-body">
+            <h3>Дизайн 1 в 1 по вашему примеру</h3>
+            <p>Присылаете понравившиеся картинки из любой ниши, и мы повторяем стиль для ваших каруселей и Историй.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Полезный PDF без звонков -->
+    <div class="mid-banner">
+      <div>
+        <div style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:#93c5fd; font-weight:700; margin-bottom:3px;">Бесплатно и без созвонов</div>
+        <div style="font-size:17px; font-weight:700;">Скачайте PDF «10 связок Reels, которые приносят заявки на высокий чек»</div>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="openModal('Скачать PDF «10 связок Reels под заявки»')">Забрать PDF в Telegram</button>
+    </div>
+  </div>
+</section>
+
+<!-- 05. ТАРИФЫ + УМНЫЙ КАЛЬКУЛЯТОР + СТАРТ СНИЗУ -->
+<section id="pricing" class="section section-soft">
   <div class="container">
     <span class="section-eyebrow">Понятные пакеты</span>
-    <h2>Тарифы и умный конструктор под ваш объём</h2>
-    <p class="section-lead">При чеке от 100 тыс. ₽ основной пакет окупается с <strong>одной сделки</strong> — дешевле найма 1 сотрудника.</p>
+    <h2>Тарифы и удобный калькулятор под ваш объём</h2>
+    <p class="section-lead">При среднем чеке от 100 тыс. ₽ основной тариф окупается с <strong>одной сделки</strong> и выходит дешевле найма одного сотрудника.</p>
 
-    <!-- 3 тарифа с раскрытой сутью -->
     <div class="grid-3">
       <div class="price-card">
         <div>
           <span class="section-eyebrow" style="color:var(--ink-muted);">Тариф 01</span>
           <h3>Присутствие</h3>
-          <div class="tier-essence">Суть: упакованная витрина и прогрев базы без съёмки Reels.</div>
+          <div class="tier-essence">Суть: упакованный профиль и постоянный прогрев без съёмки Reels.</div>
           <div class="price-val">29 990 ₽ <span>/ мес</span></div>
           <ul class="check-list">
-            <li>Упаковка профиля + план на 30 дней</li>
+            <li>Упаковка аккаунта + план на 30 дней</li>
             <li><strong>6 каруселей</strong> или постов в ленту</li>
-            <li><strong>10 серий Stories</strong> (прогревы)</li>
-            <li>Автопостинг по расписанию</li>
+            <li><strong>10 серий Историй</strong> с прогревом к покупке</li>
+            <li>Выкладка материалов по расписанию</li>
           </ul>
         </div>
         <button type="button" class="btn btn-outline-dark" style="width:100%;" onclick="openModal('Тариф «Присутствие» (29 990 ₽/мес)')">Выбрать «Присутствие»</button>
@@ -1337,10 +1593,10 @@
           <div class="tier-essence">Суть: полноценный отдел контента и стабильный поток заявок.</div>
           <div class="price-val">59 990 ₽ <span>/ мес</span></div>
           <ul class="check-list">
-            <li><strong>Стратегия и разведка бесплатно</strong> (вместо 29 900 ₽)</li>
+            <li><strong>Анализ рынка и стратегия бесплатно</strong> (вместо 29 900 ₽)</li>
             <li><strong>10 Reels под ключ</strong> (сценарии, монтаж, обложки)</li>
-            <li><strong>6 каруселей</strong> + <strong>12 серий Stories</strong></li>
-            <li>Автопостинг + отчёт по заявкам</li>
+            <li><strong>6 каруселей</strong> + <strong>12 серий Историй</strong></li>
+            <li>Выкладка + понятный отчёт по заявкам</li>
           </ul>
         </div>
         <button type="button" class="btn btn-primary" style="width:100%;" onclick="openModal('Тариф «Оптимальный» (59 990 ₽/мес)')">Выбрать «Оптимальный»</button>
@@ -1350,13 +1606,13 @@
         <div>
           <span class="section-eyebrow" style="color:#d97706;">Тариф 03</span>
           <h3>Максимальный</h3>
-          <div class="tier-essence">Суть: быстрый захват охватов сразу на двух площадках.</div>
+          <div class="tier-essence">Суть: быстрый рост охватов сразу на двух площадках.</div>
           <div class="price-val">99 990 ₽ <span>/ мес</span></div>
           <ul class="check-list">
-            <li>Стратегия + сборка <strong>PDF лид-магнита и воронки</strong></li>
+            <li>Стратегия + готовый <strong>подарочный PDF-гайд для заявок</strong></li>
             <li><strong>20 Reels под ключ</strong> (почти каждый будний день)</li>
-            <li><strong>10 каруселей</strong> + <strong>20 серий Stories</strong></li>
-            <li><strong>Бонус: адаптация и постинг во 2-ю соцсеть</strong></li>
+            <li><strong>10 каруселей</strong> + <strong>20 серий Историй</strong></li>
+            <li><strong>Бонус: адаптация и выпуск во 2-ю соцсеть</strong></li>
           </ul>
         </div>
         <button type="button" class="btn btn-outline-dark" style="width:100%;" onclick="openModal('Тариф «Максимальный» (99 990 ₽/мес)')">Выбрать «Максимальный»</button>
@@ -1367,17 +1623,16 @@
     <div class="calc-wrap" id="calculator">
       <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:18px;">
         <div>
-          <span class="section-eyebrow" style="margin-bottom:4px;">Умный конструктор</span>
+          <span class="section-eyebrow" style="margin-bottom:4px;">Удобный конструктор</span>
           <h3 style="font-size:22px;">Соберите нужный объём и формат под себя</h3>
         </div>
-        <span style="font-size:13px; color:var(--ink-muted);">Можно взять тариф + докупить ролики, только монтаж или только сценарии</span>
+        <span style="font-size:13px; color:var(--ink-muted);">Можно выбрать тариф и докупить ролики, только монтаж или только сценарии</span>
       </div>
 
       <div class="calc-grid">
         <div>
-          <!-- Шаг 1 -->
           <div class="calc-group">
-            <div class="calc-step-label">Шаг 1. Выберите базу (или свой набор с нуля)</div>
+            <div class="calc-step-label">Шаг 1. Выберите основу (или соберите с нуля)</div>
             <div class="calc-tier-grid">
               <button type="button" class="calc-tile" id="tile-custom" onclick="setBase('custom')">
                 <div class="calc-tile-title">Свой набор с нуля</div>
@@ -1387,21 +1642,20 @@
               <button type="button" class="calc-tile" id="tile-presence" onclick="setBase('presence')">
                 <div class="calc-tile-title">Присутствие</div>
                 <div class="calc-tile-price">29 990 ₽ / мес</div>
-                <div class="calc-tile-sub">Упаковка + 6 каруселей + 10 серий Stories (без Reels)</div>
+                <div class="calc-tile-sub">Упаковка + 6 каруселей + 10 серий Историй (без Reels)</div>
               </button>
               <button type="button" class="calc-tile active" id="tile-optimal" onclick="setBase('optimal')">
                 <div class="calc-tile-title">Оптимальный <span class="hit-badge" style="font-size:10px; padding:2px 7px;">ХИТ</span></div>
                 <div class="calc-tile-price">59 990 ₽ / мес</div>
-                <div class="calc-tile-sub">Стратегия 0 ₽ + 10 Reels под ключ + 6 каруселей + 12 Stories</div>
+                <div class="calc-tile-sub">Стратегия 0 ₽ + 10 Reels под ключ + 6 каруселей + 12 Историй</div>
               </button>
               <button type="button" class="calc-tile" id="tile-max" onclick="setBase('max')">
                 <div class="calc-tile-title">Максимальный</div>
                 <div class="calc-tile-price">99 990 ₽ / мес</div>
-                <div class="calc-tile-sub">Стратегия + магнит + 20 Reels + 10 каруселей + 20 Stories + 2-я сеть</div>
+                <div class="calc-tile-sub">Стратегия + PDF-гайд + 20 Reels + 10 каруселей + 20 Историй + 2-я сеть</div>
               </button>
             </div>
 
-            <!-- Шаг 2 -->
             <div class="calc-step-label">Шаг 2. Добавить Reels сверх тарифа (или поштучно)</div>
             <div class="calc-mode-grid">
               <button type="button" class="calc-chip-btn active" id="mode-full" onclick="setExtraType('full')">
@@ -1413,8 +1667,8 @@
                 <span>2 900 ₽/шт. • ваш сценарий и видео</span>
               </button>
               <button type="button" class="calc-chip-btn" id="mode-motion_montage" onclick="setExtraType('motion_montage')">
-                Сложный Motion + AI монтаж
-                <span>4 900 ₽/шт. • графика, титры, B-roll</span>
+                Сложный монтаж с графикой
+                <span>4 900 ₽/шт. • титры, эффекты, звук</span>
               </button>
               <button type="button" class="calc-chip-btn" id="mode-script" onclick="setExtraType('script')">
                 Только сценарии Reels
@@ -1425,7 +1679,7 @@
             <div class="stepper-row">
               <div style="font-size:13.5px; font-weight:700;">Сколько доп. штук:</div>
               <div class="stepper-ctrl">
-                <button type="button" class="stepper-btn" onclick="changeExtraQty(-1)">−</button>
+                <button type="button" class="stepper-btn" onclick="changeExtraQty(-1)">-</button>
                 <span class="stepper-val" id="extra-qty-val">0</span>
                 <button type="button" class="stepper-btn" onclick="changeExtraQty(1)">+</button>
               </div>
@@ -1440,43 +1694,42 @@
 
             <div style="margin-top:10px;">
               <button type="button" class="preset-btn" style="width:100%; padding:8px; text-align:left;" onclick="toggleMoreContent()">
-                + Добавить отдельно карусели (3 000 ₽), серии Stories (2 000 ₽) или стратегию (29 900 ₽) ▾
+                + Добавить отдельно карусели (3 000 ₽), серии Историй (2 000 ₽) или стратегию (29 900 ₽) ▾
               </button>
               <div id="more-content-panel" class="calc-subpanel">
                 <div class="calc-option">
                   <label>Доп. дизайнерские карусели (до 8 слайдов, 3 000 ₽)</label>
                   <div class="stepper-ctrl">
-                    <button type="button" class="stepper-btn" onclick="changeOther('carousels', -1)">−</button>
+                    <button type="button" class="stepper-btn" onclick="changeOther('carousels', -1)">-</button>
                     <span class="stepper-val" id="qty-carousels">0</span>
                     <button type="button" class="stepper-btn" onclick="changeOther('carousels', 1)">+</button>
                   </div>
                 </div>
                 <div class="calc-option">
-                  <label>Доп. серии Stories (до 6 слайдов, 2 000 ₽)</label>
+                  <label>Доп. серии Историй (до 6 слайдов, 2 000 ₽)</label>
                   <div class="stepper-ctrl">
-                    <button type="button" class="stepper-btn" onclick="changeOther('stories', -1)">−</button>
+                    <button type="button" class="stepper-btn" onclick="changeOther('stories', -1)">-</button>
                     <span class="stepper-val" id="qty-stories">0</span>
                     <button type="button" class="stepper-btn" onclick="changeOther('stories', 1)">+</button>
                   </div>
                 </div>
                 <div class="calc-option" id="row-strategy">
-                  <label><input type="checkbox" id="opt-strategy" onchange="recalc()"> Отдельная полная стратегия (разово)</label>
+                  <label><input type="checkbox" id="opt-strategy" onchange="recalc()"> Отдельный разбор рынка и стратегия (разово)</label>
                   <strong>+29 900 ₽</strong>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Шаг 3 -->
           <div class="calc-group" style="margin-bottom:0;">
             <div class="calc-step-label">Шаг 3. Кто снимает видео и доп. площадки</div>
             <div class="calc-shoot-grid">
               <button type="button" class="calc-chip-btn active" id="shoot-self" onclick="setShootMode('self')">
-                Сам / наш архив
+                Сам / ваши фото и видео
                 <span>0 ₽ доплат</span>
               </button>
               <button type="button" class="calc-chip-btn" id="shoot-avatar" onclick="setShootMode('avatar')">
-                AI-аватар
+                Цифровой двойник
                 <span>от 19 900 ₽ разово</span>
               </button>
               <button type="button" class="calc-chip-btn" id="shoot-crew" onclick="setShootMode('crew')">
@@ -1486,28 +1739,27 @@
             </div>
 
             <div id="sub-avatar" class="calc-subpanel">
-              <div class="calc-option"><label><input type="radio" name="avatar_type" value="19900" checked onchange="recalc()"> Удалённо по нашему ТЗ (снимитесь сами 1 раз)</label><strong>+19 900 ₽ разово</strong></div>
+              <div class="calc-option"><label><input type="radio" name="avatar_type" value="19900" checked onchange="recalc()"> Удалённо (по вашему фото и голосу или 1 записи)</label><strong>+19 900 ₽ разово</strong></div>
               <div class="calc-option"><label><input type="radio" name="avatar_type" value="49900" onchange="recalc()"> Под ключ в Москве (студия 2 ч, камера, свет)</label><strong>+49 900 ₽ разово</strong></div>
             </div>
 
             <div id="sub-crew" class="calc-subpanel">
-              <div class="calc-option"><label><input type="radio" name="crew_type" value="14900" checked onchange="recalc()"> iPhone со светом — полусмена 2–3 ч (до 4–5 Reels)</label><strong>+14 900 ₽ разово</strong></div>
-              <div class="calc-option"><label><input type="radio" name="crew_type" value="27900" onchange="recalc()"> iPhone со светом — полная смена 7–8 ч (10–12 Reels)</label><strong>+27 900 ₽ разово</strong></div>
-              <div class="calc-option"><label><input type="radio" name="crew_type" value="24900" onchange="recalc()"> Проф. камера — полусмена до 4 ч (до 4–5 Reels)</label><strong>+24 900 ₽ разово</strong></div>
-              <div class="calc-option"><label><input type="radio" name="crew_type" value="49900" onchange="recalc()"> Проф. камера — полная смена 8–10 ч (10–12 Reels)</label><strong>+49 900 ₽ разово</strong></div>
+              <div class="calc-option"><label><input type="radio" name="crew_type" value="14900" checked onchange="recalc()"> iPhone со светом: полусмена 2-3 ч (до 4-5 Reels)</label><strong>+14 900 ₽ разово</strong></div>
+              <div class="calc-option"><label><input type="radio" name="crew_type" value="27900" onchange="recalc()"> iPhone со светом: полная смена 7-8 ч (10-12 Reels)</label><strong>+27 900 ₽ разово</strong></div>
+              <div class="calc-option"><label><input type="radio" name="crew_type" value="24900" onchange="recalc()"> Проф. камера: полусмена до 4 ч (до 4-5 Reels)</label><strong>+24 900 ₽ разово</strong></div>
+              <div class="calc-option"><label><input type="radio" name="crew_type" value="49900" onchange="recalc()"> Проф. камера: полная смена 8-10 ч (10-12 Reels)</label><strong>+49 900 ₽ разово</strong></div>
             </div>
 
             <div style="margin-top:10px;">
-              <div class="calc-option"><label><input type="checkbox" id="opt-multi1" onchange="toggleMulti(1)"> +1 доп. соцсеть (TG / VK / Shorts / Threads)</label><strong id="price-multi1">+4 900 ₽/мес</strong></div>
-              <div class="calc-option"><label><input type="checkbox" id="opt-multi4" onchange="toggleMulti(4)"> Все сети сразу (TG + VK + Shorts + Threads)</label><strong>+9 900 ₽/мес</strong></div>
-              <div class="calc-option"><label><input type="checkbox" id="opt-prepay3" onchange="recalc()"> Предоплата сразу за 3 месяца</label><strong>−10% к ведению</strong></div>
-              <div class="calc-option"><label><input type="checkbox" id="opt-credit" onchange="recalc()"> Зачёт «Стратегического старта» в 1-й месяц</label><strong>−14 900 ₽</strong></div>
+              <div class="calc-option"><label><input type="checkbox" id="opt-multi1" onchange="toggleMulti(1)"> +1 доп. соцсеть (Telegram / ВК / Shorts)</label><strong id="price-multi1">+4 900 ₽/мес</strong></div>
+              <div class="calc-option"><label><input type="checkbox" id="opt-multi4" onchange="toggleMulti(4)"> Все сети сразу (Telegram + ВК + Shorts + Threads)</label><strong>+9 900 ₽/мес</strong></div>
+              <div class="calc-option"><label><input type="checkbox" id="opt-prepay3" onchange="recalc()"> Предоплата сразу за 3 месяца</label><strong>-10% к ведению</strong></div>
+              <div class="calc-option"><label><input type="checkbox" id="opt-credit" onchange="recalc()"> Зачёт «Стратегического старта» в 1-й месяц</label><strong>-14 900 ₽</strong></div>
               <div class="calc-option"><label><input type="checkbox" id="opt-b2b" onchange="recalc()"> Оплата на расчётный счёт ИП/ООО</label><strong>+10%</strong></div>
             </div>
           </div>
         </div>
 
-        <!-- Итог + Умная подсказка -->
         <div class="calc-total-box">
           <div>
             <span class="section-eyebrow">Ваш итоговый расчёт</span>
@@ -1531,70 +1783,70 @@
       </div>
     </div>
 
-    <!-- Безопасный вход: Стратегический старт (теперь компактно ПОД тарифами!) -->
+    <!-- Безопасный вход: Стратегический старт -->
     <div class="start-strip">
       <div style="max-width:740px;">
-        <div style="font-size:12px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:#fbbf24; margin-bottom:4px;">Сомневаетесь заходить сразу на месяц? Протестируйте нас за 72 часа</div>
-        <div style="font-size:20px; font-weight:800; margin-bottom:6px;">«Стратегический старт» — <span style="color:#fbbf24;">14 900 ₽</span> <span style="font-size:14px; color:#94a3b8; text-decoration:line-through; font-weight:500;">19 900 ₽</span></div>
-        <p style="font-size:14px; color:#cbd5e1;">Разбор конкурентов + стратегия + контент-план на 30 дней + 10 сценариев Reels. <strong style="color:#fff;">100% суммы зачитываются в 1-й месяц ведения за 7 дней.</strong></p>
+        <div style="font-size:12px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:#fbbf24; margin-bottom:4px;">Сомневаетесь заходить сразу на месяц? Проверьте нас за 72 часа</div>
+        <div style="font-size:20px; font-weight:800; margin-bottom:6px;">«Стратегический старт»: <span style="color:#fbbf24;">14 900 ₽</span> <span style="font-size:14px; color:#94a3b8; text-decoration:line-through; font-weight:500;">19 900 ₽</span></div>
+        <p style="font-size:14px; color:#cbd5e1;">Глубокий анализ рынка и конкурентов + готовая стратегия продаж + план на 30 дней + 10 сценариев Reels. <strong style="color:#fff;">100% суммы зачитываются в 1-й месяц ведения за 7 дней.</strong></p>
       </div>
       <button type="button" class="btn btn-primary" onclick="openModal('Бронь «Стратегического старта» за 14 900 ₽')">Начать с 14 900 ₽</button>
     </div>
   </div>
 </section>
 
-<!-- 05. КОРОТКИЙ FAQ -->
-<section id="faq" class="section section-soft">
+<!-- 06. КОРОТКИЕ ОТВЕТЫ НА ВОПРОСЫ -->
+<section id="faq" class="section">
   <div class="container">
     <span class="section-eyebrow">Частые вопросы</span>
     <h2>Коротко о главном</h2>
 
     <div class="grid-2" style="margin-top:20px;">
       <div class="card">
-        <h3>Сработает в узкой нише или не в Москве?</h3>
-        <p>Да. Работаем по всей РФ; подбираем форматы строго под ваш город, чек и реальную точку.</p>
+        <h3>Сработает в узкой теме или не в Москве?</h3>
+        <p>Да. Работаем по всей РФ: разбираем конкурентов и подбираем подачу строго под ваш город, чек и реальный продукт.</p>
       </div>
       <div class="card">
         <h3>Если уже снято много видео на точке?</h3>
-        <p>Сразу пересобираем ваш архив в телефоне под сильные хуки без лишних съёмок.</p>
+        <p>Сразу пересобираем ваши старые видео из телефона под цепляющее начало и титры без лишних съёмок.</p>
       </div>
       <div class="card">
         <h3>Как не запутаетесь в наших ценах и сроках?</h3>
-        <p>Перед стартом фиксируем базу правды по вашему бизнесу — ноль фантазий в текстах.</p>
+        <p>Перед стартом записываем все ваши реальные цены, сроки и факты о компании, чтобы в сценариях и постах не было ни одной выдумки.</p>
       </div>
       <div class="card">
         <h3>Правки, сроки и оплата по счёту?</h3>
-        <p>Сдача пулами на 1–2 недели вперёд, 2 круга правок бесплатно, счёт ИП/ООО (+10%).</p>
+        <p>Сдаём материалы готовыми пачками на 1-2 недели вперёд, 2 круга правок бесплатно, есть оплата на счёт ИП/ООО (+10%).</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 06. ФИНАЛЬНЫЙ ЗАХВАТ -->
+<!-- 07. ФИНАЛЬНЫЙ ЗАХВАТ -->
 <section id="lead" class="section section-dark">
   <div class="container">
-    <span class="section-eyebrow">Первый шаг — 0 ₽</span>
+    <span class="section-eyebrow">Первый шаг (0 ₽)</span>
     <h2>Заберите бесплатный 3-минутный видеоразбор вашей ниши</h2>
-    <p class="section-lead">Получите на руки: <strong style="color:#fff;">3</strong> рабочих ролика конкурентов с заявками • <strong style="color:#fff;">2</strong> дыры вашего профиля • <strong style="color:#fff;">1</strong> готовый сценарий под ваш чек.</p>
+    <p class="section-lead">Получите на руки: <strong style="color:#fff;">3</strong> примера роликов ваших конкурентов с заявками • <strong style="color:#fff;">2</strong> ошибки вашего профиля • <strong style="color:#fff;">1</strong> готовый сценарий под ваш чек.</p>
 
     <div class="grid-2" style="align-items:stretch;">
       <div class="form-card">
         <h3 style="font-size:20px; margin-bottom:16px;">Заявка на видеоразбор</h3>
         <form onsubmit="submitMainForm(event)">
           <div class="form-field">
-            <label for="m-niche">1. Ниша и главный продукт *</label>
-            <input id="m-niche" type="text" required placeholder="Например: производство мебели / автодетейлинг / клиника">
+            <label for="m-niche">1. Чем занимаетесь и главный товар/услуга *</label>
+            <input id="m-niche" type="text" required placeholder="Например: производство мебели / детейлинг / клиника">
           </div>
           <div class="form-field">
             <label for="m-link">2. Ссылка на Instagram или сайт *</label>
             <input id="m-link" type="text" required placeholder="@профиль или ссылка">
           </div>
           <div class="form-field">
-            <label for="m-check">3. Средний чек и формат съёмок *</label>
+            <label for="m-check">3. Средний чек и как удобно снимать *</label>
             <select id="m-check" required>
               <option value="">Выберите вариант...</option>
               <option>Чек от 50 000 ₽ • Готов сниматься сам</option>
-              <option>Чек от 50 000 ₽ • Нужен AI-аватар / пересборка архива</option>
+              <option>Чек от 50 000 ₽ • Нужен цифровой двойник / работа по фото</option>
               <option>Нужен сразу «Стратегический старт» за 14 900 ₽</option>
             </select>
           </div>
@@ -1616,14 +1868,14 @@
               <div style="font-size:13.5px; color:#94a3b8;">Руководитель KARPOV PRODUCTION / CONTENT OS</div>
             </div>
           </div>
-          <p style="font-size:15px; color:#cbd5e1; margin-bottom:18px;">Работаем в Москве (выездные съёмки) и удалённо по всей РФ. Не работаем с инфобизом без продукта и чеком 500 ₽.</p>
+          <p style="font-size:15px; color:#cbd5e1; margin-bottom:18px;">Работаем в Москве (выездные съёмки) и удалённо по всей РФ. Не берём инфобизнес без твёрдого продукта и проекты с чеком 500 ₽.</p>
           <div style="display:flex; flex-direction:column; gap:12px;">
             <a href="https://t.me/frankiemoor" class="btn btn-primary" style="width:100%;">Написать в Telegram: @frankiemoor</a>
             <a href="tel:+79649999443" class="btn btn-outline-light" style="width:100%;">Позвонить / WhatsApp / TG: +7 964 999-94-43</a>
           </div>
         </div>
         <div style="border-top:1px solid var(--border-dark); padding-top:14px; font-size:13px; color:#94a3b8;">
-          2 круга правок бесплатно • Сдача пулами на 1–2 недели • Прямая оплата или счёт ИП/ООО (+10%)
+          2 круга правок бесплатно • Сдача готовыми пачками на 1-2 недели • Оплата напрямую или на счёт ИП/ООО (+10%)
         </div>
       </div>
     </div>
@@ -1632,11 +1884,12 @@
 
 <footer>
   <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;">
-    <div><strong style="color:#fff;">CONTENT OS • KARPOV PRODUCTION</strong> — Москва и вся РФ</div>
+    <div><strong style="color:#fff;">CONTENT OS • KARPOV PRODUCTION</strong>, Москва и вся РФ</div>
     <div style="display:flex; flex-wrap:wrap; gap:16px;">
-      <a href="#cases">Примеры видео</a>
+      <a href="#marketing">Анализ рынка</a>
+      <a href="#cases">Примеры работ</a>
       <a href="#calculator">Калькулятор</a>
-      <a href="javascript:void(0)" onclick="openModal('Подписка на разборы и статьи (SEO-раздел)')">Журнал статей (скоро /blog/)</a>
+      <a href="javascript:void(0)" onclick="openModal('Подписка на полезные разборы для бизнеса')">Полезные разборы для бизнеса</a>
     </div>
   </div>
 </footer>
@@ -1650,7 +1903,7 @@
   <button type="button" class="btn btn-primary" style="padding:9px 14px; font-size:13px; white-space:nowrap;" onclick="openModal('Быстрая заявка с мобильного экрана')">Забрать</button>
 </div>
 
-<!-- 2-ШАГОВОЕ МОДАЛЬНОЕ ОКНО -->
+<!-- 2-ШАГОВОЕ МОДАЛЬНОЕ ОКНО ЗАЯВКИ -->
 <div id="lead-modal" class="modal-backdrop">
   <div class="modal-window">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
@@ -1660,7 +1913,7 @@
     <h3 id="modal-title" style="font-size:20px; margin-bottom:14px;">Заявка</h3>
     <form onsubmit="submitModalForm(event)">
       <div class="form-field">
-        <label>Шаг 1: Ниша и ссылка на Instagram / сайт *</label>
+        <label>Шаг 1: Чем занимаетесь и ссылка на Instagram / сайт *</label>
         <input id="modal-niche" type="text" required placeholder="Например: автосервис в Москве, @account">
       </div>
       <div class="form-field">
@@ -1674,22 +1927,231 @@
   </div>
 </div>
 
-<!-- МОДАЛКА ВИДЕО-ПРИМЕРА -->
-<div id="video-modal" class="modal-backdrop">
-  <div class="modal-window" style="background:#0b1222; color:#fff; border:1px solid rgba(255,255,255,0.2);">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-      <span id="vmodal-title" style="font-size:13px; font-weight:700; color:#60a5fa; text-transform:uppercase;">Видео-пример</span>
-      <button type="button" class="btn btn-outline-light" style="padding:5px 10px; font-size:12px;" onclick="closeVideoModal()">✕ Закрыть</button>
+<!-- МОДАЛКА ЖИВЫХ ВИДЕО И ГАЛЕРЕИ СЛАЙДОВ -->
+<div id="media-modal" class="modal-backdrop">
+  <div class="modal-window modal-media-window">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px;">
+      <span id="mmodal-title" style="font-size:13px; font-weight:800; color:#60a5fa; text-transform:uppercase;">Пример работы</span>
+      <button type="button" class="btn btn-outline-light" style="padding:5px 10px; font-size:12px;" onclick="closeMediaModal()">✕ Закрыть</button>
     </div>
-    <div style="background:#060a14; border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:26px 20px; text-align:center; margin-bottom:14px;">
-      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Слот под ваш живой видео-ролик</div>
-      <p id="vmodal-desc" style="font-size:13px; color:#94a3b8;"></p>
+
+    <div id="mmodal-tabs" class="media-tabs"></div>
+
+    <div class="media-stage" id="mmodal-stage"></div>
+
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px;">
+      <p id="mmodal-desc" style="font-size:13.5px; color:#cbd5e1; flex:1; min-width:200px;"></p>
+      <div id="mmodal-nav" style="display:none; gap:8px;">
+        <button type="button" class="btn btn-outline-light" style="padding:7px 12px; font-size:12.5px;" onclick="stepMedia(-1)">← Назад</button>
+        <button type="button" class="btn btn-outline-light" style="padding:7px 12px; font-size:12.5px;" onclick="stepMedia(1)">Дальше →</button>
+      </div>
     </div>
-    <button type="button" class="btn btn-primary" style="width:100%;" onclick="closeVideoModal(); openModal('Хочу такой же формат — разбор ниши (0 ₽)');">Хочу так же — забрать разбор</button>
+
+    <button type="button" class="btn btn-primary" style="width:100%;" onclick="closeMediaModal(); openModal('Хочу такой же формат под свой бизнес (разбор 0 ₽)');">Хочу так же, забрать разбор (0 ₽)</button>
   </div>
 </div>
 
 <script>
+  const REMOTE_MEDIA_BASE = 'https://dmikarpov-sar-ui.github.io/content-os-preview/';
+  function resolveMedia(relPath) {
+    if (!relPath) return '';
+    if (window.location.protocol === 'file:') {
+      return REMOTE_MEDIA_BASE + relPath;
+    }
+    return relPath;
+  }
+
+  // Hydrate all static posters on load
+  document.querySelectorAll('[data-media-src]').forEach((el) => {
+    el.src = resolveMedia(el.getAttribute('data-media-src'));
+  });
+
+  const VIDEO_PACKS = {
+    motion: [
+      {
+        label: 'STEP AUTO: автоимпорт (1:00)',
+        src: 'media/v_step_auto_motion.mp4',
+        poster: 'media/posters/v_step_auto_motion.jpg',
+        desc: 'Живая съёмка на 2 камеры + анимированные карточки с ценами, графики расходов и чистый звук.'
+      },
+      {
+        label: 'CHLN: разбор стиля (0:55)',
+        src: 'media/v_chln_nba.mp4',
+        poster: 'media/posters/v_chln_nba.jpg',
+        desc: 'Динамичный монтаж разговорного ролика с вставками-метафорами и плотными титрами.'
+      }
+    ],
+    before_after: [
+      {
+        label: 'Было → Стало (0:26)',
+        src: 'media/v_step_auto_ba.mp4',
+        poster: 'media/posters/v_step_auto_ba.jpg',
+        desc: 'Один и тот же ролик и одна речь: справа обычный монтаж без графики, слева готовая упаковка.'
+      }
+    ],
+    avatar: [
+      {
+        label: 'Мебель: по фото и голосу (0:49)',
+        src: 'media/v_dorofey_ai.mp4',
+        poster: 'media/posters/v_dorofey_ai.jpg',
+        desc: '0 часов съёмок: взяли фото владельца, фото мебели и голосовое из Telegram. Сцена на листе МДФ с пилой сделана полностью без камеры.'
+      },
+      {
+        label: 'Дизайн интерьеров: по фото (0:35)',
+        src: 'media/v_leysan_ai.mp4',
+        poster: 'media/posters/v_leysan_ai.jpg',
+        desc: '0 часов съёмок: из фото дизайнера в Telegram, фото строек и одного голосового получился полноценный экспертный ролик.'
+      }
+    ],
+    brand: [
+      {
+        label: 'CHLN: подбор одежды (0:47)',
+        src: 'media/v_chln_sizes.mp4',
+        poster: 'media/posters/v_chln_sizes.jpg',
+        desc: 'Акцент на деталях товара, примерках, посадке и причинах покупать именно у этого бренда.'
+      }
+    ]
+  };
+
+  const GALLERY_PACKS = {
+    research: [
+      {
+        label: '1. Таблица цен конкурентов',
+        src: 'media/cases/market_prices.jpg',
+        desc: 'Сравниваем 10-15 прямых игроков вашего города: что входит в базовую цену, где скрытые доплаты и за счёт чего вы продаёте дороже.'
+      },
+      {
+        label: '2. Твёрдые отличия от рынка',
+        src: 'media/cases/market_arguments.jpg',
+        desc: 'Заменяем пустые фразы про «высокое качество» на конкретные факты из отзывов и сильных сторон бизнеса.'
+      }
+    ],
+    funnel: [
+      {
+        label: '1. Путь зрителя до сделки',
+        src: 'media/cases/strat_funnel.jpg',
+        desc: 'Понятная связка без сложных схем: просмотр ролика, доверие в шапке профиля, кодовое слово в личку, созвон и оплата.'
+      },
+      {
+        label: '2. Подарочный PDF-гайд (6 экранов)',
+        src: 'media/cases/lead_magnet_6.jpg',
+        desc: 'Полезный файл, который зритель забирает в обмен на сообщение в личку, сразу открывая диалог про дату и бюджет.'
+      }
+    ],
+    carousel: [
+      {
+        label: 'Было → Стало (референс и результат)',
+        src: 'media/cases/ref_vs_carousel.jpg',
+        desc: 'Клиент прислал спортивные постеры как пример стиля. Мы перенесли ту же подачу, шрифты и контрасты на бизнес видеографа.'
+      },
+      { label: 'Карусель 1/6', src: 'media/carousel/c_01.jpg', desc: 'Обложка карусели: 6 вопросов перед заказом видеографа.' },
+      { label: 'Карусель 2/6', src: 'media/carousel/c_02.jpg', desc: 'Разбираем скрытые доплаты на рынке.' },
+      { label: 'Карусель 3/6', src: 'media/carousel/c_03.jpg', desc: 'Наглядное сравнение записи звука.' },
+      { label: 'Карусель 4/6', src: 'media/carousel/c_04.jpg', desc: 'Ответ на главный страх новичков.' },
+      { label: 'Карусель 5/6', src: 'media/carousel/c_05.jpg', desc: 'Сроки и расписание работы.' },
+      { label: 'Карусель 6/6', src: 'media/carousel/c_06.jpg', desc: 'Финальный слайд с призывом написать в личку.' },
+      { label: 'Истории: целиком (4 кадра)', src: 'media/cases/stories_sheet.jpg', desc: 'Серия из 4 Историй в том же стиле: живые отзывы и перевод в диалог.' }
+    ]
+  };
+
+  let curMediaMode = 'video';
+  let curMediaItems = [];
+  let curMediaIndex = 0;
+
+  function openCasePack(packKey, idx) {
+    curMediaMode = 'video';
+    curMediaItems = VIDEO_PACKS[packKey] || [];
+    curMediaIndex = idx || 0;
+    document.getElementById('mmodal-title').textContent = 'Видео-примеры работ';
+    renderMediaModal();
+    document.getElementById('media-modal').classList.add('open');
+  }
+
+  function openGalleryPack(packKey, idx) {
+    curMediaMode = 'image';
+    curMediaItems = GALLERY_PACKS[packKey] || [];
+    curMediaIndex = idx || 0;
+    document.getElementById('mmodal-title').textContent = 'Материалы маркетинга и оформления';
+    renderMediaModal();
+    document.getElementById('media-modal').classList.add('open');
+  }
+
+  function renderMediaModal() {
+    const item = curMediaItems[curMediaIndex];
+    if (!item) return;
+
+    const tabsEl = document.getElementById('mmodal-tabs');
+    tabsEl.innerHTML = '';
+    if (curMediaItems.length > 1) {
+      curMediaItems.forEach((it, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'media-tab-btn' + (i === curMediaIndex ? ' active' : '');
+        b.textContent = it.label;
+        b.onclick = () => {
+          stopActiveVideo();
+          curMediaIndex = i;
+          renderMediaModal();
+        };
+        tabsEl.appendChild(b);
+      });
+    }
+
+    const stageEl = document.getElementById('mmodal-stage');
+    stageEl.innerHTML = '';
+    if (curMediaMode === 'video') {
+      const v = document.createElement('video');
+      v.id = 'active-modal-video';
+      v.controls = true;
+      v.playsInline = true;
+      v.autoplay = true;
+      v.preload = 'metadata';
+      v.poster = resolveMedia(item.poster);
+      v.src = resolveMedia(item.src);
+      stageEl.appendChild(v);
+      document.getElementById('mmodal-nav').style.display = curMediaItems.length > 1 ? 'flex' : 'none';
+    } else {
+      const img = document.createElement('img');
+      img.src = resolveMedia(item.src);
+      img.alt = item.label;
+      stageEl.appendChild(img);
+      document.getElementById('mmodal-nav').style.display = curMediaItems.length > 1 ? 'flex' : 'none';
+    }
+
+    document.getElementById('mmodal-desc').textContent = item.desc;
+  }
+
+  function stepMedia(delta) {
+    if (curMediaItems.length < 2) return;
+    stopActiveVideo();
+    curMediaIndex = (curMediaIndex + delta + curMediaItems.length) % curMediaItems.length;
+    renderMediaModal();
+  }
+
+  function stopActiveVideo() {
+    const v = document.getElementById('active-modal-video');
+    if (v) {
+      try {
+        v.pause();
+        v.currentTime = 0;
+      } catch (e) {}
+    }
+  }
+
+  function closeMediaModal() {
+    stopActiveVideo();
+    document.getElementById('mmodal-stage').innerHTML = '';
+    document.getElementById('media-modal').classList.remove('open');
+  }
+
+  // Закрытие модалок по фону
+  document.getElementById('media-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'media-modal') closeMediaModal();
+  });
+  document.getElementById('lead-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'lead-modal') closeModal();
+  });
+
   function formatRub(n) {
     return Math.round(n).toLocaleString('ru-RU') + ' ₽';
   }
@@ -1704,7 +2166,7 @@
   const EXTRA_MODES = {
     full: { name: 'Reels «под ключ»', price: 4900 },
     basic_montage: { name: 'Базовый монтаж Reels', price: 2900 },
-    motion_montage: { name: 'Сложный Motion + AI монтаж', price: 4900 },
+    motion_montage: { name: 'Сложный монтаж с графикой', price: 4900 },
     script: { name: 'Сценарии Reels', price: 1900 }
   };
 
@@ -1811,7 +2273,7 @@
     if (state.extraType === 'script' && (state.extraQty === 8 || state.extraQty === 9)) {
       return {
         kind: 'scripts10',
-        text: 'Пакет из 10 сценариев стоит ровно 15 000 ₽ — это дешевле, чем ' + state.extraQty + ' шт. поштучно (' + formatRub(state.extraQty * 1900) + ')!',
+        text: 'Пакет из 10 сценариев стоит ровно 15 000 ₽. Это дешевле, чем ' + state.extraQty + ' шт. поштучно (' + formatRub(state.extraQty * 1900) + ')!',
         btn: 'Взять 10 сценариев за 15 000 ₽',
         apply: () => setExtraQty(10)
       };
@@ -1854,14 +2316,14 @@
           const extrasMsg = [];
           if (alt.reels > targetFullReels) extrasMsg.push(alt.reels + ' Reels под ключ');
           if (alt.carousels > targetCarousels) extrasMsg.push(alt.carousels + ' каруселей');
-          if (alt.stories > targetStories) extrasMsg.push(alt.stories + ' серий Stories');
+          if (alt.stories > targetStories) extrasMsg.push(alt.stories + ' серий Историй');
           if (alt.hasStrategy && !curT.hasStrategy) extrasMsg.push('стратегия в подарок');
           if (alt.hasMulti1 && !curT.hasMulti1) extrasMsg.push('+1 доп. соцсеть бонусом');
 
           const savingText = saveFirst > 0 ? 'дешевле на ' + formatRub(saveFirst) : 'за ту же цену';
-          const text = 'Переключите базу на «' + alt.name + '»' + (altExtraQty > 0 ? ' + ' + altExtraQty + ' доп.' : '') +
-            ' — выйдет ' + savingText + ' (' + formatRub(altTotalFirst) + ')' +
-            (extrasMsg.length ? ', плюс дополнительно получите: ' + extrasMsg.join(', ') + '.' : '.');
+          const text = 'Переключите основу на «' + alt.name + '»' + (altExtraQty > 0 ? ' + ' + altExtraQty + ' доп.' : '') +
+            ': выйдет ' + savingText + ' (' + formatRub(altTotalFirst) + ')' +
+            (extrasMsg.length ? ', плюс получите сверху: ' + extrasMsg.join(', ') + '.' : '.');
 
           if (!best || saveFirst > best.save) {
             best = {
@@ -1896,15 +2358,15 @@
     const bundle = calcBundlePrice(state.base, state.extraType, state.extraQty, state.extraCarousels, state.extraStories, wantStrategy, multiMode);
 
     let shootCost = 0;
-    let shootName = 'Сам / наш архив';
+    let shootName = 'Сам / ваши фото и видео';
     if (state.shootMode === 'avatar') {
       const avEl = document.querySelector('input[name="avatar_type"]:checked');
       shootCost = avEl ? Number(avEl.value) : 19900;
-      shootName = shootCost === 49900 ? 'AI-аватар (студия МСК)' : 'AI-аватар (удалённо)';
+      shootName = shootCost === 49900 ? 'Цифровой двойник (студия МСК)' : 'Цифровой двойник (удалённо)';
     } else if (state.shootMode === 'crew') {
       const crEl = document.querySelector('input[name="crew_type"]:checked');
       shootCost = crEl ? Number(crEl.value) : 14900;
-      shootName = 'Выездная съёмка в МСК';
+      shootName = 'Выездная съёмка в Москве';
     }
 
     const prepay3 = document.getElementById('opt-prepay3').checked;
@@ -1947,36 +2409,36 @@
     document.getElementById('calc-first').textContent = formatRub(s.first);
 
     const lines = [];
-    lines.push('<strong>База:</strong> ' + s.t.name);
+    lines.push('<strong>Основа:</strong> ' + s.t.name);
     if (state.extraQty > 0) {
       const uPrice = state.extraType === 'script' && state.extraQty >= 10 ? 1500 : EXTRA_MODES[state.extraType].price;
       lines.push('<strong>Доп. Reels:</strong> +' + state.extraQty + ' шт. (' + EXTRA_MODES[state.extraType].name + ' × ' + formatRub(uPrice) + ')');
     }
     if (state.extraCarousels > 0) lines.push('<strong>Доп. карусели:</strong> +' + state.extraCarousels + ' шт.');
-    if (state.extraStories > 0) lines.push('<strong>Доп. серии Stories:</strong> +' + state.extraStories + ' шт.');
-    if (s.shootCost > 0) lines.push('<strong>Съёмка/Аватар:</strong> ' + s.shootName + ' (' + formatRub(s.shootCost) + ' разово)');
+    if (state.extraStories > 0) lines.push('<strong>Доп. серии Историй:</strong> +' + state.extraStories + ' шт.');
+    if (s.shootCost > 0) lines.push('<strong>Съёмка/Двойник:</strong> ' + s.shootName + ' (' + formatRub(s.shootCost) + ' разово)');
     if (s.multiMode === 1) lines.push('<strong>Сети:</strong> +1 доп. площадка' + (s.t.hasMulti1 ? ' (бонус в тарифе)' : ''));
-    if (s.multiMode === 4) lines.push('<strong>Сети:</strong> Мультипостинг во все 4 сети');
+    if (s.multiMode === 4) lines.push('<strong>Сети:</strong> Публикация во все 4 сети');
 
     const totals = [];
     if (s.totalReels > 0) totals.push(s.totalReels + ' Reels');
     if (s.totalScriptsOnly > 0) totals.push(s.totalScriptsOnly + ' сценариев');
     if (s.totalCarousels > 0) totals.push(s.totalCarousels + ' каруселей');
-    if (s.totalStories > 0) totals.push(s.totalStories + ' серий Stories');
+    if (s.totalStories > 0) totals.push(s.totalStories + ' серий Историй');
     lines.push('<div style="margin-top:6px; padding-top:6px; border-top:1px solid #e2e8f0; color:#0f172a;"><strong>Итоговый выход в месяц:</strong> ' + (totals.length ? totals.join(' • ') : 'выберите услуги') + '</div>');
 
     document.getElementById('calc-breakdown').innerHTML = lines.join('<br>');
 
     const notes = [];
-    if (s.credit && (state.base === 'optimal' || state.base === 'max')) notes.push('Зачёт старта −14 900 ₽ применён.');
+    if (s.credit && (state.base === 'optimal' || state.base === 'max')) notes.push('Зачёт старта -14 900 ₽ применён.');
     if (s.credit && state.base !== 'optimal' && state.base !== 'max') notes.push('Зачёт 14 900 ₽ действует при выборе «Оптимального» или «Максимального».');
-    if (s.prepay3) notes.push('Скидка −10% за 3 мес.');
+    if (s.prepay3) notes.push('Скидка -10% за 3 мес.');
     if (s.b2b) notes.push('Счёт ИП/ООО +10%.');
     document.getElementById('calc-hint').textContent = notes.join(' ');
 
     const warnEl = document.getElementById('calc-warn');
     if (state.base === 'custom' && (state.extraQty > 0 || state.extraCarousels > 0 || state.extraStories > 0) && !s.wantStrategy) {
-      warnEl.textContent = 'В поштучный набор без тарифа не входят стратегия (29 900 ₽), упаковка профиля и автопостинг.';
+      warnEl.textContent = 'В поштучный набор без тарифа не входят разбор рынка и стратегия (29 900 ₽), упаковка аккаунта и выкладка.';
       warnEl.classList.add('open');
     } else {
       warnEl.classList.remove('open');
@@ -2008,7 +2470,7 @@
 
   function openModalWithCalc() {
     const s = getCalc();
-    let msg = 'База: ' + s.t.name;
+    let msg = 'Основа: ' + s.t.name;
     if (state.extraQty > 0) msg += ' + ' + state.extraQty + ' шт. (' + EXTRA_MODES[state.extraType].name + ')';
     if (s.shootCost > 0) msg += ' + ' + s.shootName;
     msg += ' • Ежемесячно: ' + formatRub(s.monthly) + ' • За 1-й мес: ' + formatRub(s.first);
@@ -2019,28 +2481,18 @@
     document.getElementById('lead-modal').classList.remove('open');
   }
 
-  function openVideoModal(title, desc) {
-    document.getElementById('vmodal-title').textContent = title;
-    document.getElementById('vmodal-desc').textContent = desc;
-    document.getElementById('video-modal').classList.add('open');
-  }
-
-  function closeVideoModal() {
-    document.getElementById('video-modal').classList.remove('open');
-  }
-
   function submitModalForm(e) {
     e.preventDefault();
     const st = document.getElementById('modal-status');
     st.style.display = 'block';
-    st.textContent = '[Демо превью]: на боевом сайте заявка сразу уходит в Telegram и Notion.';
+    st.textContent = '[Демо превью]: на рабочем сайте заявка сразу уходит вам в Telegram и таблицу.';
   }
 
   function submitMainForm(e) {
     e.preventDefault();
     const st = document.getElementById('m-status');
     st.style.display = 'block';
-    st.textContent = '[Демо превью]: на боевом сайте заявка сразу уходит в Telegram и Notion.';
+    st.textContent = '[Демо превью]: на рабочем сайте заявка сразу уходит вам в Telegram и таблицу.';
   }
 
   setBase('optimal');
