@@ -1320,7 +1320,7 @@
       <div>
         <div class="phone-frame">
           <div class="phone-screen">
-            <img class="phone-poster-img" data-media-src="media/posters/v_step_auto_motion.jpg" alt="Пример ролика STEP AUTO с графикой">
+            <img class="phone-poster-img" data-media-src="media/posters/v_step_auto_v4.jpg" alt="Пример ролика STEP AUTO с 3D-сравнением авто">
             <div class="phone-shade"></div>
 
             <div class="phone-layer phone-top">
@@ -1329,21 +1329,21 @@
             </div>
 
             <div class="phone-layer phone-center">
-              <button type="button" class="play-circle" aria-label="Смотреть видео STEP AUTO" onclick="openCasePack('motion', 0)">
+              <button type="button" class="play-circle" aria-label="Смотреть видео STEP AUTO" onclick="openCasePack('hero_show', 0)">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
               </button>
               <div class="reel-caption-box">
-                Живой пример: монтаж с графикой, чистым звуком и удержанием зрителя
+                Живой пример: разбор 3 моделей авто с графикой и 3D-вставками
               </div>
             </div>
 
             <div class="phone-layer" style="display:flex; flex-direction:column; gap:7px;">
-              <button type="button" class="btn btn-primary" style="width:100%; padding:10px 12px; font-size:13px;" onclick="openCasePack('motion', 0)">
-                Смотреть ролик со звуком (1 мин)
+              <button type="button" class="btn btn-primary" style="width:100%; padding:10px 12px; font-size:13px;" onclick="openCasePack('hero_show', 0)">
+                Смотреть ролик со звуком (37 сек)
               </button>
-              <button type="button" class="btn btn-outline-light" style="width:100%; padding:9px 12px; font-size:12.5px;" onclick="openCasePack('before_after', 0)">
-                Сравнить: Было → Стало (26 сек)
-              </button>
+              <a href="#cases" class="btn btn-outline-light" style="width:100%; padding:9px 12px; font-size:12.5px;">
+                Ещё 6 примеров ниже ↓
+              </a>
             </div>
           </div>
         </div>
@@ -1438,16 +1438,16 @@
       <!-- Видео 1: Живой спикер и графика -->
       <div class="showcase-card" data-video-slot="motion">
         <div class="video-thumb" onclick="openCasePack('motion', 0)">
-          <img class="video-thumb-img" data-media-src="media/posters/v_step_auto_motion.jpg" alt="Живой монтаж с графикой">
+          <img class="video-thumb-img" data-media-src="media/posters/v_xt_choice.jpg" alt="Живая съёмка XT TUNING">
           <div class="video-thumb-shade"></div>
           <span class="thumb-tag">Живая съёмка • 2 примера</span>
           <div class="thumb-play">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
           </div>
-          <div class="thumb-caption">Титры, живые графики, звук как в студии</div>
+          <div class="thumb-caption">Живой диалог в цеху и в авто: звук, темп и крупные титры</div>
         </div>
         <div class="showcase-body">
-          <h3>Спикер + графика и монтаж</h3>
+          <h3>Спикер + живой монтаж</h3>
           <p>Снимаем за 1 выезд в Москве или собираем по вашим видео с телефона.</p>
         </div>
       </div>
@@ -1551,10 +1551,13 @@
     <!-- Полезный PDF без звонков -->
     <div class="mid-banner">
       <div>
-        <div style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:#93c5fd; font-weight:700; margin-bottom:3px;">Бесплатно и без созвонов</div>
+        <div style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:#93c5fd; font-weight:700; margin-bottom:3px;">Бесплатно и без созвонов • Готовый файл 7 стр.</div>
         <div style="font-size:17px; font-weight:700;">Скачайте PDF «10 связок Reels, которые приносят заявки на высокий чек»</div>
       </div>
-      <button type="button" class="btn btn-primary" onclick="openModal('Скачать PDF «10 связок Reels под заявки»')">Забрать PDF в Telegram</button>
+      <div style="display:flex; flex-wrap:wrap; gap:10px;">
+        <a data-media-href="media/10_svyazok_reels_karpov_production.pdf" target="_blank" download="10_svyazok_Reels_KARPOV_PRODUCTION.pdf" class="btn btn-primary">Открыть / Скачать PDF (0 ₽)</a>
+        <button type="button" class="btn btn-outline-light" onclick="openModal('Запрос разбора + PDF «10 связок Reels» в Telegram')">Забрать в Telegram</button>
+      </div>
     </div>
   </div>
 </section>
@@ -1961,24 +1964,35 @@
     return relPath;
   }
 
-  // Hydrate all static posters on load
+  // Hydrate all static posters and PDF links on load
   document.querySelectorAll('[data-media-src]').forEach((el) => {
     el.src = resolveMedia(el.getAttribute('data-media-src'));
   });
+  document.querySelectorAll('[data-media-href]').forEach((el) => {
+    el.href = resolveMedia(el.getAttribute('data-media-href'));
+  });
 
   const VIDEO_PACKS = {
+    hero_show: [
+      {
+        label: 'STEP AUTO: 3D-разбор авто (0:37)',
+        src: 'media/v_step_auto_v4.mp4',
+        poster: 'media/posters/v_step_auto_v4.jpg',
+        desc: 'Плотный темп, 3D-карточки сравнения автомобилей, титры и чистая речь без затянутых пауз.'
+      }
+    ],
     motion: [
       {
-        label: 'STEP AUTO: автоимпорт (1:00)',
-        src: 'media/v_step_auto_motion.mp4',
-        poster: 'media/posters/v_step_auto_motion.jpg',
-        desc: 'Живая съёмка на 2 камеры + анимированные карточки с ценами, графики расходов и чистый звук.'
+        label: 'XT TUNING: живой выезд (1:05)',
+        src: 'media/v_xt_choice.mp4',
+        poster: 'media/posters/v_xt_choice.jpg',
+        desc: 'Живая съёмка на точке клиента: диалог в сервисе и салоне авто с чистым звуком и динамикой.'
       },
       {
         label: 'CHLN: разбор стиля (0:55)',
         src: 'media/v_chln_nba.mp4',
         poster: 'media/posters/v_chln_nba.jpg',
-        desc: 'Динамичный монтаж разговорного ролика с вставками-метафорами и плотными титрами.'
+        desc: 'Разговорный ролик в студии с историческими вставками, титрами и бодрым ритмом.'
       }
     ],
     before_after: [
@@ -1986,7 +2000,7 @@
         label: 'Было → Стало (0:26)',
         src: 'media/v_step_auto_ba.mp4',
         poster: 'media/posters/v_step_auto_ba.jpg',
-        desc: 'Один и тот же ролик и одна речь: справа обычный монтаж без графики, слева готовая упаковка.'
+        desc: 'Один и тот же ролик и одна речь: красное «БЫЛО» без графики против зелёного «СТАЛО» с полным оформлением и чистым звуком 48 кГц.'
       }
     ],
     avatar: [
@@ -2009,6 +2023,12 @@
         src: 'media/v_chln_sizes.mp4',
         poster: 'media/posters/v_chln_sizes.jpg',
         desc: 'Акцент на деталях товара, примерках, посадке и причинах покупать именно у этого бренда.'
+      },
+      {
+        label: 'CHLN: журнальный дизайн (0:49)',
+        src: 'media/v_chln09.mp4',
+        poster: 'media/posters/v_chln09.jpg',
+        desc: 'Плотная графика, крупная типографика и сторителлинг для товарного бренда.'
       }
     ]
   };
