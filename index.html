@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CONTENT OS — Отдел контент-маркетинга и Reels под ключ</title>
-<meta name="description" content="Находим ролики, которые уже приводят заявки конкурентам, и выпускаем Reels, карусели и Stories под ключ. Москва и вся РФ. Старт за 72 часа.">
+<title>CONTENT OS — Забираем на себя идеи, съёмки, монтаж и заявки из Reels</title>
+<meta name="description" content="Запустим Reels на поток без съёмочной рутины: идеи с пруфами конкурентов, живой и AI-продакшн, монтаж и воронка в Директ. Москва и вся РФ.">
 <style>
   :root {
     --bg-dark: #060a14;
@@ -24,7 +24,6 @@
     --green: #10b981;
     --amber: #f59e0b;
     --radius: 16px;
-    --radius-sm: 10px;
   }
 
   * {
@@ -37,7 +36,7 @@
     scroll-behavior: smooth;
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.48;
     color: var(--ink);
     background: var(--bg-light);
     overflow-x: hidden;
@@ -58,7 +57,6 @@
     padding: 0 24px;
   }
 
-  /* Кнопки */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -97,7 +95,7 @@
   }
 
   .btn-outline-light:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.14);
   }
 
   .btn-outline-dark {
@@ -111,95 +109,16 @@
     color: var(--blue);
   }
 
-  /* Панель A/B/C теста сверху */
-  .ab-ribbon {
-    background: #0b1222;
-    border-bottom: 1px solid var(--border-dark);
-    color: #cbd5e1;
-    padding: 10px 0;
-    font-size: 13px;
-  }
-
-  .ab-ribbon-inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .ab-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .ab-pill {
-    background: rgba(255, 255, 255, 0.06);
-    color: #e2e8f0;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 999px;
-    padding: 6px 12px;
-    font-family: inherit;
-    font-size: 12.5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.15s;
-  }
-
-  .ab-pill.active {
-    background: var(--blue);
-    border-color: var(--blue-bright);
-    color: #ffffff;
-  }
-
-  .ab-all-btn {
-    background: transparent;
-    color: var(--cyan);
-    border: 1px solid rgba(56, 189, 248, 0.35);
-    border-radius: 999px;
-    padding: 5px 11px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-  .ab-all-panel {
-    display: none;
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border-dark);
-  }
-
-  .ab-all-panel.open {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-  }
-
-  .ab-mini-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border-dark);
-    border-radius: 12px;
-    padding: 12px;
-    cursor: pointer;
-  }
-
-  .ab-mini-card:hover {
-    border-color: var(--blue-bright);
-  }
-
   /* Шапка */
   .site-header {
     position: sticky;
     top: 0;
     z-index: 90;
-    background: rgba(6, 10, 20, 0.92);
+    background: rgba(6, 10, 20, 0.94);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-dark);
-    padding: 14px 0;
+    padding: 13px 0;
     color: #ffffff;
   }
 
@@ -217,7 +136,6 @@
     gap: 10px;
     font-weight: 800;
     font-size: 16px;
-    letter-spacing: -0.01em;
     color: #ffffff;
     text-decoration: none;
     white-space: nowrap;
@@ -235,13 +153,12 @@
     font-size: 12px;
     font-weight: 500;
     color: var(--ink-light-muted);
-    margin-left: 4px;
   }
 
   .nav-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 22px;
     list-style: none;
   }
 
@@ -269,14 +186,14 @@
     text-decoration: none;
   }
 
-  /* Hero секция */
+  /* 01. HERO */
   .hero-section {
     background:
-      radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.22) 0%, transparent 45%),
+      radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.24) 0%, transparent 45%),
       radial-gradient(circle at 12% 85%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
       var(--bg-dark);
     color: #ffffff;
-    padding: 58px 0 72px;
+    padding: 54px 0 66px;
     border-bottom: 1px solid var(--border-dark);
   }
 
@@ -290,40 +207,38 @@
   .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(37, 99, 235, 0.15);
+    background: rgba(37, 99, 235, 0.16);
     border: 1px solid rgba(96, 165, 250, 0.35);
     color: #93c5fd;
     padding: 6px 14px;
     border-radius: 999px;
     font-size: 12.5px;
     font-weight: 700;
-    letter-spacing: 0.02em;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .hero-section h1 {
-    font-size: clamp(30px, 4.1vw, 50px);
+    font-size: clamp(30px, 4.1vw, 48px);
     font-weight: 800;
     line-height: 1.08;
     letter-spacing: -0.028em;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     color: #ffffff;
   }
 
   .hero-lead {
     font-size: clamp(16px, 1.4vw, 19px);
     color: #cbd5e1;
-    line-height: 1.5;
-    margin-bottom: 24px;
-    max-width: 620px;
+    line-height: 1.45;
+    margin-bottom: 22px;
+    max-width: 590px;
   }
 
   .hero-chips {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
   }
 
   .hero-chip {
@@ -350,15 +265,15 @@
     gap: 12px;
   }
 
-  /* Визуальный мокап телефона 9:16 в Hero */
+  /* Телефон-плеер 9:16 в Hero */
   .phone-frame {
-    max-width: 320px;
+    max-width: 310px;
     width: 100%;
     margin: 0 auto;
     background: linear-gradient(160deg, #131c31 0%, #090e1a 100%);
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 28px;
-    padding: 14px;
+    padding: 13px;
     box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55);
   }
 
@@ -400,22 +315,21 @@
 
   .phone-center {
     text-align: center;
-    padding: 10px 4px;
   }
 
   .play-circle {
-    width: 64px;
-    height: 64px;
+    width: 62px;
+    height: 62px;
     border-radius: 999px;
-    background: rgba(37, 99, 235, 0.92);
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: rgba(37, 99, 235, 0.94);
+    border: 2px solid rgba(255, 255, 255, 0.45);
     color: #ffffff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 14px;
     cursor: pointer;
-    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.18);
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.2);
     transition: transform 0.15s;
   }
 
@@ -424,7 +338,7 @@
   }
 
   .reel-caption-box {
-    background: rgba(6, 10, 20, 0.78);
+    background: rgba(6, 10, 20, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 12px;
     padding: 10px 12px;
@@ -434,22 +348,17 @@
     line-height: 1.3;
   }
 
-  .phone-bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
   .phone-meta {
     font-size: 11.5px;
     color: #94a3b8;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 8px;
   }
 
-  /* Общие секции */
+  /* Секции */
   .section {
-    padding: 72px 0;
+    padding: 64px 0;
   }
 
   .section-soft {
@@ -478,18 +387,18 @@
   }
 
   .section h2 {
-    font-size: clamp(24px, 3vw, 36px);
+    font-size: clamp(24px, 3vw, 35px);
     font-weight: 800;
-    line-height: 1.15;
+    line-height: 1.14;
     letter-spacing: -0.022em;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .section-lead {
-    font-size: 17px;
+    font-size: 16.5px;
     color: var(--ink-muted);
-    max-width: 720px;
-    margin-bottom: 32px;
+    max-width: 700px;
+    margin-bottom: 28px;
   }
 
   .section-dark .section-lead {
@@ -500,13 +409,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-  }
-
-  .calc-grid {
-    display: grid;
-    grid-template-columns: 1.35fr 0.9fr;
-    gap: 20px;
-    align-items: stretch;
   }
 
   .grid-3 {
@@ -521,7 +423,14 @@
     gap: 16px;
   }
 
-  .grid-hero > *,
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 0.9fr;
+    gap: 22px;
+    align-items: stretch;
+  }
+
+  .hero-grid > *,
   .grid-2 > *,
   .grid-3 > *,
   .grid-4 > *,
@@ -529,12 +438,12 @@
     min-width: 0;
   }
 
-  /* Карточки */
+  /* 02. Карточки болей (коротко и в лоб) */
   .card {
     background: #ffffff;
     border: 1px solid var(--border-light);
     border-radius: var(--radius);
-    padding: 24px;
+    padding: 22px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -544,29 +453,11 @@
     border-top: 3px solid #ef4444;
   }
 
-  .card-step {
-    position: relative;
-  }
-
-  .step-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-    background: var(--blue-soft);
-    color: var(--blue);
-    font-size: 13px;
-    font-weight: 800;
-    margin-bottom: 14px;
-  }
-
   .card h3 {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.25;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .card p {
@@ -574,127 +465,107 @@
     color: var(--ink-muted);
   }
 
-  .card-foot {
-    margin-top: 16px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border-light);
-    font-size: 13.5px;
-    color: var(--ink);
-    font-weight: 500;
-  }
-
-  /* Баннер-перехватчик в середине */
-  .mid-banner {
-    margin-top: 28px;
-    background: linear-gradient(120deg, #0f172a 0%, #1e3a8a 100%);
-    color: #ffffff;
-    border-radius: var(--radius);
-    padding: 24px 28px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 18px;
-  }
-
-  /* Мокапы примеров (Блок 05) */
-  .example-card {
+  /* 03. Интерактивная витрина 4 видео-кейсов вместо текстовых блоков */
+  .showcase-card {
     background: #ffffff;
     border: 1px solid var(--border-light);
     border-radius: var(--radius);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s, box-shadow 0.15s;
   }
 
-  .example-visual {
-    background: #0b1120;
+  .showcase-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  }
+
+  .video-thumb {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background:
+      radial-gradient(circle at 25% 20%, rgba(59, 130, 246, 0.28), transparent 55%),
+      #0a101f;
+    padding: 16px;
     color: #ffffff;
-    padding: 18px;
-    border-bottom: 1px solid var(--border-light);
-    min-height: 205px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
   }
 
-  .example-body {
-    padding: 20px;
-  }
-
-  .mini-reel-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-top: 10px;
-  }
-
-  .mini-reel {
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 10px;
-    padding: 10px 8px;
+  .thumb-tag {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    padding: 4px 10px;
     font-size: 11px;
+    font-weight: 700;
+    color: #e2e8f0;
   }
 
-  .mini-reel strong {
-    display: block;
-    color: var(--cyan);
-    font-size: 12.5px;
-    margin-bottom: 4px;
-  }
-
-  .before-after {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .ba-box {
-    border-radius: 10px;
-    padding: 12px;
-    font-size: 12px;
-    line-height: 1.35;
-  }
-
-  .ba-before {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px dashed rgba(255, 255, 255, 0.25);
-    color: #94a3b8;
-  }
-
-  .ba-after {
-    background: rgba(37, 99, 235, 0.2);
-    border: 1px solid rgba(96, 165, 250, 0.45);
+  .thumb-play {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.92);
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0.2);
   }
 
-  .filter-banner {
-    margin-top: 20px;
-    background: #fef2f2;
-    border: 1px solid #fecaca;
-    color: #7f1d1d;
-    border-radius: 12px;
-    padding: 16px 20px;
-    font-size: 14.5px;
+  .thumb-caption {
+    background: rgba(6, 10, 20, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 9px 11px;
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.3;
   }
 
-  /* Тарифы */
-  .start-banner {
-    background: linear-gradient(135deg, #111827 0%, #172554 100%);
-    border: 1px solid rgba(245, 158, 11, 0.45);
+  .showcase-body {
+    padding: 16px 18px 18px;
+  }
+
+  .showcase-body h3 {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 5px;
+  }
+
+  .showcase-body p {
+    font-size: 13.5px;
+    color: var(--ink-muted);
+    line-height: 1.4;
+  }
+
+  .mid-banner {
+    margin-top: 26px;
+    background: linear-gradient(120deg, #0f172a 0%, #1e3a8a 100%);
     color: #ffffff;
     border-radius: var(--radius);
-    padding: 28px;
-    margin-bottom: 24px;
+    padding: 20px 26px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
   }
 
+  /* 04. Тарифы + Умный калькулятор + Старт снизу */
   .price-card {
     background: #ffffff;
     border: 1px solid var(--border-light);
     border-radius: var(--radius);
-    padding: 26px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -703,7 +574,6 @@
   .price-card.featured {
     border: 2px solid var(--blue);
     box-shadow: 0 18px 40px rgba(37, 99, 235, 0.12);
-    position: relative;
   }
 
   .hit-badge {
@@ -718,11 +588,18 @@
     border-radius: 999px;
   }
 
+  .tier-essence {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--blue);
+    margin: 4px 0 8px;
+  }
+
   .price-val {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 800;
     letter-spacing: -0.03em;
-    margin: 10px 0 16px;
+    margin: 6px 0 14px;
     color: var(--ink);
   }
 
@@ -736,14 +613,14 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 22px;
-    font-size: 14.5px;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
     color: var(--ink-muted);
   }
 
   .check-list li {
-    padding-left: 22px;
+    padding-left: 20px;
     position: relative;
   }
 
@@ -760,9 +637,9 @@
     color: var(--ink);
   }
 
-  /* Калькулятор */
+  /* Умный калькулятор */
   .calc-wrap {
-    margin-top: 28px;
+    margin-top: 26px;
     background: #ffffff;
     border: 1px solid var(--border-light);
     border-radius: var(--radius);
@@ -774,46 +651,6 @@
     border-radius: 12px;
     padding: 14px 16px;
     margin-bottom: 14px;
-  }
-
-  .calc-group-title {
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--blue);
-    margin-bottom: 10px;
-  }
-
-  .calc-option {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 0;
-    border-top: 1px solid #f1f5f9;
-    font-size: 14px;
-  }
-
-  .calc-option:first-of-type {
-    border-top: none;
-  }
-
-  .calc-option label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-  }
-
-  .calc-total-box {
-    background: var(--bg-soft);
-    border: 1px solid #cbd5e1;
-    border-radius: 14px;
-    padding: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 
   .calc-step-label {
@@ -949,7 +786,7 @@
   }
 
   .stepper-val {
-    min-width: 36px;
+    min-width: 34px;
     text-align: center;
     font-size: 16px;
     font-weight: 800;
@@ -992,6 +829,63 @@
     display: block;
   }
 
+  .calc-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-top: 1px solid #f1f5f9;
+    font-size: 13.5px;
+  }
+
+  .calc-option:first-of-type {
+    border-top: none;
+  }
+
+  .calc-option label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .calc-total-box {
+    background: var(--bg-soft);
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .calc-breakdown {
+    font-size: 13px;
+    color: var(--ink-muted);
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 12px 0;
+    line-height: 1.45;
+  }
+
+  .calc-warn {
+    font-size: 12px;
+    color: #92400e;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-top: 10px;
+    display: none;
+  }
+
+  .calc-warn.open {
+    display: block;
+  }
+
   .smart-tip {
     display: none;
     margin-top: 14px;
@@ -1022,62 +916,32 @@
     cursor: pointer;
   }
 
-  .calc-breakdown {
-    font-size: 13px;
-    color: var(--ink-muted);
-    background: #ffffff;
-    border: 1px solid var(--border-light);
-    border-radius: 10px;
-    padding: 10px 12px;
-    margin: 12px 0;
-    line-height: 1.45;
-  }
-
-  .calc-warn {
-    font-size: 12px;
-    color: #92400e;
-    background: #fffbeb;
-    border: 1px solid #fde68a;
-    border-radius: 8px;
-    padding: 8px 10px;
-    margin-top: 10px;
-    display: none;
-  }
-
-  .calc-warn.open {
-    display: block;
-  }
-
-  /* SEO-блог карточки */
-  .blog-card {
-    background: #ffffff;
-    border: 1px solid var(--border-light);
-    border-radius: 14px;
-    padding: 20px;
+  /* Стратегический старт — компактно под тарифами */
+  .start-strip {
+    margin-top: 22px;
+    background: #0f172a;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    color: #ffffff;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 12px;
+    align-items: center;
+    gap: 18px;
   }
 
-  .blog-meta {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--blue);
-    text-transform: uppercase;
-  }
-
-  /* Форма */
+  /* Форма и контакты */
   .form-card {
     background: #ffffff;
     color: var(--ink);
     border-radius: var(--radius);
-    padding: 28px;
+    padding: 26px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
   }
 
   .form-field {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
   }
 
   .form-field label {
@@ -1085,7 +949,6 @@
     font-size: 13px;
     font-weight: 700;
     margin-bottom: 5px;
-    color: var(--ink);
   }
 
   .form-field input,
@@ -1098,12 +961,6 @@
     font-size: 16px;
     background: #ffffff;
     color: var(--ink);
-  }
-
-  .form-field input:focus,
-  .form-field select:focus {
-    outline: 2px solid var(--blue);
-    border-color: var(--blue);
   }
 
   .form-status {
@@ -1121,16 +978,16 @@
     background: var(--bg-dark-card);
     border: 1px solid var(--border-dark);
     border-radius: var(--radius);
-    padding: 28px;
+    padding: 26px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
+    gap: 18px;
   }
 
   .avatar-monogram {
-    width: 58px;
-    height: 58px;
+    width: 56px;
+    height: 56px;
     border-radius: 14px;
     background: linear-gradient(135deg, var(--blue), #1e40af);
     color: #ffffff;
@@ -1142,12 +999,10 @@
     flex-shrink: 0;
   }
 
-  /* Липкая мобильная кнопка */
   .sticky-mobile-cta {
     display: none;
   }
 
-  /* Модалка */
   .modal-backdrop {
     position: fixed;
     inset: 0;
@@ -1180,8 +1035,13 @@
     background: #04070f;
     color: #94a3b8;
     border-top: 1px solid var(--border-dark);
-    padding: 28px 0;
+    padding: 26px 0;
     font-size: 13px;
+  }
+
+  footer a {
+    color: #93c5fd;
+    text-decoration: none;
   }
 
   @media (max-width: 960px) {
@@ -1189,8 +1049,7 @@
     .grid-4,
     .grid-3,
     .grid-2,
-    .calc-grid,
-    .ab-all-panel.open {
+    .calc-grid {
       grid-template-columns: 1fr;
     }
     .nav-links {
@@ -1206,21 +1065,15 @@
       padding: 0 16px;
     }
     .section {
-      padding: 46px 0;
+      padding: 42px 0;
     }
     .hero-section {
-      padding: 36px 0 48px;
+      padding: 32px 0 44px;
     }
     .hero-actions .btn,
-    .mid-banner .btn {
+    .mid-banner .btn,
+    .start-strip .btn {
       width: 100%;
-    }
-    .ab-pills {
-      width: 100%;
-    }
-    .ab-pill {
-      flex: 1 1 100%;
-      text-align: left;
     }
     .calc-option {
       flex-direction: column;
@@ -1253,43 +1106,6 @@
 </head>
 <body>
 
-<!-- ПАНЕЛЬ СРАВНЕНИЯ 3 ВАРИАНТОВ ПЕРВОГО БЛОКА -->
-<div class="ab-ribbon">
-  <div class="container">
-    <div class="ab-ribbon-inner">
-      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px; width:100%; justify-content:space-between;">
-        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px;">
-          <strong style="color:#ffffff;">Тест 1-го экрана (выберите вариант):</strong>
-          <div class="ab-pills">
-            <button type="button" class="ab-pill active" id="ab-btn-1" onclick="setHeroVariant(1)">1. Про конкурентов</button>
-            <button type="button" class="ab-pill" id="ab-btn-2" onclick="setHeroVariant(2)">2. Ненавидите сниматься</button>
-            <button type="button" class="ab-pill" id="ab-btn-3" onclick="setHeroVariant(3)">3. Устали от слива</button>
-          </div>
-        </div>
-        <button type="button" class="ab-all-btn" onclick="toggleAllVariants()">Сравнить все 3 сразу</button>
-      </div>
-    </div>
-
-    <div id="hero-all-variants" class="ab-all-panel">
-      <div class="ab-mini-card" onclick="setHeroVariant(1)">
-        <div style="font-size:11px; color:#60a5fa; font-weight:700; margin-bottom:4px;">ВАРИАНТ 1</div>
-        <strong style="color:#fff; font-size:13.5px; display:block; margin-bottom:4px;">Ваши конкуренты уже забирают клиентов из Reels. Заберём их обратно</strong>
-        <span style="font-size:12px;">Находим ролики с запросами цены и запускаем ваш контент под ключ.</span>
-      </div>
-      <div class="ab-mini-card" onclick="setHeroVariant(2)">
-        <div style="font-size:11px; color:#60a5fa; font-weight:700; margin-bottom:4px;">ВАРИАНТ 2</div>
-        <strong style="color:#fff; font-size:13.5px; display:block; margin-bottom:4px;">Reels, которые приносят заявки — даже если вы ненавидите сниматься</strong>
-        <span style="font-size:12px;">Архив с телефона, AI-двойник или 1 выезд в МСК. План за 72 ч.</span>
-      </div>
-      <div class="ab-mini-card" onclick="setHeroVariant(3)">
-        <div style="font-size:11px; color:#60a5fa; font-weight:700; margin-bottom:4px;">ВАРИАНТ 3</div>
-        <strong style="color:#fff; font-size:13.5px; display:block; margin-bottom:4px;">Хватит снимать в пустоту и платить за «красивые просмотры»</strong>
-        <span style="font-size:12px;">Достаём рабочие связки рынка и ведём до диалога в Директ.</span>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ШАПКА -->
 <header class="site-header">
   <div class="container">
@@ -1300,12 +1116,11 @@
         <span class="brand-geo">• Москва / РФ</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#pain">Почему не продаёт</a></li>
-        <li><a href="#system">Система</a></li>
-        <li><a href="#formats">Без съёмок</a></li>
-        <li><a href="#examples">Примеры</a></li>
+        <li><a href="#pain">Боли</a></li>
+        <li><a href="#cases">Видео-примеры</a></li>
         <li><a href="#pricing">Тарифы</a></li>
-        <li><a href="#blog">Статьи</a></li>
+        <li><a href="#calculator">Калькулятор</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
       <div class="header-cta">
         <a href="https://t.me/frankiemoor" class="header-tg">@frankiemoor</a>
@@ -1320,26 +1135,26 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div id="hero-eyebrow" class="hero-badge">Москва (выезд) и вся РФ (онлайн) • Старт за 72 часа</div>
-        <h1 id="hero-title">Ваши конкуренты уже забирают клиентов из Reels. Заберём их обратно</h1>
-        <p id="hero-lead" class="hero-lead">
-          Находим ролики в вашей нише, где покупатели прямо сейчас спрашивают цену, и запускаем ваш контент под ключ — без танцев и съёмочной каторги.
+        <div class="hero-badge">Москва (выезд) и вся РФ (онлайн) • Запуск за 72 часа</div>
+        <h1>Хватит самому работать SMM-щиком. Запустим вам Reels на поток — даже без съёмок</h1>
+        <p class="hero-lead">
+          Идеи с пруфами конкурентов, монтаж и воронка заявок в Директ — от 0 до 3 часов вашего времени в месяц.
         </p>
 
         <div class="hero-chips">
-          <div class="hero-chip"><span>✓</span> План и 10 сценариев за 72 часа</div>
-          <div class="hero-chip"><span>✓</span> 0–3 ч вашего времени в месяц</div>
-          <div class="hero-chip"><span>✓</span> Воронка кодовых слов в Директ</div>
+          <div class="hero-chip"><span>✓</span> Готовый план за 72 часа</div>
+          <div class="hero-chip"><span>✓</span> От 0 ч у камеры (архив / AI)</div>
+          <div class="hero-chip"><span>✓</span> Воронка кодовых слов</div>
         </div>
 
         <div class="hero-actions">
           <button type="button" class="btn btn-primary" onclick="openModal('Бесплатный 3-минутный разбор ниши (0 ₽)')">Получить видеоразбор ниши (0 ₽)</button>
-          <a href="#examples" class="btn btn-outline-light">Смотреть примеры и кейсы</a>
+          <a href="#cases" class="btn btn-outline-light">Смотреть примеры видео</a>
         </div>
       </div>
 
-      <!-- Визуальный макет Reels-плеера 9:16 -->
-      <div>
+      <!-- Слот под главный видео-шоурил 9:16 -->
+      <div data-video-slot="hero">
         <div class="phone-frame">
           <div class="phone-screen">
             <div class="phone-top">
@@ -1348,21 +1163,21 @@
             </div>
 
             <div class="phone-center">
-              <button type="button" class="play-circle" aria-label="Смотреть видео о системе" onclick="openVideoPreview()">
+              <button type="button" class="play-circle" aria-label="Смотреть видео о системе" onclick="openVideoModal('Главный шоурил и обзор системы', 'Сюда встаёт ваш главный ролик: живой моушн-монтаж + быстрый показ, как устроена система.')">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
               </button>
               <div class="reel-caption-box">
-                «Почему 90% контента в бизнесе не приносит заявок — и как это чинится за 72 часа»
+                «Как мы делаем Reels под заявки за 0–3 часа вашего времени в месяц»
               </div>
             </div>
 
-            <div class="phone-bottom">
+            <div>
               <div class="phone-meta">
-                <span>Кейсы: STEP AUTO • XT TUNING</span>
-                <span>02:15</span>
+                <span>Слот под ваш шоурил</span>
+                <span>01:30</span>
               </div>
-              <button type="button" class="btn btn-outline-light" style="width:100%; padding:9px 12px; font-size:12.5px;" onclick="openVideoPreview()">
-                Смотреть 2-мин обзор системы
+              <button type="button" class="btn btn-outline-light" style="width:100%; padding:9px 12px; font-size:12.5px;" onclick="openVideoModal('Главный шоурил и обзор системы', 'Сюда встаёт ваш главный ролик: живой моушн-монтаж + быстрый показ, как устроена система.')">
+                Смотреть видео-пример
               </button>
             </div>
           </div>
@@ -1372,268 +1187,141 @@
   </div>
 </section>
 
-<!-- 02. БОЛИ (БЕЗ ЦЕНЫ) -->
+<!-- 02. 4 КОРОТКИЕ БОЛИ (ТОЧНО ЯЗЫКОМ ПРЕДПРИНИМАТЕЛЕЙ) -->
 <section id="pain" class="section">
   <div class="container">
-    <span class="section-eyebrow">Почему классический SMM не работает</span>
-    <h2>Почему контент забирает время, но не приносит клиентов</h2>
-    <p class="section-lead">Покупатель выбирает не того, кто красивее станцевал под тренд, а того, кто попал в его боль и довёл до диалога.</p>
+    <span class="section-eyebrow">Знакомая ситуация?</span>
+    <h2>Почему сейчас контент тормозит бизнес</h2>
 
-    <div class="grid-4">
+    <div class="grid-4" style="margin-top:22px;">
       <div class="card card-pain">
         <div>
-          <h3>1. Темы «из головы»</h3>
-          <p>Снимаете ради просмотров под музыку — в комментариях никто не спрашивает цену.</p>
+          <h3>1. Сами как SMM-щик</h3>
+          <p>Тратите вечера на придумывание тем и контроль монтажа вместо роста продаж.</p>
         </div>
       </div>
       <div class="card card-pain">
         <div>
-          <h3>2. «Процесс в лоб»</h3>
-          <p>Сырые видео работы без хука и смысла в ленте просто пролистывают мимо.</p>
+          <h3>2. Мало контента и нет идей</h3>
+          <p>Как только начинается завал по заказам — профиль замирает на недели.</p>
         </div>
       </div>
       <div class="card card-pain">
         <div>
-          <h3>3. Вода из нейросети</h3>
-          <p>Подрядчики лепят шаблонные тексты и путают ваши реальные цены и сроки.</p>
+          <h3>3. Сырое видео не продаёт</h3>
+          <p>Снимаете процесс работы в лоб без хука — охваты низкие, заявок ноль.</p>
         </div>
       </div>
       <div class="card card-pain">
         <div>
-          <h3>4. Бросаете через 2 недели</h3>
-          <p>Сложные съёмки не вписываются в вашу работу — профиль снова пустой.</p>
+          <h3>4. Подрядчики льют воду</h3>
+          <p>Присылают шаблонные тексты из нейросетей и путают ваши реальные цены.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 03. КАК УСТРОЕНА СИСТЕМА + ЛИД-МАГНИТ -->
-<section id="system" class="section section-soft">
+<!-- 03. ВИДЕО-ШОУРУМ: НАЖМИ И ПОСМОТРИ В ДЕЛЕ -->
+<section id="cases" class="section section-soft">
   <div class="container">
-    <span class="section-eyebrow">Под капотом Content OS</span>
-    <h2>Как мы превращаем ваши соцсети в канал заявок</h2>
-    <p class="section-lead">Всю рутину анализа, сценариев и продакшена забираем на себя — наружу вы получаете понятный выбор и готовый результат.</p>
+    <span class="section-eyebrow">Смотрите руками</span>
+    <h2>4 формата, которые закрывают контент без вашей рутины</h2>
+    <p class="section-lead">Нажмите на любую карточку — откроется пример ролика или разбора.</p>
 
     <div class="grid-4">
-      <div class="card card-step">
-        <div>
-          <div class="step-num">01</div>
-          <h3>База правды о вас</h3>
-          <p>12 вопросов голосом + ваш архив и прайсы. Ни одной выдуманной цифры в текстах.</p>
+      <!-- Слот 1: Живой моушн и спикер -->
+      <div class="showcase-card" data-video-slot="motion">
+        <div class="video-thumb" onclick="openVideoModal('Живой моушн и спикер', 'Сюда встанет ваш новый ролик с плотным моушн-дизайном и кейсы STEP AUTO / XT TUNING.')">
+          <span class="thumb-tag">Живая съёмка / Выезд</span>
+          <div class="thumb-play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </div>
+          <div class="thumb-caption">Титры, графика, студийный звук 48 кГц и плотный ритм</div>
+        </div>
+        <div class="showcase-body">
+          <h3>Живой моушн-монтаж</h3>
+          <p>Снимаем за 1 выезд в МСК или монтируем ваш исходник с телефонов по суфлёру.</p>
         </div>
       </div>
-      <div class="card card-step">
-        <div>
-          <div class="step-num">02</div>
-          <h3>Разведка конкурентов</h3>
-          <p>Находим ролики с охватом 2–3x и живыми запросами цены в комментариях.</p>
+
+      <!-- Слот 2: AI-аватар -->
+      <div class="showcase-card" data-video-slot="avatar">
+        <div class="video-thumb" onclick="openVideoModal('Реалистичный AI-аватар', 'Сюда встанет живой пример AI-двойника с родным голосом, чтобы клиент видел качество мимики и речи.')">
+          <span class="thumb-tag">0 ч съёмок в месяц</span>
+          <div class="thumb-play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </div>
+          <div class="thumb-caption">Оцифровываем ваш голос и мимику по 1 записи</div>
+        </div>
+        <div class="showcase-body">
+          <h3>Ваш AI-двойник</h3>
+          <p>Экспертные Reels выходят весь год без вашего участия у камеры за 0 ₽ доплат.</p>
         </div>
       </div>
-      <div class="card card-step">
-        <div>
-          <div class="step-num">03</div>
-          <h3>Отбор с пруфами</h3>
-          <p>Отсекаем пустой глянец («Тест вторника»). Вы выбираете темы с реальными цифрами.</p>
+
+      <!-- Слот 3: Оживление фото / архива -->
+      <div class="showcase-card" data-video-slot="photo_live">
+        <div class="video-thumb" onclick="openVideoModal('Оживление фото и сырого архива', 'Сюда встанет пример «до → после»: как из фото шкафа/объекта или старых видео в телефоне собирается рекламный Reels.')">
+          <span class="thumb-tag">Без новых съёмок</span>
+          <div class="thumb-play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </div>
+          <div class="thumb-caption">Фото товара или видео из цеха → Reels с историей</div>
+        </div>
+        <div class="showcase-body">
+          <h3>Из архива и фото в Reels</h3>
+          <p>Пересобираем видео из вашей галереи и оживляем фото объектов под острые хуки.</p>
         </div>
       </div>
-      <div class="card card-step">
-        <div>
-          <div class="step-num">04</div>
-          <h3>Продакшн и воронка</h3>
-          <p>Reels, карусели, Stories, PDF-магнит, кодовые слова в Директ и автопостинг.</p>
+
+      <!-- Слот 4: Разведка и воронка -->
+      <div class="showcase-card" data-video-slot="xray">
+        <div class="video-thumb" onclick="openVideoModal('Рентген ниши и воронка заявок', 'Сюда встанет скрин разбора конкурентов (ролики 2–3x выше медианы + запросы цены) и пример PDF лид-магнита.')">
+          <span class="thumb-tag">Темы с цифрами</span>
+          <div class="thumb-play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </div>
+          <div class="thumb-caption">3 хита ниши с запросами цены + PDF по кодовому слову</div>
+        </div>
+        <div class="showcase-body">
+          <h3>Темы с пруфами и воронка</h3>
+          <p>Вы никогда не придумываете идеи: выбираете из проверенных связок рынка.</p>
         </div>
       </div>
     </div>
 
-    <!-- Захват в середине -->
+    <!-- Полезный перехватчик PDF -->
     <div class="mid-banner">
       <div>
-        <div style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:#93c5fd; font-weight:700; margin-bottom:4px;">Полезный материал без звонков</div>
-        <div style="font-size:18px; font-weight:700;">Не готовы к разбору прямо сейчас? Заберите PDF «10 коммерческих связок Reels для высокого чека»</div>
+        <div style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:#93c5fd; font-weight:700; margin-bottom:3px;">Бесплатно без звонков</div>
+        <div style="font-size:17px; font-weight:700;">Скачайте PDF «10 связок Reels, которые приносят заявки на высокий чек»</div>
       </div>
       <button type="button" class="btn btn-primary" onclick="openModal('Скачать PDF «10 коммерческих связок Reels»')">Забрать PDF в Telegram</button>
     </div>
   </div>
 </section>
 
-<!-- 04. НЕТ ВРЕМЕНИ СНИМАТЬСЯ -->
-<section id="formats" class="section">
-  <div class="container">
-    <span class="section-eyebrow">Удобно при любой загрузке</span>
-    <h2>Сколько вашего времени нужно: от 0 до 3 часов в месяц</h2>
-    <p class="section-lead">Подстраиваем производство под ваш график и город — ничего не ломая в операционке.</p>
-
-    <div class="grid-3">
-      <div class="card">
-        <div>
-          <span class="section-eyebrow">0 часов съёмок в месяц</span>
-          <h3>Ваш архив + AI-двойник</h3>
-          <p>Пересобираем готовые видео из вашего телефона или 1 раз обучаем вашего AI-аватара с родным голосом.</p>
-        </div>
-        <div class="card-foot">Для тех, кто вообще не хочет стоять перед камерой каждый месяц.</div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="section-eyebrow">10 мин в неделю / Удалённо</span>
-          <h3>Микро-досъём на точке (0 ₽)</h3>
-          <p>Доснимаете 2–3 кадра по ходу работы или читаете готовый текст с телесуфлёра в телефоне.</p>
-        </div>
-        <div class="card-foot">Любой город РФ и мира. Монтаж, звук и титры полностью на нас.</div>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="section-eyebrow">Под ключ в Москве</span>
-          <h3>Выездная группа</h3>
-          <p>Приезжаем в офис или на объект со светом, петличками и суфлёром — снимаем пул сразу на месяц.</p>
-        </div>
-        <div class="card-foot">Без вашей возни со светом, кадром и техникой.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 05. ПРИМЕРЫ И УРОВЕНЬ -->
-<section id="examples" class="section section-soft">
-  <div class="container">
-    <span class="section-eyebrow">Примеры руками, а не на словах</span>
-    <h2>Что именно вы получаете: аналитика, «было → стало» и видео</h2>
-    <p class="section-lead">Показываем механику разбора, формат сборки контента и реальный уровень цеха продакшена.</p>
-
-    <div class="grid-3">
-      <!-- Пример 1: Рентген ниши -->
-      <div class="example-card">
-        <div class="example-visual">
-          <div style="display:flex; justify-content:space-between; font-size:11px; color:#94a3b8;">
-            <span>ФОРМАТ ОТЧЁТА КОНКУРЕНТОВ</span>
-            <span style="color:var(--green);">3 хита ниши</span>
-          </div>
-          <div class="mini-reel-row">
-            <div class="mini-reel">
-              <strong>Хит №1</strong>
-              Хук про цену<br><span style="color:#cbd5e1;">💬 47 запросов</span>
-            </div>
-            <div class="mini-reel">
-              <strong>Хит №2</strong>
-              Разбор ошибки<br><span style="color:#cbd5e1;">↗ репосты</span>
-            </div>
-            <div class="mini-reel">
-              <strong>Хит №3</strong>
-              Кейс «до/после»<br><span style="color:#cbd5e1;">💬 слово ПРАЙС</span>
-            </div>
-          </div>
-          <div style="font-size:11.5px; color:#cbd5e1; margin-top:10px; border-top:1px solid rgba(255,255,255,0.1); padding-top:8px;">
-            Фильтр «Тест вторника»: адаптировано под реальную точку.
-          </div>
-        </div>
-        <div class="example-body">
-          <h3>Рентген конкурентов</h3>
-          <p style="font-size:14px; color:var(--ink-muted); margin-top:6px;">Вы сразу видите ролики вашей ниши с живыми комментариями и понимаете, почему они сработали.</p>
-        </div>
-      </div>
-
-      <!-- Пример 2: Было -> Стало -->
-      <div class="example-card">
-        <div class="example-visual">
-          <div style="font-size:11px; color:#94a3b8;">ТРАНСФОРМАЦИЯ ИСХОДНИКА</div>
-          <div class="before-after">
-            <div class="ba-box ba-before">
-              <strong style="display:block; color:#e2e8f0; margin-bottom:4px;">БЫЛО</strong>
-              Сырое видео работы в галерее + пустой профиль без воронки
-            </div>
-            <div class="ba-box ba-after">
-              <strong style="display:block; margin-bottom:4px;">СТАЛО</strong>
-              Reels с хуком + карусель 4:5 на ваших фото + PDF лид-магнит
-            </div>
-          </div>
-          <div style="font-size:11.5px; color:#93c5fd; margin-top:10px;">
-            Ноль выдуманных картинок — только ваши реальные объекты.
-          </div>
-        </div>
-        <div class="example-body">
-          <h3>Сборка «Было → Стало»</h3>
-          <p style="font-size:14px; color:var(--ink-muted); margin-top:6px;">Превращаем обычные рабочие кадры с телефона в упакованные продающие форматы.</p>
-        </div>
-      </div>
-
-      <!-- Пример 3: Видео продакшена -->
-      <div class="example-card">
-        <div class="example-visual">
-          <div style="display:flex; justify-content:space-between; font-size:11px; color:#94a3b8;">
-            <span>ПРОДАКШЕН KARPOV PRODUCTION</span>
-            <span style="color:#60a5fa;">Live кейсы</span>
-          </div>
-          <div class="mini-reel-row">
-            <div class="mini-reel" style="text-align:center;">
-              <strong>STEP AUTO</strong>
-              Спикер + 3D<br>моушн Reels
-            </div>
-            <div class="mini-reel" style="text-align:center;">
-              <strong>XT TUNING</strong>
-              Динамичный<br>авто-контент
-            </div>
-            <div class="mini-reel" style="text-align:center;">
-              <strong>WEDDINGS</strong>
-              Кино-цвет<br>и премиум
-            </div>
-          </div>
-          <div style="font-size:11.5px; color:#cbd5e1; margin-top:10px; border-top:1px solid rgba(255,255,255,0.1); padding-top:8px;">
-            Систему ведёт действующий видеопродакшн, а не чат-бот.
-          </div>
-        </div>
-        <div class="example-body">
-          <h3>Живой уровень видео</h3>
-          <p style="font-size:14px; color:var(--ink-muted); margin-top:6px;">Звук 48 кГц, плотный ритм, понятная графика и визуальный вкус без дешёвых шаблонов.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="filter-banner">
-      <strong>Кому мы НЕ подойдём:</strong> не берём проекты с чеком 500 ₽, инфобизнес без твёрдого продукта и тех, кто ждёт волшебную кнопку без фактов бизнеса.
-    </div>
-  </div>
-</section>
-
-<!-- 06. ЦЕНЫ, ОКУПАЕМОСТЬ И КАЛЬКУЛЯТОР -->
+<!-- 04. ТАРИФЫ + УМНЫЙ КАЛЬКУЛЯТОР + СТАРТ СНИЗУ -->
 <section id="pricing" class="section">
   <div class="container">
-    <span class="section-eyebrow">Прозрачные условия</span>
-    <h2>Тарифы и безопасный старт за 72 часа</h2>
-    <p class="section-lead">При среднем чеке 100–300 тыс. ₽ тариф «Оптимальный» окупается с <strong>одной сделки</strong> — и стоит в 3 раза дешевле содержания штатного отдела.</p>
+    <span class="section-eyebrow">Понятные пакеты</span>
+    <h2>Тарифы и умный конструктор под ваш объём</h2>
+    <p class="section-lead">При чеке от 100 тыс. ₽ основной пакет окупается с <strong>одной сделки</strong> — дешевле найма 1 сотрудника.</p>
 
-    <!-- Шаг 0 -->
-    <div class="start-banner">
-      <div class="grid-2" style="align-items:center;">
-        <div>
-          <span class="hit-badge" style="background:rgba(245,158,11,0.2); border:1px solid var(--amber); color:#fcd34d; margin-bottom:10px;">Шаг 0 • Проверить глубину до контракта</span>
-          <h3 style="font-size:24px; margin-bottom:8px;">«Стратегический старт» за 72 часа</h3>
-          <p style="color:#cbd5e1; font-size:15px;">Анализ ниши и конкурентов + стратегия и воронка + план на 30 дней + <strong style="color:#fff;">10 готовых сценариев Reels</strong> с хуками.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:20px;">
-          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:8px;">
-            <strong style="font-size:36px; color:#fbbf24;">14 900 ₽</strong>
-            <span style="font-size:18px; color:#94a3b8; text-decoration:line-through;">19 900 ₽</span>
-          </div>
-          <p style="font-size:13.5px; color:#e2e8f0; margin-bottom:14px;"><strong>100% суммы зачитывается</strong> в 1-й месяц ведения за 7 дней (доплата в «Оптимальный» — всего 45 090 ₽). Материалы остаются у вас навсегда.</p>
-          <button type="button" class="btn btn-primary" style="width:100%;" onclick="openModal('Бронь «Стратегического старта» за 14 900 ₽')">Забрать старт за 14 900 ₽</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3 тарифа -->
+    <!-- 3 тарифа с раскрытой сутью -->
     <div class="grid-3">
       <div class="price-card">
         <div>
-          <span class="section-eyebrow" style="color:var(--ink-muted);">Тариф 01 • Витрина</span>
+          <span class="section-eyebrow" style="color:var(--ink-muted);">Тариф 01</span>
           <h3>Присутствие</h3>
+          <div class="tier-essence">Суть: упакованная витрина и прогрев базы без съёмки Reels.</div>
           <div class="price-val">29 990 ₽ <span>/ мес</span></div>
           <ul class="check-list">
             <li>Упаковка профиля + план на 30 дней</li>
             <li><strong>6 каруселей</strong> или постов в ленту</li>
             <li><strong>10 серий Stories</strong> (прогревы)</li>
-            <li>Автопостинг без выпуска Reels</li>
+            <li>Автопостинг по расписанию</li>
           </ul>
         </div>
         <button type="button" class="btn btn-outline-dark" style="width:100%;" onclick="openModal('Тариф «Присутствие» (29 990 ₽/мес)')">Выбрать «Присутствие»</button>
@@ -1641,15 +1329,16 @@
 
       <div class="price-card featured">
         <div>
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-            <span class="section-eyebrow" style="margin:0;">Тариф 02 • Флагман</span>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <span class="section-eyebrow" style="margin:0;">Тариф 02</span>
             <span class="hit-badge">ХИТ</span>
           </div>
           <h3>Оптимальный</h3>
+          <div class="tier-essence">Суть: полноценный отдел контента и стабильный поток заявок.</div>
           <div class="price-val">59 990 ₽ <span>/ мес</span></div>
           <ul class="check-list">
-            <li><strong>Стратегия и разведка бесплатно</strong></li>
-            <li><strong>10 Reels под ключ</strong> + план 30 дней</li>
+            <li><strong>Стратегия и разведка бесплатно</strong> (вместо 29 900 ₽)</li>
+            <li><strong>10 Reels под ключ</strong> (сценарии, монтаж, обложки)</li>
             <li><strong>6 каруселей</strong> + <strong>12 серий Stories</strong></li>
             <li>Автопостинг + отчёт по заявкам</li>
           </ul>
@@ -1659,21 +1348,22 @@
 
       <div class="price-card">
         <div>
-          <span class="section-eyebrow" style="color:#d97706;">Тариф 03 • Масштаб</span>
+          <span class="section-eyebrow" style="color:#d97706;">Тариф 03</span>
           <h3>Максимальный</h3>
+          <div class="tier-essence">Суть: быстрый захват охватов сразу на двух площадках.</div>
           <div class="price-val">99 990 ₽ <span>/ мес</span></div>
           <ul class="check-list">
-            <li>Стратегия + лид-магнит + воронка</li>
-            <li><strong>20 Reels под ключ</strong> + план 30 дней</li>
+            <li>Стратегия + сборка <strong>PDF лид-магнита и воронки</strong></li>
+            <li><strong>20 Reels под ключ</strong> (почти каждый будний день)</li>
             <li><strong>10 каруселей</strong> + <strong>20 серий Stories</strong></li>
-            <li><strong>Бонус: адаптация во 2-ю соцсеть</strong></li>
+            <li><strong>Бонус: адаптация и постинг во 2-ю соцсеть</strong></li>
           </ul>
         </div>
         <button type="button" class="btn btn-outline-dark" style="width:100%;" onclick="openModal('Тариф «Максимальный» (99 990 ₽/мес)')">Выбрать «Максимальный»</button>
       </div>
     </div>
 
-    <!-- Калькулятор -->
+    <!-- Умный калькулятор -->
     <div class="calc-wrap" id="calculator">
       <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:18px;">
         <div>
@@ -1829,7 +1519,6 @@
             <div id="calc-hint" style="font-size:12.5px; color:var(--green); font-weight:600;"></div>
             <div id="calc-warn" class="calc-warn"></div>
 
-            <!-- Умная подсказка оптимизации -->
             <div id="smart-tip" class="smart-tip">
               <strong style="display:block; margin-bottom:4px;">💡 Подсказка: можно выгоднее!</strong>
               <div id="smart-tip-text"></div>
@@ -1841,72 +1530,50 @@
         </div>
       </div>
     </div>
+
+    <!-- Безопасный вход: Стратегический старт (теперь компактно ПОД тарифами!) -->
+    <div class="start-strip">
+      <div style="max-width:740px;">
+        <div style="font-size:12px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:#fbbf24; margin-bottom:4px;">Сомневаетесь заходить сразу на месяц? Протестируйте нас за 72 часа</div>
+        <div style="font-size:20px; font-weight:800; margin-bottom:6px;">«Стратегический старт» — <span style="color:#fbbf24;">14 900 ₽</span> <span style="font-size:14px; color:#94a3b8; text-decoration:line-through; font-weight:500;">19 900 ₽</span></div>
+        <p style="font-size:14px; color:#cbd5e1;">Разбор конкурентов + стратегия + контент-план на 30 дней + 10 сценариев Reels. <strong style="color:#fff;">100% суммы зачитываются в 1-й месяц ведения за 7 дней.</strong></p>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="openModal('Бронь «Стратегического старта» за 14 900 ₽')">Начать с 14 900 ₽</button>
+    </div>
   </div>
 </section>
 
-<!-- 07. FAQ + ЖУРНАЛ СТАТЕЙ -->
-<section id="blog" class="section section-soft">
+<!-- 05. КОРОТКИЙ FAQ -->
+<section id="faq" class="section section-soft">
   <div class="container">
-    <span class="section-eyebrow">Частые вопросы и разборы</span>
+    <span class="section-eyebrow">Частые вопросы</span>
     <h2>Коротко о главном</h2>
 
-    <div class="grid-2" style="margin-top:20px; margin-bottom:44px;">
+    <div class="grid-2" style="margin-top:20px;">
       <div class="card">
         <h3>Сработает в узкой нише или не в Москве?</h3>
-        <p>Да. Работаем по всей РФ; фильтр «Тест вторника» подбирает форматы под ваш город и реальную точку.</p>
+        <p>Да. Работаем по всей РФ; подбираем форматы строго под ваш город, чек и реальную точку.</p>
       </div>
       <div class="card">
         <h3>Если уже снято много видео на точке?</h3>
-        <p>Не выбрасываем: сразу пересобираем ваш архив под сильные хуки без лишних съёмок.</p>
+        <p>Сразу пересобираем ваш архив в телефоне под сильные хуки без лишних съёмок.</p>
       </div>
       <div class="card">
         <h3>Как не запутаетесь в наших ценах и сроках?</h3>
-        <p>Перед стартом фиксируем закрытую базу правды по вашему бизнесу — ноль фантазий в текстах.</p>
+        <p>Перед стартом фиксируем базу правды по вашему бизнесу — ноль фантазий в текстах.</p>
       </div>
       <div class="card">
         <h3>Правки, сроки и оплата по счёту?</h3>
         <p>Сдача пулами на 1–2 недели вперёд, 2 круга правок бесплатно, счёт ИП/ООО (+10%).</p>
       </div>
     </div>
-
-    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:12px; margin-bottom:18px;">
-      <div>
-        <span class="section-eyebrow">База знаний (SEO-блог)</span>
-        <h3 style="font-size:24px;">Полезные разборы для собственников</h3>
-      </div>
-      <span style="font-size:13.5px; color:var(--ink-muted);">Раздел для регулярных SEO-статей и лидогенерации из поиска</span>
-    </div>
-
-    <div class="grid-3">
-      <div class="blog-card">
-        <div>
-          <div class="blog-meta">Гайд • Производство и услуги</div>
-          <h3 style="font-size:17px; margin-top:6px;">Как снимать Reels для бизнеса и цеха без лица собственника</h3>
-        </div>
-        <button type="button" class="btn btn-outline-dark" style="padding:9px 14px; font-size:13px;" onclick="openModal('Запрос статьи / разбора по производству')">Скоро в журнале →</button>
-      </div>
-      <div class="blog-card">
-        <div>
-          <div class="blog-meta">Экономика • Сравнение</div>
-          <h3 style="font-size:17px; margin-top:6px;">Штатный SMM vs Content OS: реальная математика затрат</h3>
-        </div>
-        <button type="button" class="btn btn-outline-dark" style="padding:9px 14px; font-size:13px;" onclick="openModal('Запрос расчёта экономики контента')">Скоро в журнале →</button>
-      </div>
-      <div class="blog-card">
-        <div>
-          <div class="blog-meta">Воронки • Instagram</div>
-          <h3 style="font-size:17px; margin-top:6px;">Как кодовые слова в Reels переводят зрителя в заявку</h3>
-        </div>
-        <button type="button" class="btn btn-outline-dark" style="padding:9px 14px; font-size:13px;" onclick="openModal('Запрос схемы воронки кодовых слов')">Скоро в журнале →</button>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- 08. ФИНАЛЬНЫЙ ЗАХВАТ -->
+<!-- 06. ФИНАЛЬНЫЙ ЗАХВАТ -->
 <section id="lead" class="section section-dark">
   <div class="container">
-    <span class="section-eyebrow">Первый шаг до любых оплат — 0 ₽</span>
+    <span class="section-eyebrow">Первый шаг — 0 ₽</span>
     <h2>Заберите бесплатный 3-минутный видеоразбор вашей ниши</h2>
     <p class="section-lead">Получите на руки: <strong style="color:#fff;">3</strong> рабочих ролика конкурентов с заявками • <strong style="color:#fff;">2</strong> дыры вашего профиля • <strong style="color:#fff;">1</strong> готовый сценарий под ваш чек.</p>
 
@@ -1942,21 +1609,21 @@
 
       <div class="founder-card">
         <div>
-          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px;">
             <div class="avatar-monogram">ДК</div>
             <div>
               <div style="font-size:18px; font-weight:800; color:#fff;">Дмитрий Карпов</div>
               <div style="font-size:13.5px; color:#94a3b8;">Руководитель KARPOV PRODUCTION / CONTENT OS</div>
             </div>
           </div>
-          <p style="font-size:15px; color:#cbd5e1; margin-bottom:20px;">Работаем в Москве (выездные съёмки) и удалённо по всей РФ. Если удобнее сразу переслать ссылку на профиль или голосовое — пишите напрямую:</p>
+          <p style="font-size:15px; color:#cbd5e1; margin-bottom:18px;">Работаем в Москве (выездные съёмки) и удалённо по всей РФ. Не работаем с инфобизом без продукта и чеком 500 ₽.</p>
           <div style="display:flex; flex-direction:column; gap:12px;">
             <a href="https://t.me/frankiemoor" class="btn btn-primary" style="width:100%;">Написать в Telegram: @frankiemoor</a>
             <a href="tel:+79649999443" class="btn btn-outline-light" style="width:100%;">Позвонить / WhatsApp / TG: +7 964 999-94-43</a>
           </div>
         </div>
-        <div style="border-top:1px solid var(--border-dark); padding-top:16px; font-size:13px; color:#94a3b8;">
-          2 бесплатных круга правок • Сдача пулами на 1–2 недели • Прямая оплата или счёт ИП/ООО (+10%)
+        <div style="border-top:1px solid var(--border-dark); padding-top:14px; font-size:13px; color:#94a3b8;">
+          2 круга правок бесплатно • Сдача пулами на 1–2 недели • Прямая оплата или счёт ИП/ООО (+10%)
         </div>
       </div>
     </div>
@@ -1965,8 +1632,12 @@
 
 <footer>
   <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;">
-    <div><strong style="color:#fff;">CONTENT OS • KARPOV PRODUCTION</strong> — системный контент-маркетинг и видеопродакшн</div>
-    <div>Москва и вся РФ • @frankiemoor • +7 964 999-94-43</div>
+    <div><strong style="color:#fff;">CONTENT OS • KARPOV PRODUCTION</strong> — Москва и вся РФ</div>
+    <div style="display:flex; flex-wrap:wrap; gap:16px;">
+      <a href="#cases">Примеры видео</a>
+      <a href="#calculator">Калькулятор</a>
+      <a href="javascript:void(0)" onclick="openModal('Подписка на разборы и статьи (SEO-раздел)')">Журнал статей (скоро /blog/)</a>
+    </div>
   </div>
 </footer>
 
@@ -2003,56 +1674,22 @@
   </div>
 </div>
 
-<!-- МОДАЛКА ПРЕВЬЮ ВИДЕО -->
+<!-- МОДАЛКА ВИДЕО-ПРИМЕРА -->
 <div id="video-modal" class="modal-backdrop">
   <div class="modal-window" style="background:#0b1222; color:#fff; border:1px solid rgba(255,255,255,0.2);">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-      <span style="font-size:12px; font-weight:700; color:#60a5fa; text-transform:uppercase;">Видео-обзор системы (макет плеера)</span>
-      <button type="button" class="btn btn-outline-light" style="padding:5px 10px; font-size:12px;" onclick="closeVideoPreview()">✕ Закрыть</button>
+      <span id="vmodal-title" style="font-size:13px; font-weight:700; color:#60a5fa; text-transform:uppercase;">Видео-пример</span>
+      <button type="button" class="btn btn-outline-light" style="padding:5px 10px; font-size:12px;" onclick="closeVideoModal()">✕ Закрыть</button>
     </div>
-    <div style="background:#060a14; border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:24px; text-align:center; margin-bottom:14px;">
-      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Здесь в боевой версии запускается 2-минутное видео от Дмитрия Карпова + нарезка шоурила</div>
-      <p style="font-size:13px; color:#94a3b8;">Сейчас это превью-концепция, чтобы оценить расположение плеера на экране.</p>
+    <div style="background:#060a14; border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:26px 20px; text-align:center; margin-bottom:14px;">
+      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Слот под ваш живой видео-ролик</div>
+      <p id="vmodal-desc" style="font-size:13px; color:#94a3b8;"></p>
     </div>
-    <button type="button" class="btn btn-primary" style="width:100%;" onclick="closeVideoPreview(); openModal('Видеоразбор вашей ниши (0 ₽)');">Перейти к получению разбора</button>
+    <button type="button" class="btn btn-primary" style="width:100%;" onclick="closeVideoModal(); openModal('Хочу такой же формат — разбор ниши (0 ₽)');">Хочу так же — забрать разбор</button>
   </div>
 </div>
 
 <script>
-  const HERO_VARIANTS = {
-    1: {
-      eyebrow: 'Вариант 1 из 3 • Москва (выезд) и вся РФ (онлайн) • Старт за 72 часа',
-      title: 'Ваши конкуренты уже забирают клиентов из Reels. Заберём их обратно',
-      lead: 'Находим ролики в вашей нише, где покупатели прямо сейчас спрашивают цену, и запускаем ваш контент под ключ — без танцев и съёмочной каторги.'
-    },
-    2: {
-      eyebrow: 'Вариант 2 из 3 • Москва (выезд) и вся РФ (онлайн) • Отдел контента за 72 часа',
-      title: 'Reels, которые приносят заявки — даже если вы ненавидите сниматься',
-      lead: 'Пересоберём ваши старые видео из телефона, обучим AI-двойника или снимем всё за 1 выезд в Москве. План и 10 сценариев — уже через 72 часа.'
-    },
-    3: {
-      eyebrow: 'Вариант 3 из 3 • Москва и вся РФ • Запуск стратегии за 72 часа',
-      title: 'Хватит снимать в пустоту и платить за «красивые просмотры»',
-      lead: 'Подрядчики просили вас самих выдумывать темы, а заявок ноль? Вытаскиваем связки с доказанным спросом и ведём до диалога в Директ.'
-    }
-  };
-
-  function setHeroVariant(num) {
-    const v = HERO_VARIANTS[num];
-    if (!v) return;
-    document.getElementById('hero-eyebrow').textContent = v.eyebrow;
-    document.getElementById('hero-title').textContent = v.title;
-    document.getElementById('hero-lead').textContent = v.lead;
-    [1, 2, 3].forEach((id) => {
-      const btn = document.getElementById('ab-btn-' + id);
-      if (btn) btn.classList.toggle('active', id === num);
-    });
-  }
-
-  function toggleAllVariants() {
-    document.getElementById('hero-all-variants').classList.toggle('open');
-  }
-
   function formatRub(n) {
     return Math.round(n).toLocaleString('ru-RU') + ' ₽';
   }
@@ -2171,7 +1808,6 @@
   }
 
   function findBestOffer(curMonthlyRaw, curStratOneTime, multiMode, wantStrategy) {
-    // 1. Проверка пакетной скидки на 10 сценариев (8 или 9 сценариев стоят 15 200 / 17 100 ₽, а 10 — ровно 15 000 ₽)
     if (state.extraType === 'script' && (state.extraQty === 8 || state.extraQty === 9)) {
       return {
         kind: 'scripts10',
@@ -2193,19 +1829,14 @@
     ['presence', 'optimal', 'max'].forEach((altKey) => {
       if (altKey === state.base) return;
       const alt = TIERS[altKey];
-
-      // Не предлагаем апгрейд, если альтернативный тариф даёт меньше включённых Reels, чем уже включено в текущую базу
       if (alt.reels < curT.reels) return;
 
       let altExtraType = state.extraType;
       let altExtraQty = state.extraQty;
 
-      if (state.extraType === 'full' || state.extraType === 'motion_montage') {
-        altExtraQty = Math.max(0, targetAllReels - alt.reels);
-      } else if (state.extraType === 'basic_montage') {
+      if (state.extraType === 'full' || state.extraType === 'motion_montage' || state.extraType === 'basic_montage') {
         altExtraQty = Math.max(0, targetAllReels - alt.reels);
       } else if (state.extraType === 'script') {
-        // Сценарии в составе тарифа не заменяют отдельные сценарии, если база 0, но «Оптимальный» даёт 10 готовых Reels вместо 10 сценариев
         if (state.base === 'custom' && altKey === 'optimal') {
           altExtraQty = Math.max(0, state.extraQty - alt.reels);
         }
@@ -2216,13 +1847,9 @@
 
       const res = calcBundlePrice(altKey, altExtraType, altExtraQty, altExtraCarousels, altExtraStories, wantStrategy, multiMode);
       const altTotalFirst = res.monthlyRaw + res.stratOneTime;
-
-      // Предлагаем замену, только если она реально выгоднее (или равна по цене при кратно большем наполнении)
-      const saveMonthly = curMonthlyRaw - res.monthlyRaw;
       const saveFirst = curTotalFirst - altTotalFirst;
 
       if (saveFirst >= 0 && (saveFirst > 0 || alt.reels > curT.reels || alt.stories > curT.stories)) {
-        // Исключаем бессмысленный переход при нулевых допах
         if (altTotalFirst <= curTotalFirst && (altKey !== 'presence' || state.base === 'custom')) {
           const extrasMsg = [];
           if (alt.reels > targetFullReels) extrasMsg.push(alt.reels + ' Reels под ключ');
@@ -2392,11 +2019,13 @@
     document.getElementById('lead-modal').classList.remove('open');
   }
 
-  function openVideoPreview() {
+  function openVideoModal(title, desc) {
+    document.getElementById('vmodal-title').textContent = title;
+    document.getElementById('vmodal-desc').textContent = desc;
     document.getElementById('video-modal').classList.add('open');
   }
 
-  function closeVideoPreview() {
+  function closeVideoModal() {
     document.getElementById('video-modal').classList.remove('open');
   }
 
