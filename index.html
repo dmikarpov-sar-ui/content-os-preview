@@ -816,6 +816,238 @@
     justify-content: space-between;
   }
 
+  .calc-step-label {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+
+  .calc-tier-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .calc-tile {
+    border: 1.5px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: #ffffff;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.15s;
+  }
+
+  .calc-tile:hover {
+    border-color: var(--blue-bright);
+  }
+
+  .calc-tile.active {
+    border-color: var(--blue);
+    background: var(--blue-soft);
+    box-shadow: 0 0 0 1px var(--blue);
+  }
+
+  .calc-tile-title {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .calc-tile-price {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--blue);
+    margin: 3px 0 4px;
+  }
+
+  .calc-tile-sub {
+    font-size: 12px;
+    color: var(--ink-muted);
+    line-height: 1.3;
+  }
+
+  .calc-mode-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .calc-shoot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .calc-chip-btn {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 9px 11px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    text-align: left;
+    line-height: 1.3;
+  }
+
+  .calc-chip-btn.active {
+    background: var(--ink);
+    color: #ffffff;
+    border-color: var(--ink);
+  }
+
+  .calc-chip-btn span {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-top: 2px;
+  }
+
+  .stepper-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+
+  .stepper-ctrl {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .stepper-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .stepper-val {
+    min-width: 36px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .preset-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .preset-btn {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .preset-btn.active {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #ffffff;
+  }
+
+  .calc-subpanel {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border-light);
+    display: none;
+  }
+
+  .calc-subpanel.open {
+    display: block;
+  }
+
+  .smart-tip {
+    display: none;
+    margin-top: 14px;
+    background: #ecfdf5;
+    border: 1.5px solid #10b981;
+    border-radius: 12px;
+    padding: 14px;
+    color: #064e3b;
+    font-size: 13.5px;
+    line-height: 1.4;
+  }
+
+  .smart-tip.open {
+    display: block;
+  }
+
+  .smart-tip-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #059669;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .calc-breakdown {
+    font-size: 13px;
+    color: var(--ink-muted);
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 12px 0;
+    line-height: 1.45;
+  }
+
+  .calc-warn {
+    font-size: 12px;
+    color: #92400e;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-top: 10px;
+    display: none;
+  }
+
+  .calc-warn.open {
+    display: block;
+  }
+
   /* SEO-блог карточки */
   .blog-card {
     background: #ffffff;
@@ -994,6 +1226,11 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 4px;
+    }
+    .calc-tier-grid,
+    .calc-mode-grid,
+    .calc-shoot-grid {
+      grid-template-columns: 1fr;
     }
     .sticky-mobile-cta {
       position: fixed;
@@ -1437,38 +1674,169 @@
     </div>
 
     <!-- Калькулятор -->
-    <div class="calc-wrap">
-      <h3 style="font-size:21px; margin-bottom:14px;">Калькулятор комплектации под ваш бизнес</h3>
+    <div class="calc-wrap" id="calculator">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:18px;">
+        <div>
+          <span class="section-eyebrow" style="margin-bottom:4px;">Умный конструктор</span>
+          <h3 style="font-size:22px;">Соберите нужный объём и формат под себя</h3>
+        </div>
+        <span style="font-size:13px; color:var(--ink-muted);">Можно взять тариф + докупить ролики, только монтаж или только сценарии</span>
+      </div>
+
       <div class="calc-grid">
         <div>
+          <!-- Шаг 1 -->
           <div class="calc-group">
-            <div class="calc-group-title">1. Базовый формат</div>
-            <div class="calc-option"><label><input type="radio" name="tier" value="0" onchange="recalc()"> Только «Стратегический старт» (72 ч)</label><strong>14 900 ₽ разово</strong></div>
-            <div class="calc-option"><label><input type="radio" name="tier" value="29990" onchange="recalc()"> «Присутствие»</label><strong>29 990 ₽/мес</strong></div>
-            <div class="calc-option"><label><input type="radio" name="tier" value="59990" checked onchange="recalc()"> «Оптимальный» (ХИТ)</label><strong>59 990 ₽/мес</strong></div>
-            <div class="calc-option"><label><input type="radio" name="tier" value="99990" onchange="recalc()"> «Максимальный»</label><strong>99 990 ₽/мес</strong></div>
+            <div class="calc-step-label">Шаг 1. Выберите базу (или свой набор с нуля)</div>
+            <div class="calc-tier-grid">
+              <button type="button" class="calc-tile" id="tile-custom" onclick="setBase('custom')">
+                <div class="calc-tile-title">Свой набор с нуля</div>
+                <div class="calc-tile-price">0 ₽ база</div>
+                <div class="calc-tile-sub">Только нужные ролики, монтаж или сценарии поштучно</div>
+              </button>
+              <button type="button" class="calc-tile" id="tile-presence" onclick="setBase('presence')">
+                <div class="calc-tile-title">Присутствие</div>
+                <div class="calc-tile-price">29 990 ₽ / мес</div>
+                <div class="calc-tile-sub">Упаковка + 6 каруселей + 10 серий Stories (без Reels)</div>
+              </button>
+              <button type="button" class="calc-tile active" id="tile-optimal" onclick="setBase('optimal')">
+                <div class="calc-tile-title">Оптимальный <span class="hit-badge" style="font-size:10px; padding:2px 7px;">ХИТ</span></div>
+                <div class="calc-tile-price">59 990 ₽ / мес</div>
+                <div class="calc-tile-sub">Стратегия 0 ₽ + 10 Reels под ключ + 6 каруселей + 12 Stories</div>
+              </button>
+              <button type="button" class="calc-tile" id="tile-max" onclick="setBase('max')">
+                <div class="calc-tile-title">Максимальный</div>
+                <div class="calc-tile-price">99 990 ₽ / мес</div>
+                <div class="calc-tile-sub">Стратегия + магнит + 20 Reels + 10 каруселей + 20 Stories + 2-я сеть</div>
+              </button>
+            </div>
+
+            <!-- Шаг 2 -->
+            <div class="calc-step-label">Шаг 2. Добавить Reels сверх тарифа (или поштучно)</div>
+            <div class="calc-mode-grid">
+              <button type="button" class="calc-chip-btn active" id="mode-full" onclick="setExtraType('full')">
+                Reels «под ключ»
+                <span>4 900 ₽/шт. • идея, сценарий, монтаж</span>
+              </button>
+              <button type="button" class="calc-chip-btn" id="mode-basic_montage" onclick="setExtraType('basic_montage')">
+                Только базовый монтаж
+                <span>2 900 ₽/шт. • ваш сценарий и видео</span>
+              </button>
+              <button type="button" class="calc-chip-btn" id="mode-motion_montage" onclick="setExtraType('motion_montage')">
+                Сложный Motion + AI монтаж
+                <span>4 900 ₽/шт. • графика, титры, B-roll</span>
+              </button>
+              <button type="button" class="calc-chip-btn" id="mode-script" onclick="setExtraType('script')">
+                Только сценарии Reels
+                <span>1 900 ₽/шт. • от 10 шт. по 1 500 ₽</span>
+              </button>
+            </div>
+
+            <div class="stepper-row">
+              <div style="font-size:13.5px; font-weight:700;">Сколько доп. штук:</div>
+              <div class="stepper-ctrl">
+                <button type="button" class="stepper-btn" onclick="changeExtraQty(-1)">−</button>
+                <span class="stepper-val" id="extra-qty-val">0</span>
+                <button type="button" class="stepper-btn" onclick="changeExtraQty(1)">+</button>
+              </div>
+              <div class="preset-row">
+                <button type="button" class="preset-btn active" id="pre-0" onclick="setExtraQty(0)">0</button>
+                <button type="button" class="preset-btn" id="pre-5" onclick="setExtraQty(5)">+5</button>
+                <button type="button" class="preset-btn" id="pre-10" onclick="setExtraQty(10)">+10</button>
+                <button type="button" class="preset-btn" id="pre-20" onclick="setExtraQty(20)">+20</button>
+                <button type="button" class="preset-btn" id="pre-30" onclick="setExtraQty(30)">+30</button>
+              </div>
+            </div>
+
+            <div style="margin-top:10px;">
+              <button type="button" class="preset-btn" style="width:100%; padding:8px; text-align:left;" onclick="toggleMoreContent()">
+                + Добавить отдельно карусели (3 000 ₽), серии Stories (2 000 ₽) или стратегию (29 900 ₽) ▾
+              </button>
+              <div id="more-content-panel" class="calc-subpanel">
+                <div class="calc-option">
+                  <label>Доп. дизайнерские карусели (до 8 слайдов, 3 000 ₽)</label>
+                  <div class="stepper-ctrl">
+                    <button type="button" class="stepper-btn" onclick="changeOther('carousels', -1)">−</button>
+                    <span class="stepper-val" id="qty-carousels">0</span>
+                    <button type="button" class="stepper-btn" onclick="changeOther('carousels', 1)">+</button>
+                  </div>
+                </div>
+                <div class="calc-option">
+                  <label>Доп. серии Stories (до 6 слайдов, 2 000 ₽)</label>
+                  <div class="stepper-ctrl">
+                    <button type="button" class="stepper-btn" onclick="changeOther('stories', -1)">−</button>
+                    <span class="stepper-val" id="qty-stories">0</span>
+                    <button type="button" class="stepper-btn" onclick="changeOther('stories', 1)">+</button>
+                  </div>
+                </div>
+                <div class="calc-option" id="row-strategy">
+                  <label><input type="checkbox" id="opt-strategy" onchange="recalc()"> Отдельная полная стратегия (разово)</label>
+                  <strong>+29 900 ₽</strong>
+                </div>
+              </div>
+            </div>
           </div>
 
+          <!-- Шаг 3 -->
           <div class="calc-group" style="margin-bottom:0;">
-            <div class="calc-group-title">2. Опции (AI-аватар, съёмка, сети, скидки)</div>
-            <div class="calc-option"><label><input type="checkbox" id="opt-av-remote" onchange="toggleAvatar('remote')"> AI-аватар удалённо</label><strong>+19 900 ₽ разово</strong></div>
-            <div class="calc-option"><label><input type="checkbox" id="opt-av-msk" onchange="toggleAvatar('msk')"> AI-аватар «Под ключ в Москве»</label><strong>+49 900 ₽ разово</strong></div>
-            <div class="calc-option"><label><input type="checkbox" id="opt-shoot" onchange="recalc()"> Выездная съёмка МСК (iPhone, 2–3 ч)</label><strong>+14 900 ₽ разово</strong></div>
-            <div class="calc-option"><label><input type="checkbox" id="opt-multi4" onchange="recalc()"> Мультипостинг «Все сети» (TG+VK+Shorts+Threads)</label><strong>+9 900 ₽/мес</strong></div>
-            <div class="calc-option"><label><input type="checkbox" id="opt-credit" onchange="recalc()"> Зачёт «Стратегического старта» в 1-й месяц</label><strong>−14 900 ₽</strong></div>
-            <div class="calc-option"><label><input type="checkbox" id="opt-prepay3" onchange="recalc()"> Предоплата за 3 месяца</label><strong>−10%</strong></div>
-            <div class="calc-option"><label><input type="checkbox" id="opt-b2b" onchange="recalc()"> Оплата на р/с ИП/ООО</label><strong>+10%</strong></div>
+            <div class="calc-step-label">Шаг 3. Кто снимает видео и доп. площадки</div>
+            <div class="calc-shoot-grid">
+              <button type="button" class="calc-chip-btn active" id="shoot-self" onclick="setShootMode('self')">
+                Сам / наш архив
+                <span>0 ₽ доплат</span>
+              </button>
+              <button type="button" class="calc-chip-btn" id="shoot-avatar" onclick="setShootMode('avatar')">
+                AI-аватар
+                <span>от 19 900 ₽ разово</span>
+              </button>
+              <button type="button" class="calc-chip-btn" id="shoot-crew" onclick="setShootMode('crew')">
+                Выезд в Москве
+                <span>от 14 900 ₽ смена</span>
+              </button>
+            </div>
+
+            <div id="sub-avatar" class="calc-subpanel">
+              <div class="calc-option"><label><input type="radio" name="avatar_type" value="19900" checked onchange="recalc()"> Удалённо по нашему ТЗ (снимитесь сами 1 раз)</label><strong>+19 900 ₽ разово</strong></div>
+              <div class="calc-option"><label><input type="radio" name="avatar_type" value="49900" onchange="recalc()"> Под ключ в Москве (студия 2 ч, камера, свет)</label><strong>+49 900 ₽ разово</strong></div>
+            </div>
+
+            <div id="sub-crew" class="calc-subpanel">
+              <div class="calc-option"><label><input type="radio" name="crew_type" value="14900" checked onchange="recalc()"> iPhone со светом — полусмена 2–3 ч (до 4–5 Reels)</label><strong>+14 900 ₽ разово</strong></div>
+              <div class="calc-option"><label><input type="radio" name="crew_type" value="27900" onchange="recalc()"> iPhone со светом — полная смена 7–8 ч (10–12 Reels)</label><strong>+27 900 ₽ разово</strong></div>
+              <div class="calc-option"><label><input type="radio" name="crew_type" value="24900" onchange="recalc()"> Проф. камера — полусмена до 4 ч (до 4–5 Reels)</label><strong>+24 900 ₽ разово</strong></div>
+              <div class="calc-option"><label><input type="radio" name="crew_type" value="49900" onchange="recalc()"> Проф. камера — полная смена 8–10 ч (10–12 Reels)</label><strong>+49 900 ₽ разово</strong></div>
+            </div>
+
+            <div style="margin-top:10px;">
+              <div class="calc-option"><label><input type="checkbox" id="opt-multi1" onchange="toggleMulti(1)"> +1 доп. соцсеть (TG / VK / Shorts / Threads)</label><strong id="price-multi1">+4 900 ₽/мес</strong></div>
+              <div class="calc-option"><label><input type="checkbox" id="opt-multi4" onchange="toggleMulti(4)"> Все сети сразу (TG + VK + Shorts + Threads)</label><strong>+9 900 ₽/мес</strong></div>
+              <div class="calc-option"><label><input type="checkbox" id="opt-prepay3" onchange="recalc()"> Предоплата сразу за 3 месяца</label><strong>−10% к ведению</strong></div>
+              <div class="calc-option"><label><input type="checkbox" id="opt-credit" onchange="recalc()"> Зачёт «Стратегического старта» в 1-й месяц</label><strong>−14 900 ₽</strong></div>
+              <div class="calc-option"><label><input type="checkbox" id="opt-b2b" onchange="recalc()"> Оплата на расчётный счёт ИП/ООО</label><strong>+10%</strong></div>
+            </div>
           </div>
         </div>
 
+        <!-- Итог + Умная подсказка -->
         <div class="calc-total-box">
           <div>
-            <span class="section-eyebrow">Итог расчёта</span>
-            <div style="margin-bottom:10px; font-size:14px; color:var(--ink-muted);">Ежемесячно: <strong id="calc-monthly" style="display:block; font-size:26px; color:var(--ink);">59 990 ₽/мес</strong></div>
-            <div style="margin-bottom:12px; font-size:14px; color:var(--ink-muted);">Разовые опции: <strong id="calc-onetime" style="display:block; font-size:20px; color:var(--ink);">0 ₽</strong></div>
-            <div style="border-top:1px solid #cbd5e1; padding-top:12px; font-size:14px; color:var(--ink-muted);">К оплате за 1-й месяц: <strong id="calc-first" style="display:block; font-size:32px; color:var(--blue);">59 990 ₽</strong></div>
-            <div id="calc-hint" style="font-size:12.5px; color:var(--green); font-weight:600; margin-top:8px;"></div>
+            <span class="section-eyebrow">Ваш итоговый расчёт</span>
+            <div style="margin-bottom:8px; font-size:13.5px; color:var(--ink-muted);">Ежемесячно: <strong id="calc-monthly" style="display:block; font-size:26px; color:var(--ink);">59 990 ₽/мес</strong></div>
+            <div style="margin-bottom:10px; font-size:13.5px; color:var(--ink-muted);">Разовые опции: <strong id="calc-onetime" style="display:block; font-size:20px; color:var(--ink);">0 ₽</strong></div>
+            <div style="border-top:1px solid #cbd5e1; padding-top:10px; font-size:13.5px; color:var(--ink-muted);">К оплате за 1-й месяц: <strong id="calc-first" style="display:block; font-size:32px; color:var(--blue);">59 990 ₽</strong></div>
+
+            <div id="calc-breakdown" class="calc-breakdown"></div>
+            <div id="calc-hint" style="font-size:12.5px; color:var(--green); font-weight:600;"></div>
+            <div id="calc-warn" class="calc-warn"></div>
+
+            <!-- Умная подсказка оптимизации -->
+            <div id="smart-tip" class="smart-tip">
+              <strong style="display:block; margin-bottom:4px;">💡 Подсказка: можно выгоднее!</strong>
+              <div id="smart-tip-text"></div>
+              <button type="button" class="smart-tip-btn" id="smart-tip-btn" onclick="applyBestDeal()">Применить выгодный вариант</button>
+            </div>
           </div>
+
           <button type="button" class="btn btn-primary" style="width:100%; margin-top:16px;" onclick="openModalWithCalc()">Зафиксировать расчёт и забрать разбор</button>
         </div>
       </div>
@@ -1689,31 +2057,241 @@
     return Math.round(n).toLocaleString('ru-RU') + ' ₽';
   }
 
-  function toggleAvatar(type) {
-    const r = document.getElementById('opt-av-remote');
-    const m = document.getElementById('opt-av-msk');
-    if (type === 'remote' && r.checked) m.checked = false;
-    if (type === 'msk' && m.checked) r.checked = false;
+  const TIERS = {
+    custom: { name: 'Свой набор (без тарифа)', price: 0, reels: 0, carousels: 0, stories: 0, hasStrategy: false, hasMulti1: false },
+    presence: { name: 'Присутствие', price: 29990, reels: 0, carousels: 6, stories: 10, hasStrategy: false, hasMulti1: false },
+    optimal: { name: 'Оптимальный', price: 59990, reels: 10, carousels: 6, stories: 12, hasStrategy: true, hasMulti1: false },
+    max: { name: 'Максимальный', price: 99990, reels: 20, carousels: 10, stories: 20, hasStrategy: true, hasMulti1: true }
+  };
+
+  const EXTRA_MODES = {
+    full: { name: 'Reels «под ключ»', price: 4900 },
+    basic_montage: { name: 'Базовый монтаж Reels', price: 2900 },
+    motion_montage: { name: 'Сложный Motion + AI монтаж', price: 4900 },
+    script: { name: 'Сценарии Reels', price: 1900 }
+  };
+
+  const state = {
+    base: 'optimal',
+    extraType: 'full',
+    extraQty: 0,
+    extraCarousels: 0,
+    extraStories: 0,
+    shootMode: 'self',
+    bestOffer: null
+  };
+
+  function setBase(b) {
+    state.base = b;
+    ['custom', 'presence', 'optimal', 'max'].forEach((id) => {
+      const el = document.getElementById('tile-' + id);
+      if (el) el.classList.toggle('active', id === b);
+    });
+    if (TIERS[b].hasStrategy) {
+      document.getElementById('opt-strategy').checked = false;
+      document.getElementById('row-strategy').style.display = 'none';
+    } else {
+      document.getElementById('row-strategy').style.display = 'flex';
+    }
+    document.getElementById('price-multi1').textContent = b === 'max' ? '0 ₽ (бонус в тарифе)' : '+4 900 ₽/мес';
     recalc();
   }
 
+  function setExtraType(t) {
+    state.extraType = t;
+    ['full', 'basic_montage', 'motion_montage', 'script'].forEach((id) => {
+      const el = document.getElementById('mode-' + id);
+      if (el) el.classList.toggle('active', id === t);
+    });
+    recalc();
+  }
+
+  function setExtraQty(q) {
+    state.extraQty = Math.max(0, q);
+    document.getElementById('extra-qty-val').textContent = state.extraQty;
+    [0, 5, 10, 20, 30].forEach((n) => {
+      const el = document.getElementById('pre-' + n);
+      if (el) el.classList.toggle('active', state.extraQty === n);
+    });
+    recalc();
+  }
+
+  function changeExtraQty(delta) {
+    setExtraQty(state.extraQty + delta);
+  }
+
+  function changeOther(kind, delta) {
+    if (kind === 'carousels') {
+      state.extraCarousels = Math.max(0, state.extraCarousels + delta);
+      document.getElementById('qty-carousels').textContent = state.extraCarousels;
+    } else if (kind === 'stories') {
+      state.extraStories = Math.max(0, state.extraStories + delta);
+      document.getElementById('qty-stories').textContent = state.extraStories;
+    }
+    recalc();
+  }
+
+  function toggleMoreContent() {
+    document.getElementById('more-content-panel').classList.toggle('open');
+  }
+
+  function setShootMode(m) {
+    state.shootMode = m;
+    ['self', 'avatar', 'crew'].forEach((id) => {
+      const el = document.getElementById('shoot-' + id);
+      if (el) el.classList.toggle('active', id === m);
+    });
+    document.getElementById('sub-avatar').classList.toggle('open', m === 'avatar');
+    document.getElementById('sub-crew').classList.toggle('open', m === 'crew');
+    recalc();
+  }
+
+  function toggleMulti(which) {
+    const m1 = document.getElementById('opt-multi1');
+    const m4 = document.getElementById('opt-multi4');
+    if (which === 1 && m1.checked) m4.checked = false;
+    if (which === 4 && m4.checked) m1.checked = false;
+    recalc();
+  }
+
+  function scriptCost(qty) {
+    return qty >= 10 ? qty * 1500 : qty * 1900;
+  }
+
+  function calcBundlePrice(baseKey, extraType, extraQty, extraCarousels, extraStories, wantStrategy, multiMode) {
+    const t = TIERS[baseKey];
+    let extraReelsPrice = 0;
+    if (extraQty > 0) {
+      extraReelsPrice = extraType === 'script' ? scriptCost(extraQty) : extraQty * EXTRA_MODES[extraType].price;
+    }
+    const multiPrice = multiMode === 4 ? 9900 : (multiMode === 1 && !t.hasMulti1 ? 4900 : 0);
+    const monthlyRaw = t.price + extraReelsPrice + extraCarousels * 3000 + extraStories * 2000 + multiPrice;
+    const stratOneTime = (!t.hasStrategy && wantStrategy) ? 29900 : 0;
+    return { monthlyRaw, stratOneTime };
+  }
+
+  function findBestOffer(curMonthlyRaw, curStratOneTime, multiMode, wantStrategy) {
+    // 1. Проверка пакетной скидки на 10 сценариев (8 или 9 сценариев стоят 15 200 / 17 100 ₽, а 10 — ровно 15 000 ₽)
+    if (state.extraType === 'script' && (state.extraQty === 8 || state.extraQty === 9)) {
+      return {
+        kind: 'scripts10',
+        text: 'Пакет из 10 сценариев стоит ровно 15 000 ₽ — это дешевле, чем ' + state.extraQty + ' шт. поштучно (' + formatRub(state.extraQty * 1900) + ')!',
+        btn: 'Взять 10 сценариев за 15 000 ₽',
+        apply: () => setExtraQty(10)
+      };
+    }
+
+    const curT = TIERS[state.base];
+    const curTotalFirst = curMonthlyRaw + curStratOneTime;
+    const targetFullReels = curT.reels + (state.extraType === 'full' ? state.extraQty : 0);
+    const targetAllReels = curT.reels + (state.extraType !== 'script' ? state.extraQty : 0);
+    const targetCarousels = curT.carousels + state.extraCarousels;
+    const targetStories = curT.stories + state.extraStories;
+
+    let best = null;
+
+    ['presence', 'optimal', 'max'].forEach((altKey) => {
+      if (altKey === state.base) return;
+      const alt = TIERS[altKey];
+
+      // Не предлагаем апгрейд, если альтернативный тариф даёт меньше включённых Reels, чем уже включено в текущую базу
+      if (alt.reels < curT.reels) return;
+
+      let altExtraType = state.extraType;
+      let altExtraQty = state.extraQty;
+
+      if (state.extraType === 'full' || state.extraType === 'motion_montage') {
+        altExtraQty = Math.max(0, targetAllReels - alt.reels);
+      } else if (state.extraType === 'basic_montage') {
+        altExtraQty = Math.max(0, targetAllReels - alt.reels);
+      } else if (state.extraType === 'script') {
+        // Сценарии в составе тарифа не заменяют отдельные сценарии, если база 0, но «Оптимальный» даёт 10 готовых Reels вместо 10 сценариев
+        if (state.base === 'custom' && altKey === 'optimal') {
+          altExtraQty = Math.max(0, state.extraQty - alt.reels);
+        }
+      }
+
+      const altExtraCarousels = Math.max(0, targetCarousels - alt.carousels);
+      const altExtraStories = Math.max(0, targetStories - alt.stories);
+
+      const res = calcBundlePrice(altKey, altExtraType, altExtraQty, altExtraCarousels, altExtraStories, wantStrategy, multiMode);
+      const altTotalFirst = res.monthlyRaw + res.stratOneTime;
+
+      // Предлагаем замену, только если она реально выгоднее (или равна по цене при кратно большем наполнении)
+      const saveMonthly = curMonthlyRaw - res.monthlyRaw;
+      const saveFirst = curTotalFirst - altTotalFirst;
+
+      if (saveFirst >= 0 && (saveFirst > 0 || alt.reels > curT.reels || alt.stories > curT.stories)) {
+        // Исключаем бессмысленный переход при нулевых допах
+        if (altTotalFirst <= curTotalFirst && (altKey !== 'presence' || state.base === 'custom')) {
+          const extrasMsg = [];
+          if (alt.reels > targetFullReels) extrasMsg.push(alt.reels + ' Reels под ключ');
+          if (alt.carousels > targetCarousels) extrasMsg.push(alt.carousels + ' каруселей');
+          if (alt.stories > targetStories) extrasMsg.push(alt.stories + ' серий Stories');
+          if (alt.hasStrategy && !curT.hasStrategy) extrasMsg.push('стратегия в подарок');
+          if (alt.hasMulti1 && !curT.hasMulti1) extrasMsg.push('+1 доп. соцсеть бонусом');
+
+          const savingText = saveFirst > 0 ? 'дешевле на ' + formatRub(saveFirst) : 'за ту же цену';
+          const text = 'Переключите базу на «' + alt.name + '»' + (altExtraQty > 0 ? ' + ' + altExtraQty + ' доп.' : '') +
+            ' — выйдет ' + savingText + ' (' + formatRub(altTotalFirst) + ')' +
+            (extrasMsg.length ? ', плюс дополнительно получите: ' + extrasMsg.join(', ') + '.' : '.');
+
+          if (!best || saveFirst > best.save) {
+            best = {
+              save: saveFirst,
+              text,
+              btn: 'Переключить на «' + alt.name + '»' + (altExtraQty > 0 ? ' + ' + altExtraQty + ' доп.' : ''),
+              apply: () => {
+                state.base = altKey;
+                state.extraQty = altExtraQty;
+                state.extraCarousels = altExtraCarousels;
+                state.extraStories = altExtraStories;
+                document.getElementById('qty-carousels').textContent = altExtraCarousels;
+                document.getElementById('qty-stories').textContent = altExtraStories;
+                setBase(altKey);
+                setExtraQty(altExtraQty);
+              }
+            };
+          }
+        }
+      }
+    });
+
+    return best;
+  }
+
   function getCalc() {
-    const tierEl = document.querySelector('input[name="tier"]:checked');
-    const base = tierEl ? Number(tierEl.value) : 0;
-    const av = document.getElementById('opt-av-remote').checked ? 19900 :
-               document.getElementById('opt-av-msk').checked ? 49900 : 0;
-    const shoot = document.getElementById('opt-shoot').checked ? 14900 : 0;
-    const multi4 = document.getElementById('opt-multi4').checked ? 9900 : 0;
-    const credit = document.getElementById('opt-credit').checked;
+    const t = TIERS[state.base];
+    const multiMode = document.getElementById('opt-multi4').checked ? 4 :
+                      document.getElementById('opt-multi1').checked ? 1 : 0;
+    const wantStrategy = document.getElementById('opt-strategy').checked;
+
+    const bundle = calcBundlePrice(state.base, state.extraType, state.extraQty, state.extraCarousels, state.extraStories, wantStrategy, multiMode);
+
+    let shootCost = 0;
+    let shootName = 'Сам / наш архив';
+    if (state.shootMode === 'avatar') {
+      const avEl = document.querySelector('input[name="avatar_type"]:checked');
+      shootCost = avEl ? Number(avEl.value) : 19900;
+      shootName = shootCost === 49900 ? 'AI-аватар (студия МСК)' : 'AI-аватар (удалённо)';
+    } else if (state.shootMode === 'crew') {
+      const crEl = document.querySelector('input[name="crew_type"]:checked');
+      shootCost = crEl ? Number(crEl.value) : 14900;
+      shootName = 'Выездная съёмка в МСК';
+    }
+
     const prepay3 = document.getElementById('opt-prepay3').checked;
+    const credit = document.getElementById('opt-credit').checked;
     const b2b = document.getElementById('opt-b2b').checked;
 
-    let monthly = base > 0 ? base + multi4 : 0;
+    let monthly = bundle.monthlyRaw;
     if (prepay3) monthly *= 0.90;
 
-    let onetime = av + shoot + (base === 0 ? 14900 : 0);
+    let onetime = shootCost + bundle.stratOneTime;
     let first = monthly + onetime;
-    if (credit && base >= 59990) first = Math.max(0, first - 14900);
+    if (credit && (state.base === 'optimal' || state.base === 'max')) {
+      first = Math.max(0, first - 14900);
+    }
 
     if (b2b) {
       monthly *= 1.10;
@@ -1721,21 +2299,77 @@
       first *= 1.10;
     }
 
-    return { base, monthly, onetime, first, credit, prepay3, b2b };
+    const totalReels = t.reels + (state.extraType !== 'script' ? state.extraQty : 0);
+    const totalScriptsOnly = state.extraType === 'script' ? state.extraQty : 0;
+    const totalCarousels = t.carousels + state.extraCarousels;
+    const totalStories = t.stories + state.extraStories;
+
+    const offer = findBestOffer(bundle.monthlyRaw, bundle.stratOneTime, multiMode, wantStrategy);
+
+    return {
+      t, multiMode, wantStrategy, shootCost, shootName, prepay3, credit, b2b,
+      monthly, onetime, first, totalReels, totalScriptsOnly, totalCarousels, totalStories,
+      monthlyRaw: bundle.monthlyRaw, offer
+    };
   }
 
   function recalc() {
     const s = getCalc();
-    document.getElementById('calc-monthly').textContent = s.base > 0 ? formatRub(s.monthly) + '/мес' : '0 ₽ (разовый старт)';
+    document.getElementById('calc-monthly').textContent = s.monthly > 0 ? formatRub(s.monthly) + '/мес' : '0 ₽ / мес';
     document.getElementById('calc-onetime').textContent = formatRub(s.onetime);
     document.getElementById('calc-first').textContent = formatRub(s.first);
 
+    const lines = [];
+    lines.push('<strong>База:</strong> ' + s.t.name);
+    if (state.extraQty > 0) {
+      const uPrice = state.extraType === 'script' && state.extraQty >= 10 ? 1500 : EXTRA_MODES[state.extraType].price;
+      lines.push('<strong>Доп. Reels:</strong> +' + state.extraQty + ' шт. (' + EXTRA_MODES[state.extraType].name + ' × ' + formatRub(uPrice) + ')');
+    }
+    if (state.extraCarousels > 0) lines.push('<strong>Доп. карусели:</strong> +' + state.extraCarousels + ' шт.');
+    if (state.extraStories > 0) lines.push('<strong>Доп. серии Stories:</strong> +' + state.extraStories + ' шт.');
+    if (s.shootCost > 0) lines.push('<strong>Съёмка/Аватар:</strong> ' + s.shootName + ' (' + formatRub(s.shootCost) + ' разово)');
+    if (s.multiMode === 1) lines.push('<strong>Сети:</strong> +1 доп. площадка' + (s.t.hasMulti1 ? ' (бонус в тарифе)' : ''));
+    if (s.multiMode === 4) lines.push('<strong>Сети:</strong> Мультипостинг во все 4 сети');
+
+    const totals = [];
+    if (s.totalReels > 0) totals.push(s.totalReels + ' Reels');
+    if (s.totalScriptsOnly > 0) totals.push(s.totalScriptsOnly + ' сценариев');
+    if (s.totalCarousels > 0) totals.push(s.totalCarousels + ' каруселей');
+    if (s.totalStories > 0) totals.push(s.totalStories + ' серий Stories');
+    lines.push('<div style="margin-top:6px; padding-top:6px; border-top:1px solid #e2e8f0; color:#0f172a;"><strong>Итоговый выход в месяц:</strong> ' + (totals.length ? totals.join(' • ') : 'выберите услуги') + '</div>');
+
+    document.getElementById('calc-breakdown').innerHTML = lines.join('<br>');
+
     const notes = [];
-    if (s.credit && s.base >= 59990) notes.push('Зачёт старта −14 900 ₽ применён.');
-    if (s.credit && s.base < 59990) notes.push('Зачёт 14 900 ₽ действует от тарифа «Оптимальный».');
+    if (s.credit && (state.base === 'optimal' || state.base === 'max')) notes.push('Зачёт старта −14 900 ₽ применён.');
+    if (s.credit && state.base !== 'optimal' && state.base !== 'max') notes.push('Зачёт 14 900 ₽ действует при выборе «Оптимального» или «Максимального».');
     if (s.prepay3) notes.push('Скидка −10% за 3 мес.');
     if (s.b2b) notes.push('Счёт ИП/ООО +10%.');
     document.getElementById('calc-hint').textContent = notes.join(' ');
+
+    const warnEl = document.getElementById('calc-warn');
+    if (state.base === 'custom' && (state.extraQty > 0 || state.extraCarousels > 0 || state.extraStories > 0) && !s.wantStrategy) {
+      warnEl.textContent = 'В поштучный набор без тарифа не входят стратегия (29 900 ₽), упаковка профиля и автопостинг.';
+      warnEl.classList.add('open');
+    } else {
+      warnEl.classList.remove('open');
+    }
+
+    const tipEl = document.getElementById('smart-tip');
+    state.bestOffer = s.offer;
+    if (s.offer) {
+      document.getElementById('smart-tip-text').textContent = s.offer.text;
+      document.getElementById('smart-tip-btn').textContent = s.offer.btn;
+      tipEl.classList.add('open');
+    } else {
+      tipEl.classList.remove('open');
+    }
+  }
+
+  function applyBestDeal() {
+    if (state.bestOffer && typeof state.bestOffer.apply === 'function') {
+      state.bestOffer.apply();
+    }
   }
 
   function openModal(title, calcNote) {
@@ -1747,10 +2381,11 @@
 
   function openModalWithCalc() {
     const s = getCalc();
-    const tName = s.base === 0 ? 'Стратегический старт' :
-                  s.base === 29990 ? 'Присутствие' :
-                  s.base === 59990 ? 'Оптимальный' : 'Максимальный';
-    openModal('Зафиксировать расчёт тарифа', 'Выбрано: ' + tName + ' • 1-й месяц: ' + formatRub(s.first));
+    let msg = 'База: ' + s.t.name;
+    if (state.extraQty > 0) msg += ' + ' + state.extraQty + ' шт. (' + EXTRA_MODES[state.extraType].name + ')';
+    if (s.shootCost > 0) msg += ' + ' + s.shootName;
+    msg += ' • Ежемесячно: ' + formatRub(s.monthly) + ' • За 1-й мес: ' + formatRub(s.first);
+    openModal('Зафиксировать расчёт и забрать разбор', msg);
   }
 
   function closeModal() {
@@ -1779,7 +2414,7 @@
     st.textContent = '[Демо превью]: на боевом сайте заявка сразу уходит в Telegram и Notion.';
   }
 
-  recalc();
+  setBase('optimal');
 </script>
 
 </body>
